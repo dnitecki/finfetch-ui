@@ -11,3 +11,12 @@
   background-color: rgba(255, 255, 255, 0.2); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body,
+html {
+  margin: 0;
+  overflow: overlay;
+}

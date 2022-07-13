@@ -1,1 +1,12 @@
-
+.app-dashboard {
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: overlay;
+  background: linear-gradient(
+    135deg,
+    rgba(9, 32, 63, 1) 40%,
+    rgba(83, 120, 149, 1) 100%
+  );
+}
