@@ -10,8 +10,8 @@ function App() {
     <div>
       <Routes location={location} key={location.pathname}>
         <Route exact path="/" element={<LandingPage />} />
-        <Route exact path="/api" element={<Home />} />
-        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/api/*" element={<Home />} />
+        <Route exact path="/dashboard/*" element={<Dashboard />} />
       </Routes>
     </div>
   );
