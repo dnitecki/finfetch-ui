@@ -9,7 +9,7 @@ export default function Dashboard() {
   return (
     <div className="dashboard">
       <Routes>
-        <Route path="overview" element={<Overview />} />
+        <Route path="" element={<Overview />} />
         <Route path="watchlist" element={<WatchList />} />
         <Route path="reportbug" element={<ReportBug />} />
       </Routes>
