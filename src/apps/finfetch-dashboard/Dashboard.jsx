@@ -9,14 +9,16 @@ import Sidebar from "./components/sidebar/Sidebar";
 export default function Dashboard() {
   return (
     <div className="app-dashboard">
-      <div className="dashboard-sidebar">
-        <Sidebar />
+      <div className="app-dashboard-container">
+        <div className="dashboard-sidebar">
+          <Sidebar />
+        </div>
+        <Routes>
+          <Route path="overview" element={<Overview />} />
+          <Route path="watchlist" element={<WatchList />} />
+          <Route path="reportbug" element={<ReportBug />} />
+        </Routes>
       </div>
-      <Routes>
-        <Route path="overview" element={<Overview />} />
-        <Route path="watchlist" element={<WatchList />} />
-        <Route path="reportbug" element={<ReportBug />} />
-      </Routes>
     </div>
   );
 }
