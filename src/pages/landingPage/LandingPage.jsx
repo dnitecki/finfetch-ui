@@ -34,10 +34,14 @@ export default function LandingPage() {
             onMouseOver={changeBgDashboard}
             onMouseLeave={resetBg}
           >
-            <div className="landingPage-card">Dashboard </div>
+            <div className="landingPage-card">
+              <div className="landingPage-card-content">Dashboard</div>
+            </div>
           </NavLink>
           <NavLink to="api" onMouseOver={changeBgApi} onMouseLeave={resetBg}>
-            <div className="landingPage-card">API </div>
+            <div className="landingPage-card">
+              <div className="landingPage-card-content">API</div>
+            </div>
           </NavLink>
         </div>
       </div>
