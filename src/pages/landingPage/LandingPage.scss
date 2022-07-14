@@ -25,14 +25,12 @@
   width: 15rem;
   background-color: #fff;
   border-radius: 1rem;
-  filter: drop-shadow(0.1rem 0.5rem 0.5rem #0000001a);
+  box-shadow: 0.1rem 0.5rem 1rem #0000001a;
+  transition: box-shadow ease 0.3s;
   top: 0;
   transition: top ease 0.3s;
 }
 .landingPage-card:hover {
   top: -10px;
-  filter: drop-shadow(0.1rem 0.5rem 0.5rem #0000002e);
-  -webkit-transition: ease-in-out 0.3s;
-  -moz-transition: ease-in-out 0.3s;
-  transition: ease-in-out 0.3s;
+  box-shadow: 0.1rem 0.5rem 1rem #0000002a;
 }
