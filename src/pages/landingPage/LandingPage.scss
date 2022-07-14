@@ -2,8 +2,37 @@
   overflow: overlay;
   height: 100vh;
   width: 100vw;
-  background: #c9c9c9;
+  background: #d3d3d3;
 }
 .landingPage-container {
   display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.landingPage-apps {
+  display: flex;
+  column-gap: 2rem;
+}
+.landingPage-card {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: 20rem;
+  width: 15rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  filter: drop-shadow(0.1rem 0.5rem 0.5rem #0000001a);
+  top: 0;
+  transition: top ease 0.3s;
+}
+.landingPage-card:hover {
+  top: -10px;
+  filter: drop-shadow(0.1rem 0.5rem 0.5rem #0000002e);
+  -webkit-transition: ease-in-out 0.3s;
+  -moz-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
