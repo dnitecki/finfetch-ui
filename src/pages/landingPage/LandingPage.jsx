@@ -5,12 +5,14 @@ import { NavLink } from "react-router-dom";
 const changeBgDashboard = () => {
   document.getElementById("landingPage").style.background =
     "rgba(9, 32, 63, 1)";
+  document.getElementById("landingPage-name").style.color = "white";
 };
 const changeBgApi = () => {
   document.getElementById("landingPage").style.background = "green";
 };
 const resetBg = () => {
   document.getElementById("landingPage").style.background = "#91a3b0";
+  document.getElementById("landingPage-name").style.color = "black";
 };
 export default function LandingPage() {
   return (
@@ -22,7 +24,9 @@ export default function LandingPage() {
             src="./assets/finfetch-icon.png"
             alt="FinFetch.io"
           />
-          <div className="landingPage-name">FinFetch.io</div>
+          <div id="landingPage-name" className="landingPage-name">
+            FinFetch.io
+          </div>
         </div>
         <div className="landingPage-apps">
           <NavLink
