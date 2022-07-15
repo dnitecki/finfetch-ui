@@ -50,22 +50,24 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="landingPage-apps">
-          <NavLink
-            to="dashboard/overview"
-            onMouseOver={changeBgDashboard}
-            // onMouseLeave={resetBg}
-          >
-            <div className="landingPage-card">
-              <div className="landingPage-circle"></div>
-              <div className="landingPage-card-content">Dashboard</div>
-            </div>
-          </NavLink>
-          <NavLink to="api" onMouseOver={changeBgApi}>
-            <div className="landingPage-card">
-              <div className="landingPage-circle"></div>
-              <div className="landingPage-card-content">API</div>
-            </div>
-          </NavLink>
+          <div className="landingPage-card-container">
+            <NavLink
+              to="dashboard/overview"
+              onMouseOver={changeBgDashboard}
+              // onMouseLeave={resetBg}
+            >
+              <div className="landingPage-card">
+                <div className="landingPage-circle"></div>
+                <div className="landingPage-card-content">Dashboard</div>
+              </div>
+            </NavLink>
+            <NavLink to="api" onMouseOver={changeBgApi}>
+              <div className="landingPage-card">
+                <div className="landingPage-circle"></div>
+                <div className="landingPage-card-content">API</div>
+              </div>
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>
