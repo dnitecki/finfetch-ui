@@ -1,6 +1,7 @@
 import React from "react";
 import "./LandingPage.scss";
 import { NavLink } from "react-router-dom";
+import StockTicker from "../../components/stockTicker/StockTicker";
 
 const changeBgDashboard = () => {
   document.getElementById("landingPage").style.background = "#5C4EB3";
@@ -14,15 +15,16 @@ const changeBgApi = () => {
   document.getElementById("landingPage-dashboard").style.display = "none";
   document.getElementById("landingPage-api").style.display = "flex";
 };
-const resetBg = () => {
-  document.getElementById("landingPage").style.background = "#e9e9e9";
-  document.getElementById("landingPage-api").style.display = "none";
-  document.getElementById("landingPage-dashboard").style.display = "none";
-  document.getElementById("landingPage-main").style.display = "flex";
-};
+// const resetBg = () => {
+//   document.getElementById("landingPage").style.background = "#e9e9e9";
+//   document.getElementById("landingPage-api").style.display = "none";
+//   document.getElementById("landingPage-dashboard").style.display = "none";
+//   document.getElementById("landingPage-main").style.display = "flex";
+// };
 export default function LandingPage() {
   return (
     <div id="landingPage" className="landingPage">
+      <StockTicker />
       <div className="landingPage-container">
         <div className="landingPage-text">
           <div id="landingPage-main">

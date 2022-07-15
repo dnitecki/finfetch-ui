@@ -1,0 +1,72 @@
+[
+  {
+    "name": "microsoft",
+    "symbol": "msft",
+    "current": 339.51,
+    "old": 330,
+    "currency": "$"
+  },
+  {
+    "name": "rivian",
+    "symbol": "rivn",
+    "current": 172.01,
+    "old": 160,
+    "currency": "$"
+  },
+  {
+    "name": "atari",
+    "symbol": "ata",
+    "current": 0.45,
+    "old": 0.3,
+    "currency": "€"
+  },
+  {
+    "name": "bnp",
+    "symbol": "bnp",
+    "current": 60.29,
+    "old": 62,
+    "currency": "€"
+  },
+  {
+    "name": "hertz",
+    "symbol": "htzww",
+    "current": 15.25,
+    "old": 10,
+    "currency": "$"
+  },
+  {
+    "name": "american water works company",
+    "symbol": "awk",
+    "current": 170.74,
+    "old": 168,
+    "currency": "$"
+  },
+  {
+    "name": "roper",
+    "symbol": "rop",
+    "current": 492.29,
+    "old": 482,
+    "currency": "$"
+  },
+  {
+    "name": "home depot",
+    "symbol": "hd",
+    "current": 392.33,
+    "old": 390,
+    "currency": "$"
+  },
+  {
+    "name": "jpmorgan chase",
+    "symbol": "JPM",
+    "current": 165.36,
+    "old": 168,
+    "currency": "$"
+  },
+  {
+    "name": "3m",
+    "symbol": "MMM",
+    "current": 183.37,
+    "old": 183,
+    "currency": "$"
+  }
+]

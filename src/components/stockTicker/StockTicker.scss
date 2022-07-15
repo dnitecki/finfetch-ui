@@ -1,0 +1,78 @@
+.ticker-wrap {
+  position: absolute;
+  overflow-x: hidden;
+  white-space: nowrap;
+  background-color: #ffffff;
+  box-sizing: content-box;
+  width: 100%;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: marquee 40s linear infinite;
+}
+
+.item-collection-1 {
+  position: relative;
+  left: 0%;
+  float: left;
+}
+
+.item-collection-1 span,
+.item-collection-2 span {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  width: 120px;
+  margin: 0px;
+}
+
+.ticker-content:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.item {
+  display: inline-block;
+  width: 130px;
+  vertical-align: top;
+  margin-left: 15px;
+  overflow: hidden;
+}
+
+.item span:first-child,
+.item span:nth-child(2) {
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.color-neutral {
+  color: #ffae00;
+}
+
+.color-positive {
+  color: #2cc357;
+  font-weight: normal;
+}
+
+.color-negative {
+  color: #ff0000;
+  font-weight: normal;
+}
+
+.company-percentage {
+  text-transform: capitalize;
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+}
