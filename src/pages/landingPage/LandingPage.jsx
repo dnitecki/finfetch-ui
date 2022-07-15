@@ -58,17 +58,35 @@ export default function LandingPage() {
             >
               <div className="landingPage-card">
                 <div className="landingPage-circle">
-                  <div className="landingPage-app-name">Dashboard</div>
+                  <div className="landingPage-app-name">
+                    Stock Analyzer <div>App</div>
+                  </div>
                 </div>
-                <div className="landingPage-card-content"></div>
+                <div className="landingPage-card-content">
+                  <div className="landingPage-card-button-dashboard">
+                    Open
+                    <span class="material-symbols-rounded">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
               </div>
             </NavLink>
             <NavLink to="api" onMouseOver={changeBgApi}>
               <div className="landingPage-card">
                 <div className="landingPage-circle">
-                  <div className="landingPage-app-name">Financial API</div>
+                  <div className="landingPage-app-name">
+                    Financial Data<div>API</div>
+                  </div>
                 </div>
-                <div className="landingPage-card-content"></div>
+                <div className="landingPage-card-content">
+                  <div className="landingPage-card-button-api">
+                    Open
+                    <span class="material-symbols-rounded">
+                      arrow_right_alt
+                    </span>
+                  </div>
+                </div>
               </div>
             </NavLink>
           </div>
