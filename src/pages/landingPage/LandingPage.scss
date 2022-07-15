@@ -66,7 +66,7 @@
   top: -8px;
   transform: scale(1.05);
   box-shadow: 0 0.5rem 3rem #0000008b;
-  filter: blur(0px);
+  filter: blur(0);
   opacity: 1;
 }
 .landingPage-circle {
@@ -136,40 +136,44 @@
   display: none;
   transition: display ease 0.3s;
 }
+.bg-animation {
+  position: absolute;
+  transform: rotate(45deg);
+  height: 100%;
+  width: 100%;
+}
 .bg-layer-1 {
   position: absolute;
-  top: 1100px;
-  height: 400%;
-  width: 400%;
   background-color: #fff;
   opacity: 0.1;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  // animation-name: bounce;
-  // animation-duration: 2s;
-  // animation-iteration-count: infinite;
-  // animation-timing-function: ease;
+  width: 400%;
+  height: 400%;
+  animation: diagonal-1 9s ease-in-out infinite alternate;
 }
 .bg-layer-2 {
   position: absolute;
-  top: 1300px;
-  height: 400%;
-  width: 400%;
   background-color: #fff;
   opacity: 0.1;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  width: 400%;
+  height: 400%;
+  animation: diagonal-2 10s ease-in-out infinite alternate;
 }
 
-// @keyframes slide {
-//   0% {
-//     transform:translateX(-25%);
-//   }
-//   100% {
-//     transform:translateX(25%);
-//   }
-// }
+@keyframes diagonal-1 {
+  0% {
+    transform: translate(850px, -1200px);
+  }
+
+  100% {
+    transform: translate(1000px, -1200px);
+  }
+}
+@keyframes diagonal-2 {
+  0% {
+    transform: translate(900px, -1200px);
+  }
+
+  100% {
+    transform: translate(1110px, -1200px);
+  }
+}

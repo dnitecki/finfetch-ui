@@ -24,8 +24,10 @@ const changeBgApi = () => {
 export default function LandingPage() {
   return (
     <div id="landingPage" className="landingPage">
-      <div className="bg-layer-1"></div>
-      <div className="bg-layer-2"></div>
+      <div className="bg-animation">
+        <div className="bg-layer-1"></div>
+        <div className="bg-layer-2"></div>
+      </div>
       <StockTicker />
       <div className="landingPage-container">
         <div className="landingPage-text">
@@ -61,7 +63,7 @@ export default function LandingPage() {
               <div className="landingPage-card">
                 <div className="landingPage-circle">
                   <div className="landingPage-app-name">
-                    Stock Analyzer <div>App</div>
+                    Stock Analyzer <div>Tool</div>
                   </div>
                 </div>
                 <div className="landingPage-card-content">
