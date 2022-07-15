@@ -3,7 +3,7 @@ import "./LandingPage.scss";
 import { NavLink } from "react-router-dom";
 
 const changeBgDashboard = () => {
-  document.getElementById("landingPage").style.background = "#20124E";
+  document.getElementById("landingPage").style.background = "#5C4EB3";
   document.getElementById("landingPage-main").style.display = "none";
   document.getElementById("landingPage-api").style.display = "none";
   document.getElementById("landingPage-dashboard").style.display = "flex";
