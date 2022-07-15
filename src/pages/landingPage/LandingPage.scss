@@ -1,8 +1,5 @@
 .landingPage {
-  background: #91a3b0;
-  background-image: none;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #e9e9e9;
   overflow: overlay;
   height: 100vh;
   width: 100vw;
@@ -21,8 +18,10 @@
   flex-direction: column;
 }
 .landingPage-icon {
-  height: 18rem;
-  width: 18rem;
+  margin-left: 4rem;
+  height: 40rem;
+  width: 100%;
+  opacity: 1;
 }
 .landingPage-name {
   font-size: 4rem;
@@ -67,4 +66,16 @@
   color: black;
   font-size: 20px;
   font-weight: 500;
+}
+#landingPage-main {
+  display: flex;
+  transition: display ease 0.3s;
+}
+#landingPage-dashboard {
+  display: none;
+  transition: display ease 0.3s;
+}
+#landingPage-api {
+  display: none;
+  transition: display ease 0.3s;
 }
