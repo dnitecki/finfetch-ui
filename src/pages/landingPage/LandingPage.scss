@@ -57,15 +57,14 @@
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5px);
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 2rem #0000004c;
-  transition: box-shadow ease 0.3s;
+  box-shadow: 0 0.5rem 1rem #0000004c;
   top: 0;
   transition: all ease 0.3s;
 }
 .landingPage-card-container .landingPage-card:hover {
   top: -8px;
   transform: scale(1.05);
-  box-shadow: 0 0.5rem 3rem #0000008b;
+  box-shadow: 0 0.5rem 2rem #0000008b;
   filter: blur(0);
   opacity: 1;
 }
@@ -79,7 +78,7 @@
   clip-path: circle(160px at center -30px);
 }
 .landingPage-app-name {
-  font-size: 22px;
+  font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   flex-direction: column;
