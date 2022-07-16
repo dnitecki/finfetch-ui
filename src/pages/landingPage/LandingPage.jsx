@@ -39,7 +39,13 @@ export default function LandingPage() {
                 alt="FinFetch.io"
               />
             </div>
-            <div className="landingPage-title">FinFetch.io</div>
+            <div>
+              <img
+                className="landingPage-finfetch-text"
+                src="./assets/finfetch-text.png"
+                alt="FinFetch.io"
+              />
+            </div>
           </div>
           <div id="landingPage-dashboard">
             <img
