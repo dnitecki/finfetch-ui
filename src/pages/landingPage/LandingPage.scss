@@ -1,5 +1,5 @@
 .landingPage {
-  background: #2170fa;
+  background: #0b335b;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
@@ -24,6 +24,18 @@
   height: 35rem;
   width: 100%;
   opacity: 1;
+}
+.landingPage-finfetch-icon {
+  display: flex;
+  height: 22rem;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 1;
+  box-shadow: 0 0.5rem 1rem #0000004c;
+}
+.landingPage-icon-container {
+  display: flex;
+  width: fit-content;
 }
 .landingPage-name {
   font-size: 4rem;
@@ -125,7 +137,13 @@
 }
 #landingPage-main {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: display ease 0.3s;
+  color: #fff;
+  row-gap: 1.5rem;
+  font-size: 40px;
+  font-weight: bold;
 }
 #landingPage-dashboard {
   display: none;

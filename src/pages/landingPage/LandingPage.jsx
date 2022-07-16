@@ -15,12 +15,12 @@ const changeBgApi = () => {
   document.getElementById("landingPage-dashboard").style.display = "none";
   document.getElementById("landingPage-api").style.display = "flex";
 };
-// const resetBg = () => {
-//   document.getElementById("landingPage").style.background = "#e9e9e9";
-//   document.getElementById("landingPage-api").style.display = "none";
-//   document.getElementById("landingPage-dashboard").style.display = "none";
-//   document.getElementById("landingPage-main").style.display = "flex";
-// };
+const resetBg = () => {
+  document.getElementById("landingPage").style.background = "#0b335b";
+  document.getElementById("landingPage-api").style.display = "none";
+  document.getElementById("landingPage-dashboard").style.display = "none";
+  document.getElementById("landingPage-main").style.display = "flex";
+};
 export default function LandingPage() {
   return (
     <div id="landingPage" className="landingPage">
@@ -32,11 +32,14 @@ export default function LandingPage() {
       <div className="landingPage-container">
         <div className="landingPage-text">
           <div id="landingPage-main">
-            <img
-              className="landingPage-icon"
-              src="./assets/landingPage-image.png"
-              alt="FinFetch.io"
-            />
+            <div className="landingPage-icon-container">
+              <img
+                className="landingPage-finfetch-icon"
+                src="./assets/finfetch-icon.png"
+                alt="FinFetch.io"
+              />
+            </div>
+            <div className="landingPage-title">FinFetch.io</div>
           </div>
           <div id="landingPage-dashboard">
             <img
@@ -54,12 +57,8 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="landingPage-apps">
-          <div className="landingPage-card-container">
-            <NavLink
-              to="dashboard/overview"
-              onMouseOver={changeBgDashboard}
-              // onMouseLeave={resetBg}
-            >
+          <div className="landingPage-card-container" onMouseLeave={resetBg}>
+            <NavLink to="dashboard/overview" onMouseOver={changeBgDashboard}>
               <div className="landingPage-card">
                 <div className="landingPage-circle">
                   <div className="landingPage-app-name">
