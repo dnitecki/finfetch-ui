@@ -12,9 +12,7 @@ export default function Dashboard() {
   return (
     <div className="app-dashboard">
       <div className="app-dashboard-container">
-        <div className="dashboard-sidebar">
-          <Sidebar />
-        </div>
+        <Sidebar />
         <Routes location={location} key={location.pathname}>
           <Route path="overview" element={<Overview />} />
           <Route path="watchlist" element={<WatchList />} />
