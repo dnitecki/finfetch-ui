@@ -10,7 +10,7 @@ const changeBgDashboard = () => {
   document.getElementById("landingPage-dashboard").style.display = "flex";
 };
 const changeBgApi = () => {
-  document.getElementById("landingPage").style.background = "#2170FA";
+  document.getElementById("landingPage").style.background = "#0982CC";
   document.getElementById("landingPage-main").style.display = "none";
   document.getElementById("landingPage-dashboard").style.display = "none";
   document.getElementById("landingPage-api").style.display = "flex";

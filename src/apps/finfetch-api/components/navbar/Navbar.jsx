@@ -7,18 +7,20 @@ export default function Navbar() {
     <div className="api-navbar">
       <div className="api-navbar-container">
         <div className="api-navbar-icon">
-          <img
-            className="api-navbar-finfetch-icon"
-            src="./assets/finfetch-icon.png"
-            alt="FinFetch.io"
-          />
+          <NavLink to="/">
+            <img
+              className="api-navbar-finfetch-icon"
+              src="./assets/finfetch-icon.png"
+              alt="FinFetch.io"
+            />
+          </NavLink>
         </div>
         <div className="api-navbar-links">
           <NavLink to="register">
-            <div className="api-register-button">Register</div>
+            <div className="api-register-button">Sign Up</div>
           </NavLink>
           <NavLink to="login">
-            <div className="api-login-button">Login</div>
+            <div className="api-login-button">Sign In</div>
           </NavLink>
         </div>
       </div>
