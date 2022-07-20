@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import { NavLink } from "react-router-dom";
+import icon from "./FinFetch-icon-small.png";
 
 export default function Navbar() {
   return (
@@ -10,7 +11,7 @@ export default function Navbar() {
           <NavLink to="/">
             <img
               className="api-navbar-finfetch-icon"
-              src="./assets/finfetch-icon.png"
+              src={icon}
               alt="FinFetch.io"
             />
           </NavLink>

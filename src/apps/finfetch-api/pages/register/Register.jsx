@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
+import icon from "./FinFetch-icon-small.png";
 // import axios from "./api/axios";
 
 const EMAIL_REGEX =
@@ -93,14 +94,19 @@ export default function Register() {
     <div className="register">
       {success ? (
         <div className="register-container">
-          <h1>Success!</h1>
-          <p>
-            Your account has been created, <br /> please verify it by clicking
-            the activation link that has been send to your email.
-          </p>
-          <NavLink to="/api/login">
-            <p>Sign In</p>
-          </NavLink>
+          <div className="register-header">
+            <img className="register-icon" src={icon} alt="FinFetch.io" />
+            <div className="register-header-text">
+              Your account has been created!{" "}
+            </div>
+            <p>
+              Please verify your account by clicking the activation link that
+              has been send to your email.
+            </p>
+            <NavLink to="/api/login">
+              <p className="line">Sign In</p>
+            </NavLink>
+          </div>
         </div>
       ) : (
         <div className="register-container">
@@ -111,7 +117,10 @@ export default function Register() {
           >
             {errMsg}
           </p>
-          <h1>Register</h1>
+          <div className="register-header">
+            <img className="register-icon" src={icon} alt="FinFetch.io" />
+            <div className="register-header-text">Register</div>
+          </div>
           <form className="register-form" onSubmit={handleSubmit}>
             <label htmlFor="email">
               Email:
@@ -127,6 +136,7 @@ export default function Register() {
               />
             </label>
             <input
+              className="form-input"
               type="text"
               id="email"
               ref={emailRef}
@@ -165,6 +175,7 @@ export default function Register() {
               />
             </label>
             <input
+              className="form-input"
               type="password"
               id="password"
               onChange={(e) => setPwd(e.target.value)}
@@ -209,6 +220,7 @@ export default function Register() {
               />
             </label>
             <input
+              className="form-input"
               type="password"
               id="confirm_pwd"
               onChange={(e) => setMatchPwd(e.target.value)}
@@ -230,6 +242,7 @@ export default function Register() {
             </p>
 
             <button
+              className="form-button"
               disabled={!validEmail || !validPwd || !validMatch ? true : false}
             >
               Sign Up
