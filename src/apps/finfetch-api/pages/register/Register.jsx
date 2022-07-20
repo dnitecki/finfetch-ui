@@ -122,7 +122,7 @@ export default function Register() {
             <div className="register-header-text">Register</div>
           </div>
           <form className="register-form" onSubmit={handleSubmit}>
-            <label htmlFor="email">
+            <label className="form-label" htmlFor="email">
               Email:
               <FontAwesomeIcon
                 icon={faCheck}
@@ -161,7 +161,7 @@ export default function Register() {
               Must be a valid email.
             </p>
 
-            <label htmlFor="password">
+            <label className="form-label" htmlFor="password">
               Password:
               <FontAwesomeIcon
                 icon={faCheck}
@@ -204,7 +204,7 @@ export default function Register() {
               <span aria-label="percent">%</span>
             </p>
 
-            <label htmlFor="confirm_pwd">
+            <label className="form-label" htmlFor="confirm_pwd">
               Confirm Password:
               <FontAwesomeIcon
                 icon={faCheck}
