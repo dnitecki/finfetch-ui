@@ -17,7 +17,7 @@ export default function Navbar() {
         </div>
         <div className="api-navbar-links">
           <NavLink to="register">
-            <div className="api-register-button">Sign Up</div>
+            <div className="api-register-button">Register</div>
           </NavLink>
           <NavLink to="login">
             <div className="api-login-button">Sign In</div>
