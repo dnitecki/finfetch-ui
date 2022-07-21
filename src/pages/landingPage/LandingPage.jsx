@@ -2,6 +2,7 @@ import React from "react";
 import "./LandingPage.scss";
 import { NavLink } from "react-router-dom";
 import StockTicker from "../../components/stockTicker/StockTicker";
+import icon from "../../assets/FinFetch-icon-small.png";
 
 const changeBgDashboard = () => {
   document.getElementById("landingPage").style.background = "#5C4EB3";
@@ -35,7 +36,7 @@ export default function LandingPage() {
             <div className="landingPage-icon-container">
               <img
                 className="landingPage-finfetch-icon"
-                src="./assets/finfetch-icon.png"
+                src={icon}
                 alt="FinFetch.io"
               />
             </div>
