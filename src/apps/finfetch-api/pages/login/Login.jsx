@@ -6,7 +6,20 @@ import { useState } from "react";
 export default function Login() {
   const [email, setEmail] = useState(false);
   const [pwd, setPwd] = useState(false);
-
+  function emailCheck(event) {
+    if (event.target.value.length > 0) {
+      setEmail(true);
+    } else {
+      setEmail(false);
+    }
+  }
+  function pwdCheck(event) {
+    if (event.target.value.length > 0) {
+      setPwd(true);
+    } else {
+      setPwd(false);
+    }
+  }
   return (
     <div className="login">
       <div className="login-container">
@@ -22,7 +35,7 @@ export default function Login() {
             className="form-input"
             type="text"
             id="email"
-            onChange={(e) => setEmail(true)}
+            onChange={emailCheck}
             autoComplete="off"
             required
           />
@@ -33,7 +46,7 @@ export default function Login() {
             className="form-input"
             type="password"
             id="password"
-            onChange={(e) => setPwd(true)}
+            onChange={pwdCheck}
             required
           />
           <button
