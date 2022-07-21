@@ -38,3 +38,7 @@ html {
   font-weight: 500;
   cursor: pointer;
 }
+.form-button:disabled {
+  cursor: auto;
+  pointer-events: all !important;
+}
