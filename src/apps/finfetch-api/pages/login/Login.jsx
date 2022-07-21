@@ -1,8 +1,12 @@
 import React from "react";
 import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon-small.png";
+import { useState } from "react";
 
 export default function Login() {
+  const [email, setEmail] = useState(false);
+  const [pwd, setPwd] = useState(false);
+
   return (
     <div className="login">
       <div className="login-container">
@@ -18,6 +22,7 @@ export default function Login() {
             className="form-input"
             type="text"
             id="email"
+            onChange={(e) => setEmail(true)}
             autoComplete="off"
             required
           />
@@ -28,11 +33,12 @@ export default function Login() {
             className="form-input"
             type="password"
             id="password"
+            onChange={(e) => setPwd(true)}
             required
           />
           <button
-            className="form-button"
-            // disabled={!validEmail || !validPwd || !validMatch ? true : false}
+            className="form-button login-button"
+            disabled={!pwd || !email}
           >
             Sign In
           </button>
