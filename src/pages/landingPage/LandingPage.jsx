@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import StockTicker from "../../components/stockTicker/StockTicker";
 import icon from "../../assets/FinFetch-icon.png";
 import iconText from "../../assets/FinFetch-icon-text.png";
+import apiIcon from "../../assets/API-icon.png";
+import dashIcon from "../../assets/Dashboard-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
@@ -76,9 +78,18 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div className="landingPage-card-content">
-                  <div className="landingPage-card-button-dashboard">
-                    Launch
-                    <FontAwesomeIcon icon={faArrowRightLong} />
+                  <div className="landingPage-card-icon">
+                    <img
+                      className="landingPage-card-icon-dash"
+                      src={dashIcon}
+                      alt="FinFetch.io"
+                    />
+                  </div>
+                  <div className="landingPage-card-button">
+                    <div className="landingPage-card-button-dashboard">
+                      Launch
+                      <FontAwesomeIcon icon={faArrowRightLong} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,9 +102,18 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div className="landingPage-card-content">
-                  <div className="landingPage-card-button-api">
-                    Get Access
-                    <FontAwesomeIcon icon={faArrowRightLong} />
+                  <div className="landingPage-card-icon">
+                    <img
+                      className="landingPage-card-icon-api"
+                      src={apiIcon}
+                      alt="FinFetch.io"
+                    />
+                  </div>
+                  <div className="landingPage-card-button">
+                    <div className="landingPage-card-button-api">
+                      Get Access
+                      <FontAwesomeIcon icon={faArrowRightLong} />
+                    </div>
                   </div>
                 </div>
               </div>
