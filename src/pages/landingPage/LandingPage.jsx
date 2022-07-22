@@ -16,7 +16,7 @@ const changeBgDashboard = () => {
   document.getElementById("landingPage-dashboard").style.display = "flex";
 };
 const changeBgApi = () => {
-  document.getElementById("landingPage").style.background = "#0982CC";
+  document.getElementById("landingPage").style.background = "#0982cc";
   document.getElementById("landingPage-main").style.display = "none";
   document.getElementById("landingPage-dashboard").style.display = "none";
   document.getElementById("landingPage-api").style.display = "flex";
@@ -72,9 +72,12 @@ export default function LandingPage() {
           <div className="landingPage-card-container" onMouseLeave={resetBg}>
             <NavLink to="dashboard/overview" onMouseOver={changeBgDashboard}>
               <div className="landingPage-card">
-                <div className="landingPage-circle">
+                <div className="landingPage-circle-dash">
                   <div className="landingPage-app-name">
-                    Stock Analyzer <div>Tool</div>
+                    Stock Analyzer
+                    <div>
+                      <div className="landingPage-bold">Tool</div>
+                    </div>
                   </div>
                 </div>
                 <div className="landingPage-card-content">
@@ -96,9 +99,9 @@ export default function LandingPage() {
             </NavLink>
             <NavLink to="api" onMouseOver={changeBgApi}>
               <div className="landingPage-card">
-                <div className="landingPage-circle">
+                <div className="landingPage-circle-api">
                   <div className="landingPage-app-name">
-                    Financial Data<div>API</div>
+                    Financial Data <div className="landingPage-bold">API</div>
                   </div>
                 </div>
                 <div className="landingPage-card-content">
