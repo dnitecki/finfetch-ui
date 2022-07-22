@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import { NavLink } from "react-router-dom";
-import icon from "../../../../assets/FinFetch-icon-small.png";
+import icon from "../../../../assets/FinFetch-icon.png";
 
 export default function Navbar() {
   return (

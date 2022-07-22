@@ -1,6 +1,6 @@
 import React from "react";
 import "./Login.scss";
-import icon from "../../../../assets/FinFetch-icon-small.png";
+import icon from "../../../../assets/FinFetch-icon.png";
 import { useState } from "react";
 
 export default function Login() {

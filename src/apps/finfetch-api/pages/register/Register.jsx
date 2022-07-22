@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
-import icon from "../../../../assets/FinFetch-icon-small.png";
+import icon from "../../../../assets/FinFetch-icon.png";
 // import axios from "./api/axios";
 
 const EMAIL_REGEX =
