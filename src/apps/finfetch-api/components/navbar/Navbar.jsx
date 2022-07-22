@@ -17,6 +17,9 @@ export default function Navbar() {
           </NavLink>
         </div>
         <div className="api-navbar-links">
+          <NavLink to="">
+            <div className="api-documentation-button">API Docs</div>
+          </NavLink>
           <NavLink to="register">
             <div className="api-register-button">Register</div>
           </NavLink>
