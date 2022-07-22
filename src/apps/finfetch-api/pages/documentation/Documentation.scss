@@ -3,15 +3,28 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
 }
 .documentation-header {
   height: 5rem;
   width: 100%;
 }
+.documentation-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
 .documentation-content {
   display: flex;
   padding: 1rem;
+  overflow: auto;
+  width: 80%;
+  flex-direction: column;
+}
+.documentation-sidebar {
+  display: flex;
+  height: 100vh;
+  width: 20%;
+  background-color: #fff;
 }
 .documentation-content-header {
   display: flex;
