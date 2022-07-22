@@ -74,7 +74,7 @@ export default function LandingPage() {
                 </div>
                 <div className="landingPage-card-content">
                   <div className="landingPage-card-button-dashboard">
-                    Open
+                    Launch
                     <span class="material-symbols-rounded">
                       arrow_right_alt
                     </span>
@@ -91,7 +91,7 @@ export default function LandingPage() {
                 </div>
                 <div className="landingPage-card-content">
                   <div className="landingPage-card-button-api">
-                    Open
+                    Get Access
                     <span class="material-symbols-rounded">
                       arrow_right_alt
                     </span>
