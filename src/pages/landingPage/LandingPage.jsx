@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import StockTicker from "../../components/stockTicker/StockTicker";
 import icon from "../../assets/FinFetch-icon.png";
 import iconText from "../../assets/FinFetch-icon-text.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const changeBgDashboard = () => {
   document.getElementById("landingPage").style.background = "#5C4EB3";
@@ -76,9 +78,7 @@ export default function LandingPage() {
                 <div className="landingPage-card-content">
                   <div className="landingPage-card-button-dashboard">
                     Launch
-                    <span class="material-symbols-rounded">
-                      arrow_right_alt
-                    </span>
+                    <FontAwesomeIcon icon={faArrowRightLong} />
                   </div>
                 </div>
               </div>
@@ -93,9 +93,7 @@ export default function LandingPage() {
                 <div className="landingPage-card-content">
                   <div className="landingPage-card-button-api">
                     Get Access
-                    <span class="material-symbols-rounded">
-                      arrow_right_alt
-                    </span>
+                    <FontAwesomeIcon icon={faArrowRightLong} />
                   </div>
                 </div>
               </div>
