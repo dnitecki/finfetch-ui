@@ -22,6 +22,7 @@
 }
 .documentation-sidebar {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 20%;
   background-color: #fff;
