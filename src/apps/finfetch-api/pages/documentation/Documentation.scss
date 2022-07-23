@@ -13,12 +13,28 @@
   height: 100%;
   width: 100%;
 }
-.documentation-content {
+.documentation-content-container {
   display: flex;
   padding: 1rem;
   overflow: auto;
   width: 80%;
   flex-direction: column;
+}
+.documentation-content {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.documentation-text {
+  display: flex;
+  width: 50%;
+}
+.documentation-code {
+  display: flex;
+  width: 50%;
+}
+.syntax-highlighter {
+  width: 100%;
 }
 .documentation-sidebar {
   display: flex;
