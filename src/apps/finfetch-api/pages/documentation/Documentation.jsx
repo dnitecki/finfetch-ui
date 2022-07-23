@@ -10,7 +10,9 @@ export default function Documentation() {
       <div className="documentation-container">
         <div className="documentation-sidebar">
           <div className="documentation-header"></div>
-          <div className="documentation-sidebar-container">Sidebar</div>
+          <div className="documentation-sidebar-container">
+            Sidebar Navigation
+          </div>
         </div>
         <div className="documentation-content-container">
           <div className="documentation-header"></div>
