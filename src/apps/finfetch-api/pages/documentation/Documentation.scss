@@ -23,11 +23,13 @@
 .documentation-content {
   margin-top: 1rem;
   display: flex;
-  flex-direction: row;
+  width: 70%;
+  border-bottom: 1px solid #ccc;
 }
 .documentation-text {
   display: flex;
   width: 50%;
+  font-size: 18px;
 }
 .documentation-code {
   display: flex;
@@ -47,4 +49,5 @@
   display: flex;
   font-size: 30px;
   font-weight: 500;
+  margin-bottom: 2rem;
 }
