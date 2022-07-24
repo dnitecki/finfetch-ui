@@ -2,9 +2,9 @@ import React from "react";
 import "./Documentation.scss";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { stockPrice, stockInfo, stockNews } from "./StockResponses";
 
 export default function Documentation() {
-  const code = "if (length > 0)\n {return true};";
   return (
     <div className="documentation">
       <div className="documentation-container">
@@ -21,170 +21,41 @@ export default function Documentation() {
               API Documentation
             </div>
             <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
+              <div className="documentation-text">Stock Price</div>
               <div className="documentation-code">
                 <SyntaxHighlighter
+                  useInlineStyles={true}
                   className="syntax-highlighter"
-                  language="javascript"
+                  language="json"
                   style={coy}
                 >
-                  {code}
+                  {stockPrice}
                 </SyntaxHighlighter>
               </div>
             </div>
             <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
+              <div className="documentation-text">Stock Info</div>
               <div className="documentation-code">
                 <SyntaxHighlighter
+                  useInlineStyles={true}
                   className="syntax-highlighter"
-                  language="javascript"
+                  language="json"
                   style={coy}
                 >
-                  {code}
+                  {stockInfo}
                 </SyntaxHighlighter>
               </div>
             </div>
             <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
+              <div className="documentation-text">Stock News</div>
               <div className="documentation-code">
                 <SyntaxHighlighter
+                  useInlineStyles={true}
                   className="syntax-highlighter"
-                  language="javascript"
+                  language="json"
                   style={coy}
                 >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
-                </SyntaxHighlighter>
-              </div>
-            </div>
-            <div className="documentation-content">
-              <div className="documentation-text">Sample Api Call</div>
-              <div className="documentation-code">
-                <SyntaxHighlighter
-                  className="syntax-highlighter"
-                  language="javascript"
-                  style={coy}
-                >
-                  'akjfakjfhkajfhak'
+                  {stockNews}
                 </SyntaxHighlighter>
               </div>
             </div>

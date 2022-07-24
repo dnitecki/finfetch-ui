@@ -42,16 +42,17 @@
 }
 .documentation-text {
   display: flex;
-  width: 50%;
+  width: 40%;
   font-size: 18px;
 }
 .documentation-code {
   display: flex;
-  width: 50%;
+  width: 60%;
   z-index: 0;
 }
 .syntax-highlighter {
   width: 100%;
+  max-height: 20rem;
 }
 .documentation-sidebar {
   display: flex;
