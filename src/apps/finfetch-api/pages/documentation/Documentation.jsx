@@ -23,6 +23,9 @@ export default function Documentation() {
             <div className="documentation-content">
               <div className="documentation-text">Stock Price</div>
               <div className="documentation-code">
+                <div className="documentation-code-header">
+                  Sample JSON response
+                </div>
                 <SyntaxHighlighter
                   useInlineStyles={true}
                   className="syntax-highlighter"
@@ -36,6 +39,9 @@ export default function Documentation() {
             <div className="documentation-content">
               <div className="documentation-text">Stock Info</div>
               <div className="documentation-code">
+                <div className="documentation-code-header">
+                  Sample JSON response
+                </div>
                 <SyntaxHighlighter
                   useInlineStyles={true}
                   className="syntax-highlighter"
@@ -49,6 +55,9 @@ export default function Documentation() {
             <div className="documentation-content">
               <div className="documentation-text">Stock News</div>
               <div className="documentation-code">
+                <div className="documentation-code-header">
+                  Sample JSON response
+                </div>
                 <SyntaxHighlighter
                   useInlineStyles={true}
                   className="syntax-highlighter"

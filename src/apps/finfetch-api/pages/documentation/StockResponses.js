@@ -78,8 +78,7 @@ const stockNews = `{
   }`;
 export { stockNews };
 
-const stockInfo = `
-{
+const stockInfo = `{
     "data": {
         "zip": "95054-1549",
         "sector": "Technology",

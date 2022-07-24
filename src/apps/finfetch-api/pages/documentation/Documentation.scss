@@ -17,7 +17,6 @@
 }
 .documentation-content-container {
   display: flex;
-
   width: 80%;
   height: 100vh;
   flex-direction: column;
@@ -37,22 +36,29 @@
 .documentation-content {
   margin-top: 1rem;
   display: flex;
-  width: 70%;
+  width: 100%;
   border-bottom: 1px solid #ccc;
 }
 .documentation-text {
   display: flex;
-  width: 40%;
+  width: 25rem;
   font-size: 18px;
 }
 .documentation-code {
   display: flex;
-  width: 60%;
+  flex-direction: column;
+  row-gap: 0;
+  width: 40rem;
   z-index: 0;
+}
+.documentation-code-header {
+  font-weight: 500;
+  width: 100%;
 }
 .syntax-highlighter {
   width: 100%;
-  max-height: 20rem;
+  max-height: 22rem;
+  margin: 0;
 }
 .documentation-sidebar {
   display: flex;
