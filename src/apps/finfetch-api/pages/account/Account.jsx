@@ -4,9 +4,8 @@ import "./Account.scss";
 export default function Account() {
   return (
     <div className="account">
-      <div className="account-container">
-        <div className="account-header"></div>
-      </div>
+      <div className="account-header"></div>
+      <div className="account-container">Account</div>
     </div>
   );
 }
