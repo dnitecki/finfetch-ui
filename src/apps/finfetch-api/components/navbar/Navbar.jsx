@@ -20,6 +20,9 @@ export default function Navbar() {
           <NavLink to="">
             <div className="api-documentation-button">API Docs</div>
           </NavLink>
+          <NavLink to="account">
+            <div className="api-account-button">Account</div>
+          </NavLink>
           <NavLink to="register">
             <div className="api-register-button">Register</div>
           </NavLink>
