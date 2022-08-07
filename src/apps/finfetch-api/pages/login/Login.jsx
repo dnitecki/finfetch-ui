@@ -17,9 +17,10 @@ export default function Login() {
         JSON.stringify({ email: email, password: pwd }),
         {
           headers: { "Content-Type": "application/json" },
-          credentials: "same-origin",
         }
       );
+      // const jwt = response.headers.get("Set-Cookie");
+
       console.log(response?.data);
       //clear state and controlled inputs
       //need value attrib on inputs for this
