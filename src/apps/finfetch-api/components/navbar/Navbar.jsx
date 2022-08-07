@@ -6,7 +6,7 @@ import axios from "axios";
 const LOGOUT_URL = "http://127.0.0.1:8000/api/logout/";
 
 const logOut = async () => {
-  const response = await axios.get(LOGOUT_URL, {
+  const response = await axios.post(LOGOUT_URL, {
     headers: { "Content-Type": "application/json" },
   });
   console.log(response?.data);
