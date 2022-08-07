@@ -2,24 +2,35 @@ import React from "react";
 import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon.png";
 import { useState } from "react";
+import axios from "axios";
+const LOGIN_URL = "http://127.0.0.1:8000/api/login/";
 
 export default function Login() {
-  const [email, setEmail] = useState(false);
-  const [pwd, setPwd] = useState(false);
-  function emailCheck(event) {
-    if (event.target.value.length > 0) {
-      setEmail(true);
-    } else {
-      setEmail(false);
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        LOGIN_URL,
+        JSON.stringify({ email: email, password: pwd }),
+        {
+          headers: { "Content-Type": "application/json" },
+          credentials: "same-origin",
+        }
+      );
+      console.log(response?.data);
+      //clear state and controlled inputs
+      //need value attrib on inputs for this
+      setEmail("");
+      setPwd("");
+    } catch (err) {
+      if (!err?.response) {
+        console.log(err);
+      }
     }
-  }
-  function pwdCheck(event) {
-    if (event.target.value.length > 0) {
-      setPwd(true);
-    } else {
-      setPwd(false);
-    }
-  }
+  };
   return (
     <div className="login">
       <div className="login-container">
@@ -27,7 +38,7 @@ export default function Login() {
           <img className="login-icon" src={icon} alt="FinFetch.io" />
           <div className="login-header-text">Sign In</div>
         </div>
-        <div className="login-form">
+        <form className="login-form" onSubmit={handleSubmit}>
           <label className="form-label" htmlFor="email">
             Email:
           </label>
@@ -35,7 +46,7 @@ export default function Login() {
             className="form-input"
             type="text"
             id="email"
-            onChange={emailCheck}
+            onChange={(e) => setEmail(e.target.value)}
             autoComplete="off"
             required
           />
@@ -46,7 +57,7 @@ export default function Login() {
             className="form-input"
             type="password"
             id="password"
-            onChange={pwdCheck}
+            onChange={(e) => setPwd(e.target.value)}
             required
           />
           <button
@@ -55,7 +66,7 @@ export default function Login() {
           >
             Sign In
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );

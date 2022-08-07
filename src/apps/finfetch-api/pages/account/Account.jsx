@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Account.scss";
+import axios from "axios";
+const USER_URL = "http://127.0.0.1:8000/api/user/";
 
 export default function Account() {
+  useEffect(() => {
+    const getUserInfo = async () => {
+      const response = await axios.post(USER_URL, {
+        headers: { "Content-Type": "application/json" },
+      });
+      console.log(response?.data);
+    };
+    getUserInfo();
+  }, []);
   return (
     <div className="account">
       <div className="account-header"></div>
