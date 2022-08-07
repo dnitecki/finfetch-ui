@@ -2,6 +2,15 @@ import React from "react";
 import "./Navbar.scss";
 import { NavLink } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
+import axios from "axios";
+const LOGOUT_URL = "http://127.0.0.1:8000/api/logout/";
+
+const logOut = async () => {
+  const response = await axios.get(LOGOUT_URL, {
+    headers: { "Content-Type": "application/json" },
+  });
+  console.log(response?.data);
+};
 
 export default function Navbar() {
   return (
@@ -29,6 +38,9 @@ export default function Navbar() {
           <NavLink to="login">
             <div className="api-login-button">Sign In</div>
           </NavLink>
+          <div className="api-logout-button" onClick={logOut}>
+            Log Out
+          </div>
         </div>
       </div>
     </div>
