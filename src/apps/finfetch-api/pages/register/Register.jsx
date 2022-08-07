@@ -9,11 +9,12 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
-// import axios from "./api/axios";
+import axios from "axios";
 
 const EMAIL_REGEX =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const REGISTER_URL = "http://127.0.0.1:8000/api/register/";
 
 export default function Register() {
   const emailRef = useRef();
@@ -61,17 +62,14 @@ export default function Register() {
       return;
     }
     try {
-      // const response = await axios.post(
-      //   REGISTER_URL,
-      //   JSON.stringify({ user, pwd }),
-      //   {
-      //     headers: { "Content-Type": "application/json" },
-      //     withCredentials: true,
-      //   }
-      // );
-      // console.log(response?.data);
-      // console.log(response?.accessToken);
-      // console.log(JSON.stringify(response));
+      const response = await axios.post(
+        REGISTER_URL,
+        JSON.stringify({ email: email, password: pwd }),
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      console.log(response?.data);
       setSuccess(true);
       //clear state and controlled inputs
       //need value attrib on inputs for this
@@ -81,8 +79,8 @@ export default function Register() {
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");
-      } else if (err.response?.status === 409) {
-        setErrMsg("Username Taken");
+      } else if (err.response?.status === 500) {
+        setErrMsg("Email Already Exists");
       } else {
         setErrMsg("Registration Failed");
       }
