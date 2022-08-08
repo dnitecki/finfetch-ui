@@ -9,7 +9,6 @@ export default function Account() {
       const response = await axios.get(USER_URL, {
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Credentials": "*",
         },
         withCredentials: true,
       });

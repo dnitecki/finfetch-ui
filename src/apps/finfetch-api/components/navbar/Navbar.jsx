@@ -12,12 +12,13 @@ export default function Navbar() {
   const { loginStatus, setLoginStatus } = useContext(UserContext);
 
   const logOut = async () => {
-    setLoginStatus(false);
-    navigate("", { state: { from: location }, replace: true });
     const response = await axios.post(LOGOUT_URL, {
       headers: { "Content-Type": "application/json" },
+      withCredentials: true,
     });
     console.log(response?.data);
+    navigate("", { state: { from: location }, replace: true });
+    setLoginStatus(false);
   };
 
   return (
