@@ -18,7 +18,11 @@ export default function Login() {
         LOGIN_URL,
         JSON.stringify({ email: email, password: pwd }),
         {
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            // "Access-Control-Allow-Credentials": "*",
+          },
+          withCredentials: true,
         }
       );
 
