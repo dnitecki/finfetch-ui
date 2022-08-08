@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon.png";
 import { useState } from "react";
@@ -7,12 +8,15 @@ import axios from "axios";
 const LOGIN_URL = "http://127.0.0.1:8000/api/login/";
 
 export default function Login() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const { setLoginStatus } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await axios.post(
         LOGIN_URL,
@@ -25,7 +29,7 @@ export default function Login() {
           withCredentials: true,
         }
       );
-
+      navigate("/api/", { state: { from: location }, replace: true });
       console.log(response?.data);
 
       //clear state and controlled inputs
