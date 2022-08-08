@@ -21,7 +21,11 @@ export default function Documentation() {
               API Documentation
             </div>
             <div className="documentation-content">
-              <div className="documentation-text">Stock Price</div>
+              <div className="documentation-text">
+                <div className="documentation-content-header-text">
+                  Stock Price <div className="request-type-get">GET</div>
+                </div>
+              </div>
               <div className="documentation-code">
                 <div className="documentation-code-header">
                   Sample JSON response
@@ -37,7 +41,11 @@ export default function Documentation() {
               </div>
             </div>
             <div className="documentation-content">
-              <div className="documentation-text">Stock Info</div>
+              <div className="documentation-text">
+                <div className="documentation-content-header-text">
+                  Stock Info <div className="request-type-get">GET</div>
+                </div>
+              </div>
               <div className="documentation-code">
                 <div className="documentation-code-header">
                   Sample JSON response
@@ -53,7 +61,11 @@ export default function Documentation() {
               </div>
             </div>
             <div className="documentation-content">
-              <div className="documentation-text">Stock News</div>
+              <div className="documentation-text">
+                <div className="documentation-content-header-text">
+                  Stock News <div className="request-type-get">GET</div>
+                </div>
+              </div>
               <div className="documentation-code">
                 <div className="documentation-code-header">
                   Sample JSON response
