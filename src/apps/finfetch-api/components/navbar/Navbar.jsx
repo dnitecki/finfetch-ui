@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
 import "./Navbar.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
 import axios from "axios";
 import UserContext from "../../../../components/context/UserContext";
 const LOGOUT_URL = "http://127.0.0.1:8000/api/logout/";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const { loginStatus, setLoginStatus } = useContext(UserContext);
   const logOut = async () => {
     setLoginStatus(false);
+    navigate("", { state: { from: location }, replace: true });
     const response = await axios.post(LOGOUT_URL, {
       headers: { "Content-Type": "application/json" },
     });

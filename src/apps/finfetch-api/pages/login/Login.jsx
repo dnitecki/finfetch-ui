@@ -22,7 +22,7 @@ export default function Login() {
             "Content-Type": "application/json",
             // "Access-Control-Allow-Credentials": "*",
           },
-          withCredentials: true,
+          // withCredentials: true,
         }
       );
 
