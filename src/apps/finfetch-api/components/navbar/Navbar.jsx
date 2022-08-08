@@ -13,7 +13,10 @@ export default function Navbar() {
 
   const logOut = async () => {
     const response = await axios.post(LOGOUT_URL, {
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": "*",
+      },
       withCredentials: true,
     });
     console.log(response?.data);
