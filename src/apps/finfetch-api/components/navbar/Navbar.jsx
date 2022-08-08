@@ -10,6 +10,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const { loginStatus, setLoginStatus } = useContext(UserContext);
+
   const logOut = async () => {
     setLoginStatus(false);
     navigate("", { state: { from: location }, replace: true });
