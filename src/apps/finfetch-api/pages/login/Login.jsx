@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon.png";
 import { useState } from "react";
+import UserContext from "../../../../components/context/UserContext";
 import axios from "axios";
 const LOGIN_URL = "http://127.0.0.1:8000/api/login/";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const { setLoginStatus } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,11 +21,12 @@ export default function Login() {
           headers: { "Content-Type": "application/json" },
         }
       );
-      // const jwt = response.headers.get("Set-Cookie");
 
       console.log(response?.data);
+
       //clear state and controlled inputs
       //need value attrib on inputs for this
+      setLoginStatus(true);
       setEmail("");
       setPwd("");
     } catch (err) {
