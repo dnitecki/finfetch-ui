@@ -31,24 +31,28 @@
   display: flex;
   width: 80%;
   justify-content: flex-end;
-  padding-top: 2px;
+  padding-top: 3px;
 }
 .api-navbar-links .active {
   .api-register-button {
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
     opacity: 1;
+    transition: all ease 0.25s;
   }
   .api-documentation-button {
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
     opacity: 1;
+    transition: all ease 0.25s;
   }
   .api-login-button {
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
     opacity: 1;
+    transition: all ease 0.25s;
   }
   .api-account-button {
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
     opacity: 1;
+    transition: all ease 0.25s;
   }
 }
 .api-register-button {
@@ -59,8 +63,8 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
-  opacity: 0.9;
-  border-bottom: 2px solid transparent;
+  opacity: 0.8;
+  border-bottom: 3px solid transparent;
 }
 .api-documentation-button {
   display: flex;
@@ -70,8 +74,8 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
-  opacity: 0.9;
-  border-bottom: 2px solid transparent;
+  opacity: 0.8;
+  border-bottom: 3px solid transparent;
 }
 .api-account-button {
   display: flex;
@@ -81,8 +85,8 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
-  opacity: 0.9;
-  border-bottom: 2px solid transparent;
+  opacity: 0.8;
+  border-bottom: 3px solid transparent;
 }
 .api-login-button {
   display: flex;
@@ -92,8 +96,8 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
-  opacity: 0.9;
-  border-bottom: 2px solid transparent;
+  opacity: 0.8;
+  border-bottom: 3px solid transparent;
 }
 .api-logout-button {
   display: flex;
@@ -103,8 +107,8 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
-  opacity: 0.9;
-  border-bottom: 2px solid transparent;
+  opacity: 0.8;
+  border-bottom: 3px solid transparent;
 }
 .api-logout-button:hover {
   cursor: pointer;
