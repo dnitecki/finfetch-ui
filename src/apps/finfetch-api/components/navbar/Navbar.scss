@@ -35,15 +35,19 @@
 .api-navbar-links .active {
   .api-register-button {
     border-bottom: 2px solid #ffffff;
+    opacity: 1;
   }
   .api-documentation-button {
     border-bottom: 2px solid #ffffff;
+    opacity: 1;
   }
   .api-login-button {
     border-bottom: 2px solid #ffffff;
+    opacity: 1;
   }
   .api-account-button {
     border-bottom: 2px solid #ffffff;
+    opacity: 1;
   }
 }
 .api-register-button {
@@ -54,6 +58,7 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
+  opacity: 0.9;
   border-bottom: 2px solid transparent;
 }
 .api-documentation-button {
@@ -64,6 +69,7 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
+  opacity: 0.9;
   border-bottom: 2px solid transparent;
 }
 .api-account-button {
@@ -74,6 +80,7 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
+  opacity: 0.9;
   border-bottom: 2px solid transparent;
 }
 .api-login-button {
@@ -84,6 +91,7 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
+  opacity: 0.9;
   border-bottom: 2px solid transparent;
 }
 .api-logout-button {
@@ -94,6 +102,7 @@
   font-size: 18px;
   height: 100%;
   width: 6rem;
+  opacity: 0.9;
   border-bottom: 2px solid transparent;
 }
 .api-logout-button:hover {
