@@ -97,7 +97,7 @@ export default function LandingPage() {
                 </div>
               </div>
             </NavLink>
-            <NavLink to="api" onMouseOver={changeBgApi}>
+            <NavLink to="api/docs" onMouseOver={changeBgApi}>
               <div className="landingPage-card">
                 <div className="landingPage-circle-api">
                   <div className="landingPage-app-name">

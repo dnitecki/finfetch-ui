@@ -38,7 +38,7 @@ export default function Navbar() {
         </div>
         {loginStatus ? (
           <div className="api-navbar-links">
-            <NavLink to="">
+            <NavLink to="docs">
               <div className="api-documentation-button">API Docs</div>
             </NavLink>
             <NavLink to="account">
@@ -50,7 +50,7 @@ export default function Navbar() {
           </div>
         ) : (
           <div className="api-navbar-links">
-            <NavLink to="">
+            <NavLink to="docs">
               <div className="api-documentation-button">API Docs</div>
             </NavLink>
             <NavLink to="register">

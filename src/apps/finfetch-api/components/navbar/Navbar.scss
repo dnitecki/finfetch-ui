@@ -12,8 +12,6 @@
 }
 .api-navbar-container {
   display: flex;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   height: 100%;
@@ -28,38 +26,75 @@
   height: 3rem;
 }
 .api-navbar-links {
-  column-gap: 3rem;
+  column-gap: 1rem;
+  height: 100%;
   display: flex;
   width: 80%;
   justify-content: flex-end;
-  align-items: center;
+}
+.api-navbar-links .active {
+  .api-register-button {
+    border-bottom: 2px solid #ffffff;
+  }
+  .api-documentation-button {
+    border-bottom: 2px solid #ffffff;
+  }
+  .api-login-button {
+    border-bottom: 2px solid #ffffff;
+  }
+  .api-account-button {
+    border-bottom: 2px solid #ffffff;
+  }
 }
 .api-register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 18px;
+  height: 100%;
+  width: 6rem;
+  border-bottom: 2px solid transparent;
 }
 .api-documentation-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 18px;
+  height: 100%;
+  width: 6rem;
+  border-bottom: 2px solid transparent;
 }
 .api-account-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 18px;
+  height: 100%;
+  width: 6rem;
+  border-bottom: 2px solid transparent;
 }
 .api-login-button {
-  background-color: #ffffff;
-  border-radius: 25px;
-  color: #0b335b;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
-  font-size: 18px;
-  font-weight: 500;
-}
-.api-logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-size: 18px;
+  height: 100%;
+  width: 6rem;
+  border-bottom: 2px solid transparent;
+}
+.api-logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  height: 100%;
+  width: 6rem;
+  border-bottom: 2px solid transparent;
 }
 .api-logout-button:hover {
   cursor: pointer;

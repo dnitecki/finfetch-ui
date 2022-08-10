@@ -13,7 +13,7 @@ export default function Home() {
       <div className="app-api-container">
         <Navbar />
         <Routes>
-          <Route path="" element={<Documentation />} />
+          <Route path="docs" element={<Documentation />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="account" element={<Account />} />
