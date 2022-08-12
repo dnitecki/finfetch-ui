@@ -20,7 +20,7 @@ export default function Navbar() {
       withCredentials: true,
     });
     console.log(response?.data);
-    navigate("", { state: { from: location }, replace: true });
+    navigate("/api/docs", { state: { from: location }, replace: true });
     setLoginStatus(false);
   };
 
