@@ -6,6 +6,7 @@ import icon from "../../assets/FinFetch-icon.png";
 import iconText from "../../assets/FinFetch-icon-text.png";
 import apiIcon from "../../assets/API-icon.png";
 import dashIcon from "../../assets/Dashboard-icon.png";
+import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,6 +31,9 @@ const resetBg = () => {
 export default function LandingPage() {
   return (
     <div id="landingPage" className="landingPage">
+      <Helmet>
+        <title>FinFetch.io</title>
+      </Helmet>
       <div className="bg-animation">
         <div className="bg-layer-1"></div>
         <div className="bg-layer-2"></div>

@@ -53,7 +53,7 @@ export default function Navbar() {
             </NavLink>
             <div className="api-logout-button" onClick={logOut}>
               Log Out
-              <FontAwesomeIcon icon={faArrowRightToBracket} />
+              {/* <FontAwesomeIcon icon={faArrowRightToBracket} /> */}
             </div>
           </div>
         ) : (
@@ -67,7 +67,7 @@ export default function Navbar() {
             <NavLink to="login">
               <div className="api-nav-button">
                 Sign In
-                <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                {/* <FontAwesomeIcon icon={faArrowRightFromBracket} /> */}
               </div>
             </NavLink>
           </div>

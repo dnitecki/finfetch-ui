@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 
 const EMAIL_REGEX =
@@ -90,6 +91,9 @@ export default function Register() {
 
   return (
     <div className="register">
+      <Helmet>
+        <title>FinFetch | Register</title>
+      </Helmet>
       <div className="bg-animation">
         <div className="bg-layer-3"></div>
         <div className="bg-layer-4"></div>

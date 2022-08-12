@@ -5,6 +5,7 @@ import icon from "../../../../assets/FinFetch-icon.png";
 import { useState } from "react";
 import UserContext from "../../../../context/Context";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 const LOGIN_URL = "http://127.0.0.1:8000/api/login/";
 
 export default function Login() {
@@ -53,6 +54,9 @@ export default function Login() {
   };
   return (
     <div className="login">
+      <Helmet>
+        <title>FinFetch | Sign In</title>
+      </Helmet>
       <div className="bg-animation">
         <div className="bg-layer-3"></div>
         <div className="bg-layer-4"></div>

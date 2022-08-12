@@ -2,11 +2,15 @@ import React from "react";
 import "./Documentation.scss";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Helmet } from "react-helmet";
 import { stockPrice, stockInfo, stockNews } from "./StockResponses";
 
 export default function Documentation() {
   return (
     <div className="documentation">
+      <Helmet>
+        <title>FinFetch | API Docs</title>
+      </Helmet>
       <div className="documentation-container">
         <div className="documentation-sidebar">
           <div className="documentation-header"></div>
