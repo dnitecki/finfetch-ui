@@ -21,6 +21,12 @@
 .api-navbar-icon {
   display: flex;
   width: 20%;
+  align-items: flex-start;
+}
+.api-navbar-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .api-navbar-finfetch-icon {
   height: 3rem;
@@ -49,12 +55,13 @@
 .api-nav-button {
   padding-top: 3px;
   display: flex;
+  column-gap: 0.5rem;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 18px;
   height: 100%;
-  width: 6rem;
+  width: 7rem;
   opacity: 0.8;
   border-bottom: 3px solid transparent;
 }
@@ -64,6 +71,7 @@
 
 .api-logout-button {
   display: flex;
+  column-gap: 0.5rem;
   align-items: center;
   justify-content: center;
   color: #fff;
@@ -75,4 +83,5 @@
 }
 .api-logout-button:hover {
   cursor: pointer;
+  opacity: 1;
 }

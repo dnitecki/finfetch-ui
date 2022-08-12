@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
 import "./Navbar.scss";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowRightToBracket,
+  faArrowRightFromBracket,
+} from "@fortawesome/free-solid-svg-icons";
 import icon from "../../../../assets/FinFetch-icon.png";
 import axios from "axios";
 import UserContext from "../../../../context/Context";
@@ -29,11 +34,13 @@ export default function Navbar() {
       <div className="api-navbar-container">
         <div className="api-navbar-icon">
           <NavLink to="/">
-            <img
-              className="api-navbar-finfetch-icon"
-              src={icon}
-              alt="FinFetch.io"
-            />
+            <div className="api-navbar-icon-container">
+              <img
+                className="api-navbar-finfetch-icon"
+                src={icon}
+                alt="FinFetch.io"
+              />
+            </div>
           </NavLink>
         </div>
         {loginStatus ? (
@@ -46,6 +53,7 @@ export default function Navbar() {
             </NavLink>
             <div className="api-logout-button" onClick={logOut}>
               Log Out
+              <FontAwesomeIcon icon={faArrowRightToBracket} />
             </div>
           </div>
         ) : (
@@ -57,7 +65,10 @@ export default function Navbar() {
               <div className="api-nav-button">Register</div>
             </NavLink>
             <NavLink to="login">
-              <div className="api-nav-button">Sign In</div>
+              <div className="api-nav-button">
+                Sign In
+                <FontAwesomeIcon icon={faArrowRightFromBracket} />
+              </div>
             </NavLink>
           </div>
         )}
