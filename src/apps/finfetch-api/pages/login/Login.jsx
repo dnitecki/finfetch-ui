@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon.png";
 import { useState } from "react";
-import UserContext from "../../../../components/context/UserContext";
+import UserContext from "../../../../context/Context";
 import axios from "axios";
 const LOGIN_URL = "http://127.0.0.1:8000/api/login/";
 

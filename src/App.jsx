@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/landingPage/LandingPage";
 import Dashboard from "./apps/finfetch-dashboard/Dashboard";
 import Home from "./apps/finfetch-api/Home";
-import UserContext from "./components/context/UserContext";
+import UserContext from "./context/Context";
 
 function App() {
   const [loginStatus, setLoginStatus] = useState(false);

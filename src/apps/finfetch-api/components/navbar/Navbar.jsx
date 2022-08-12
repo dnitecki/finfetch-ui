@@ -3,7 +3,7 @@ import "./Navbar.scss";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
 import axios from "axios";
-import UserContext from "../../../../components/context/UserContext";
+import UserContext from "../../../../context/Context";
 const LOGOUT_URL = "http://127.0.0.1:8000/api/logout/";
 
 export default function Navbar() {
