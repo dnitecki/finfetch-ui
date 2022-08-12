@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
 import { Helmet } from "react-helmet";
 import { validators } from "../../../../regex/Regex";
-import { register } from "../../../../requests/Requests";
+import { registerUser } from "../../../../requests/Requests";
 
 const EMAIL_REGEX = validators.email;
 const PWD_REGEX = validators.password;
@@ -54,7 +54,6 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // if button enabled with JS hack
     const v1 = EMAIL_REGEX.test(email);
     const v2 = PWD_REGEX.test(pwd);
     if (!v1 || !v2) {
@@ -62,7 +61,7 @@ export default function Register() {
       return;
     }
     try {
-      await register(email, pwd);
+      await registerUser(email, pwd);
       setSuccess(true);
       setEmail("");
       setPwd("");

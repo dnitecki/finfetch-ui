@@ -4,9 +4,8 @@ import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon.png";
 import { useState } from "react";
 import UserContext from "../../../../context/Context";
-import axios from "axios";
 import { Helmet } from "react-helmet";
-const LOGIN_URL = "http://127.0.0.1:8000/api/login/";
+import { loginUser } from "../../../../requests/Requests";
 
 export default function Login() {
   const errRef = useRef();
@@ -22,29 +21,15 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        LOGIN_URL,
-        JSON.stringify({ email: email, password: pwd }),
-        {
-          headers: {
-            "Content-Type": "application/json",
-            // "Access-Control-Allow-Credentials": "*",
-          },
-          withCredentials: true,
-        }
-      );
+      await loginUser(email, pwd);
       navigate("/api/docs", { state: { from: location }, replace: true });
-      console.log(response?.data);
-
-      //clear state and controlled inputs
-      //need value attrib on inputs for this
       setLoginStatus(true);
       setEmail("");
       setPwd("");
-    } catch (err) {
-      if (!err?.response) {
+    } catch (error) {
+      if (!error?.response) {
         setErrMsg("No Server Response");
-      } else if (err.response?.status === 403) {
+      } else if (error.response?.status === 403) {
         setErrMsg("Invalid Email or Password");
       } else {
         setErrMsg("Login Failed");
