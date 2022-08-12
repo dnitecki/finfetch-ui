@@ -32,7 +32,7 @@ export default function Login() {
           withCredentials: true,
         }
       );
-      navigate("/api/", { state: { from: location }, replace: true });
+      navigate("/api/docs", { state: { from: location }, replace: true });
       console.log(response?.data);
 
       //clear state and controlled inputs
@@ -43,10 +43,10 @@ export default function Login() {
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");
-      } else if (err.response?.status === 500) {
-        setErrMsg("Email Already Exists");
+      } else if (err.response?.status === 403) {
+        setErrMsg("Invalid Email or Password");
       } else {
-        setErrMsg("Registration Failed");
+        setErrMsg("Login Failed");
       }
       errRef.current.focus();
     }
@@ -62,6 +62,13 @@ export default function Login() {
           <img className="login-icon" src={icon} alt="FinFetch.io" />
           <div className="login-header-text">Sign In</div>
         </div>
+        <p
+          ref={errRef}
+          className={errMsg ? "errmsg" : "offscreen"}
+          aria-live="assertive"
+        >
+          {errMsg}
+        </p>
         <form className="login-form" onSubmit={handleSubmit}>
           <label className="form-label" htmlFor="email">
             Email:

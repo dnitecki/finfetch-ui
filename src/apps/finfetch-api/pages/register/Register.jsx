@@ -112,6 +112,11 @@ export default function Register() {
         </div>
       ) : (
         <div className="register-container">
+          <div className="register-header">
+            <img className="register-icon" src={icon} alt="FinFetch.io" />
+
+            <div className="register-header-text">Register</div>
+          </div>
           <p
             ref={errRef}
             className={errMsg ? "errmsg" : "offscreen"}
@@ -119,10 +124,6 @@ export default function Register() {
           >
             {errMsg}
           </p>
-          <div className="register-header">
-            <img className="register-icon" src={icon} alt="FinFetch.io" />
-            <div className="register-header-text">Register</div>
-          </div>
           <form className="register-form" onSubmit={handleSubmit}>
             <label className="form-label" htmlFor="email">
               Email:
