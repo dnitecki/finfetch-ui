@@ -90,6 +90,10 @@ export default function Register() {
 
   return (
     <div className="register">
+      <div className="bg-animation">
+        <div className="bg-layer-3"></div>
+        <div className="bg-layer-4"></div>
+      </div>
       {success ? (
         <div className="register-container">
           <div className="register-header">
