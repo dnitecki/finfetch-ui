@@ -11,11 +11,10 @@ import { NavLink } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
 import { Helmet } from "react-helmet";
 import { validators } from "../../../../regex/Regex";
-import axios from "axios";
+import { register } from "../../../../requests/Requests";
 
 const EMAIL_REGEX = validators.email;
 const PWD_REGEX = validators.password;
-const REGISTER_URL = "http://127.0.0.1:8000/api/register/";
 
 export default function Register() {
   const emailRef = useRef();
@@ -63,24 +62,15 @@ export default function Register() {
       return;
     }
     try {
-      const response = await axios.post(
-        REGISTER_URL,
-        JSON.stringify({ email: email, password: pwd }),
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      console.log(response?.data);
+      await register(email, pwd);
       setSuccess(true);
-      //clear state and controlled inputs
-      //need value attrib on inputs for this
       setEmail("");
       setPwd("");
       setMatchPwd("");
-    } catch (err) {
-      if (!err?.response) {
+    } catch (error) {
+      if (!error?.response) {
         setErrMsg("No Server Response");
-      } else if (err.response?.status === 500) {
+      } else if (error.response?.status === 500) {
         setErrMsg("Email Already Exists");
       } else {
         setErrMsg("Registration Failed");
