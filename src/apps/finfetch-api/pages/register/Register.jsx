@@ -10,11 +10,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
 import { Helmet } from "react-helmet";
+import { validators } from "../../../../regex/Regex";
 import axios from "axios";
 
-const EMAIL_REGEX =
-  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const EMAIL_REGEX = validators.email;
+const PWD_REGEX = validators.password;
 const REGISTER_URL = "http://127.0.0.1:8000/api/register/";
 
 export default function Register() {
