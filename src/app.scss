@@ -42,3 +42,60 @@ html {
   cursor: auto;
   pointer-events: all !important;
 }
+.bg-animation {
+  position: absolute;
+  transform: rotate(45deg);
+  height: 100%;
+  width: 100%;
+}
+.bg-layer-1 {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.1;
+  width: 400%;
+  height: 400%;
+  animation: diagonal-1 9s ease-in-out infinite alternate;
+}
+.bg-layer-2 {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.1;
+  width: 400%;
+  height: 400%;
+  animation: diagonal-2 10s ease-in-out infinite alternate;
+}
+.bg-layer-3 {
+  position: absolute;
+  background-color: #0b335b;
+  opacity: 0.1;
+  width: 400%;
+  height: 400%;
+  animation: diagonal-1 9s ease-in-out infinite alternate;
+}
+.bg-layer-4 {
+  position: absolute;
+  background-color: #0b335b;
+  opacity: 0.1;
+  width: 400%;
+  height: 400%;
+  animation: diagonal-2 10s ease-in-out infinite alternate;
+}
+
+@keyframes diagonal-1 {
+  0% {
+    transform: translate(850px, -1200px);
+  }
+
+  100% {
+    transform: translate(1000px, -1200px);
+  }
+}
+@keyframes diagonal-2 {
+  0% {
+    transform: translate(900px, -1200px);
+  }
+
+  100% {
+    transform: translate(1110px, -1200px);
+  }
+}

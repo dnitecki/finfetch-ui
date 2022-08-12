@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon.png";
@@ -8,10 +8,13 @@ import axios from "axios";
 const LOGIN_URL = "http://127.0.0.1:8000/api/login/";
 
 export default function Login() {
+  const errRef = useRef();
   const navigate = useNavigate();
   const location = useLocation();
+
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const [errMsg, setErrMsg] = useState("");
   const { setLoginStatus } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
@@ -39,12 +42,21 @@ export default function Login() {
       setPwd("");
     } catch (err) {
       if (!err?.response) {
-        console.log(err);
+        setErrMsg("No Server Response");
+      } else if (err.response?.status === 500) {
+        setErrMsg("Email Already Exists");
+      } else {
+        setErrMsg("Registration Failed");
       }
+      errRef.current.focus();
     }
   };
   return (
     <div className="login">
+      <div className="bg-animation">
+        <div className="bg-layer-3"></div>
+        <div className="bg-layer-4"></div>
+      </div>
       <div className="login-container">
         <div className="login-header">
           <img className="login-icon" src={icon} alt="FinFetch.io" />
