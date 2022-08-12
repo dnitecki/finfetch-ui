@@ -39,10 +39,10 @@ export default function Navbar() {
         {loginStatus ? (
           <div className="api-navbar-links">
             <NavLink to="docs">
-              <div className="api-documentation-button">API Docs</div>
+              <div className="api-nav-button">API Docs</div>
             </NavLink>
             <NavLink to="account">
-              <div className="api-account-button">Account</div>
+              <div className="api-nav-button">Account</div>
             </NavLink>
             <div className="api-logout-button" onClick={logOut}>
               Log Out
@@ -51,13 +51,13 @@ export default function Navbar() {
         ) : (
           <div className="api-navbar-links">
             <NavLink to="docs">
-              <div className="api-documentation-button">API Docs</div>
+              <div className="api-nav-button">API Docs</div>
             </NavLink>
             <NavLink to="register">
-              <div className="api-register-button">Register</div>
+              <div className="api-nav-button">Register</div>
             </NavLink>
             <NavLink to="login">
-              <div className="api-login-button">Sign In</div>
+              <div className="api-nav-button">Sign In</div>
             </NavLink>
           </div>
         )}
