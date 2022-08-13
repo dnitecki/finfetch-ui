@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "./Account.scss";
 import { Helmet } from "react-helmet";
-import axios from "axios";
-const USER_URL = "http://127.0.0.1:8000/api/user/";
+import { getUserAccount } from "../../../../requests/Requests";
 
 export default function Account() {
   const [info, setInfo] = useState({});
 
   useEffect(() => {
-    const getUserInfo = async () => {
-      const response = await axios.get(USER_URL, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: true,
-      });
-      const result = response?.data;
-      setInfo(result);
+    const updateUserAccount = async () => {
+      try {
+        const result = await getUserAccount();
+        setInfo(result);
+      } catch (error) {
+        if (!error) {
+          setInfo({});
+          console.log(error);
+        }
+      }
     };
-    getUserInfo();
+    updateUserAccount();
   }, []);
   return (
     <div className="account">

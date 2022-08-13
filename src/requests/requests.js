@@ -18,3 +18,14 @@ export const loginUser = async (email, pwd) => {
     withCredentials: true,
   });
 };
+
+export const getUserAccount = async () => {
+  const url = `${basePath}/api/user/`;
+  const response = await axios.get(url, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    withCredentials: true,
+  });
+  return response.data;
+};
