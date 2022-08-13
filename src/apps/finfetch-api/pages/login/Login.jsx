@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import { loginUser } from "../../../../requests/Requests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 
 export default function Login() {
   const errRef = useRef();
@@ -97,15 +98,19 @@ export default function Login() {
               <span></span>
             </div>
           ) : (
-            <button
-              className="form-button login-button"
-              disabled={!pwd || !email}
-            >
+            <button className="form-button" disabled={!pwd || !email}>
               Sign In
               <FontAwesomeIcon icon={faArrowRightLong} />
             </button>
           )}
         </form>
+        <p>
+          Need an account?
+          <br />
+          <NavLink to="/api/register">
+            <span className="line">Sign Up</span>
+          </NavLink>
+        </p>
       </div>
     </div>
   );
