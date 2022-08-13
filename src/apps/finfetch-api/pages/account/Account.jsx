@@ -12,10 +12,8 @@ export default function Account() {
         const result = await getUserAccount();
         setInfo(result);
       } catch (error) {
-        if (!error) {
-          setInfo({});
-          console.log(error);
-        }
+        setInfo({});
+        console.log(error);
       }
     };
     updateUserAccount();
