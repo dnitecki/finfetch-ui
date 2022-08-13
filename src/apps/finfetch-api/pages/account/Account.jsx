@@ -26,9 +26,9 @@ export default function Account() {
       <div className="account-header"></div>
       <div className="account-container">
         <div className="account-info">
-          <div>ID:&nbsp;{info.id}</div>
-          <div>Email:&nbsp;{info.email}</div>
-          <div>Account Created:&nbsp;{info.created}</div>
+          <div>ID:&nbsp;{info?.id}</div>
+          <div>Email:&nbsp;{info?.email}</div>
+          <div>Account Created:&nbsp;{info?.created}</div>
         </div>
       </div>
     </div>
