@@ -5,6 +5,7 @@ import {
   faCheck,
   faTimes,
   faInfoCircle,
+  faArrowRightLong,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
@@ -56,6 +57,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setErrMsg("");
     const v1 = EMAIL_REGEX.test(email);
     const v2 = PWD_REGEX.test(pwd);
     if (!v1 || !v2) {
@@ -256,6 +258,7 @@ export default function Register() {
               disabled={!validEmail || !validPwd || !validMatch ? true : false}
             >
               Sign Up
+              <FontAwesomeIcon icon={faArrowRightLong} />
             </button>
           </form>
           <p>

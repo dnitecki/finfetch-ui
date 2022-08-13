@@ -6,6 +6,8 @@ import { useState } from "react";
 import UserContext from "../../../../context/Context";
 import { Helmet } from "react-helmet";
 import { loginUser } from "../../../../requests/Requests";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function Login() {
   const errRef = useRef();
@@ -21,9 +23,10 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setErrMsg("");
     try {
       await loginUser(email, pwd);
-      navigate("/api/docs", { state: { from: location }, replace: true });
+      navigate("/api/account", { state: { from: location }, replace: true });
       setLoginStatus(true);
       setEmail("");
       setPwd("");
@@ -98,6 +101,7 @@ export default function Login() {
             disabled={!pwd || !email}
           >
             Sign In
+            <FontAwesomeIcon icon={faArrowRightLong} />
           </button>
         </form>
       </div>

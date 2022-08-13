@@ -29,6 +29,10 @@ html {
   font-size: 14px;
 }
 .form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
   padding: 0.7rem;
   margin-top: 1rem;
   font-size: 18px;
@@ -104,32 +108,32 @@ html {
   width: 0.6rem;
   height: 0.6rem;
   margin: 0.35rem;
-  background: #0982cc;
+  background: #fff;
   border-radius: 0.6rem;
   animation: loading-horizontal 1s infinite alternate;
 }
 .loading-horizontal span:nth-of-type(2) {
-  background: #0982cc;
+  background: #fff;
   animation-delay: 0.2s;
 }
 .loading-horizontal span:nth-of-type(3) {
-  background: #0982cc;
+  background: #fff;
   animation-delay: 0.4s;
 }
 .loading-horizontal span:nth-of-type(4) {
-  background: #0982cc;
+  background: #fff;
   animation-delay: 0.6s;
 }
 .loading-horizontal span:nth-of-type(5) {
-  background: #0982cc;
+  background: #fff;
   animation-delay: 0.8s;
 }
 .loading-horizontal span:nth-of-type(6) {
-  background: #0982cc;
+  background: #fff;
   animation-delay: 1s;
 }
 .loading-horizontal span:nth-of-type(7) {
-  background: #0982cc;
+  background: #fff;
   animation-delay: 1.2s;
 }
 
