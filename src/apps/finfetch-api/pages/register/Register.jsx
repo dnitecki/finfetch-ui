@@ -252,14 +252,17 @@ export default function Register() {
                 <span></span>
                 <span></span>
               </div>
-            ) : null}
-            <button
-              className="form-button"
-              disabled={!validEmail || !validPwd || !validMatch ? true : false}
-            >
-              Sign Up
-              <FontAwesomeIcon icon={faArrowRightLong} />
-            </button>
+            ) : (
+              <button
+                className="form-button"
+                disabled={
+                  !validEmail || !validPwd || !validMatch ? true : false
+                }
+              >
+                Sign Up
+                <FontAwesomeIcon icon={faArrowRightLong} />
+              </button>
+            )}
           </form>
           <p>
             Already registered?

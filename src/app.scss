@@ -57,6 +57,9 @@ html {
   position: absolute;
   left: -9999px;
 }
+#confirmnote {
+  margin-bottom: 0;
+}
 .bg-animation {
   position: absolute;
   transform: rotate(45deg);
@@ -97,6 +100,7 @@ html {
 }
 .loading-horizontal {
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
   display: flex;
   width: 100%;
   justify-content: center;

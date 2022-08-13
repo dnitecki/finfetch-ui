@@ -32,6 +32,7 @@ export default function Login() {
       setPwd("");
       setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       if (!error?.response) {
         setErrMsg("No Server Response");
       } else if (error.response?.status === 403) {
@@ -95,14 +96,15 @@ export default function Login() {
               <span></span>
               <span></span>
             </div>
-          ) : null}
-          <button
-            className="form-button login-button"
-            disabled={!pwd || !email}
-          >
-            Sign In
-            <FontAwesomeIcon icon={faArrowRightLong} />
-          </button>
+          ) : (
+            <button
+              className="form-button login-button"
+              disabled={!pwd || !email}
+            >
+              Sign In
+              <FontAwesomeIcon icon={faArrowRightLong} />
+            </button>
+          )}
         </form>
       </div>
     </div>
