@@ -267,7 +267,7 @@ export default function Register() {
           <p>
             Already registered?
             <br />
-            <NavLink to="/api/login">
+            <NavLink to="/api/signin">
               <span className="line">Sign In</span>
             </NavLink>
           </p>
