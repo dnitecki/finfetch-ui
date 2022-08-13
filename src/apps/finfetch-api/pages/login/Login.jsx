@@ -15,17 +15,19 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const { setLoginStatus } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     try {
       await loginUser(email, pwd);
       navigate("/api/docs", { state: { from: location }, replace: true });
       setLoginStatus(true);
       setEmail("");
       setPwd("");
+      setIsLoading(false);
     } catch (error) {
       if (!error?.response) {
         setErrMsg("No Server Response");
@@ -80,6 +82,17 @@ export default function Login() {
             onChange={(e) => setPwd(e.target.value)}
             required
           />
+          {isLoading ? (
+            <div className="loading-horizontal">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          ) : null}
           <button
             className="form-button login-button"
             disabled={!pwd || !email}

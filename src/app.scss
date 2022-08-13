@@ -29,13 +29,13 @@ html {
   font-size: 14px;
 }
 .form-button {
-  padding: 0.5rem;
+  padding: 0.7rem;
   margin-top: 1rem;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 25px;
   border: none;
   color: #0b335b;
-  font-weight: 500;
+  font-weight: bold;
   cursor: pointer;
 }
 .form-button:disabled {
@@ -91,6 +91,47 @@ html {
   height: 400%;
   animation: diagonal-2 10s ease-in-out infinite alternate;
 }
+.loading-horizontal {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.loading-horizontal span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0.35rem;
+  background: #0982cc;
+  border-radius: 0.6rem;
+  animation: loading-horizontal 1s infinite alternate;
+}
+.loading-horizontal span:nth-of-type(2) {
+  background: #0982cc;
+  animation-delay: 0.2s;
+}
+.loading-horizontal span:nth-of-type(3) {
+  background: #0982cc;
+  animation-delay: 0.4s;
+}
+.loading-horizontal span:nth-of-type(4) {
+  background: #0982cc;
+  animation-delay: 0.6s;
+}
+.loading-horizontal span:nth-of-type(5) {
+  background: #0982cc;
+  animation-delay: 0.8s;
+}
+.loading-horizontal span:nth-of-type(6) {
+  background: #0982cc;
+  animation-delay: 1s;
+}
+.loading-horizontal span:nth-of-type(7) {
+  background: #0982cc;
+  animation-delay: 1.2s;
+}
 
 @keyframes diagonal-1 {
   0% {
@@ -108,5 +149,13 @@ html {
 
   100% {
     transform: translate(1110px, -1200px);
+  }
+}
+@keyframes loading-horizontal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

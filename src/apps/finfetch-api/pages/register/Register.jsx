@@ -34,6 +34,7 @@ export default function Register() {
 
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     emailRef.current.focus();
@@ -54,6 +55,7 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const v1 = EMAIL_REGEX.test(email);
     const v2 = PWD_REGEX.test(pwd);
     if (!v1 || !v2) {
@@ -66,7 +68,9 @@ export default function Register() {
       setEmail("");
       setPwd("");
       setMatchPwd("");
+      setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       if (!error?.response) {
         setErrMsg("No Server Response");
       } else if (error.response?.status === 500) {
@@ -236,7 +240,17 @@ export default function Register() {
               <FontAwesomeIcon icon={faInfoCircle} />
               Must match the first password input field.
             </p>
-
+            {isLoading ? (
+              <div className="loading-horizontal">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            ) : null}
             <button
               className="form-button"
               disabled={!validEmail || !validPwd || !validMatch ? true : false}
