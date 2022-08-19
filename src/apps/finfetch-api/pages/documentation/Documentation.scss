@@ -99,3 +99,19 @@
   font-weight: 500;
   color: rgb(30, 144, 255);
 }
+.documentation-register {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+}
+.documentation-register-icon {
+  display: flex;
+}
+.documentation-register-button {
+}
+.key-icon {
+  height: 5rem;
+  width: 100%;
+}

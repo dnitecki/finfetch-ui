@@ -4,6 +4,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Helmet } from "react-helmet";
 import { stockPrice, stockInfo, stockNews } from "./StockResponses";
+import key from "../../../../assets/Key-icon.png";
 
 export default function Documentation() {
   return (
@@ -21,6 +22,12 @@ export default function Documentation() {
         <div className="documentation-content-container">
           <div className="documentation-header"></div>
           <div className="documentation-content-container-scroll">
+            <div className="documentation-register">
+              <div className="documentation-register-icon">
+                <img className="key-icon" src={key} alt="FinFetch.io" />
+              </div>
+              <div className="documentation-register-button">yo</div>
+            </div>
             <div className="documentation-content-header">
               API Documentation
             </div>
