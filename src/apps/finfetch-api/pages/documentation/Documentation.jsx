@@ -23,17 +23,28 @@ export default function Documentation() {
         <div className="documentation-content-container">
           <div className="documentation-header"></div>
           <div className="documentation-content-container-scroll">
-            <div className="documentation-content-header">
+            <div className="documentation-register-header">
               FinFetch Stock API
             </div>
             <div className="documentation-register">
-              <div className="documentation-register-icon">
-                <img className="key-icon" src={key} alt="FinFetch.io" />
+              <div className="documentation-register-text">
+                A truly democratized stock data RESTful API.
+              </div>
+              <div className="documentation-register-text">
+                Access real-time financial data to power your projects for
+                <strong>&nbsp;FREE.</strong>
               </div>
               <div className="documentation-register-button">
-                <NavLink to="/api/register">
-                  <button className="register-button">Get free API key</button>
-                </NavLink>
+                <div id="register-button-container">
+                  <NavLink to="/api/register">
+                    <button className="register-button">
+                      Get free API key
+                    </button>
+                  </NavLink>
+                </div>
+                <div id="documentation-register-icon">
+                  <img className="key-icon" src={key} alt="FinFetch.io" />
+                </div>
               </div>
             </div>
             <div className="documentation-content-header">
