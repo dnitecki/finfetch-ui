@@ -102,16 +102,35 @@
 .documentation-register {
   display: flex;
   flex-direction: column;
-  row-gap: 0.2rem;
+  // column-gap: 1rem;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
 }
 .documentation-register-icon {
   display: flex;
 }
 .documentation-register-button {
+  display: flex;
 }
 .key-icon {
-  height: 5rem;
+  height: 3rem;
   width: 100%;
+}
+.register-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  font-size: 18px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #0b335b;
+  color: #fff;
+  font-weight: 400;
 }

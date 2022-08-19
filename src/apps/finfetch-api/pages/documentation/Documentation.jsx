@@ -1,6 +1,7 @@
 import React from "react";
 import "./Documentation.scss";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { NavLink } from "react-router-dom";
 import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Helmet } from "react-helmet";
 import { stockPrice, stockInfo, stockNews } from "./StockResponses";
@@ -22,11 +23,18 @@ export default function Documentation() {
         <div className="documentation-content-container">
           <div className="documentation-header"></div>
           <div className="documentation-content-container-scroll">
+            <div className="documentation-content-header">
+              FinFetch Stock API
+            </div>
             <div className="documentation-register">
               <div className="documentation-register-icon">
                 <img className="key-icon" src={key} alt="FinFetch.io" />
               </div>
-              <div className="documentation-register-button">yo</div>
+              <div className="documentation-register-button">
+                <NavLink to="/api/register">
+                  <button className="register-button">Get free API key</button>
+                </NavLink>
+              </div>
             </div>
             <div className="documentation-content-header">
               API Documentation
