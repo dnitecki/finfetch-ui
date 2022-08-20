@@ -16,6 +16,11 @@ export default function Documentation() {
         <title>FinFetch | API Docs</title>
       </Helmet>
       <div className="documentation-container">
+        <div className="documentation-top">
+          <a href="#page-top" className="top-button">
+            <FontAwesomeIcon icon={faArrowUp} />
+          </a>
+        </div>
         <div className="documentation-sidebar">
           <div className="documentation-header"></div>
           <div className="documentation-sidebar-container">
@@ -26,10 +31,10 @@ export default function Documentation() {
             </div>
           </div>
         </div>
-        <div id="page-top" className="documentation-content-container">
+        <div className="documentation-content-container">
           <div className="documentation-header"></div>
           <div className="documentation-content-container-scroll">
-            <div className="documentation-register">
+            <div id="page-top" className="documentation-register">
               <div className="documentation-register-header">
                 FinFetch Stock API
               </div>
@@ -121,11 +126,6 @@ export default function Documentation() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="documentation-top">
-          <a href="#page-top" className="top-button">
-            <FontAwesomeIcon icon={faArrowUp} />
-          </a>
         </div>
       </div>
     </div>
