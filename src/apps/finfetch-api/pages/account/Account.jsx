@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Account.scss";
 import { Helmet } from "react-helmet";
 import { getUserAccount } from "../../../../requests/Requests";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faRotate } from "@fortawesome/free-solid-svg-icons";
 
 export default function Account() {
   const [info, setInfo] = useState({});
@@ -26,14 +28,17 @@ export default function Account() {
       <div className="account-container">
         <div className="account-header-text">Account</div>
         <div className="account-info">
-          <div>ID:&nbsp;{info?.id}</div>
-          <div>Email:&nbsp;{info?.email}</div>
+          <div>
+            <FontAwesomeIcon icon={faUser} />
+            &nbsp;{info?.email}
+          </div>
           <div>Account Created:&nbsp;{info?.created}</div>
           <div className="account-button-container">
             <div className="account-buttons">
               <button className="account-api-docs-button">API Docs</button>
               <button className="account-api-regen-button">
                 Regenerate Key
+                <FontAwesomeIcon icon={faRotate} />
               </button>
             </div>
             <div className="account-logout">
