@@ -195,6 +195,7 @@
 }
 #register-button-container {
   grid-area: button;
+  z-index: 1000;
 }
 #register-button-container:hover + #documentation-register-icon {
   opacity: 1;
