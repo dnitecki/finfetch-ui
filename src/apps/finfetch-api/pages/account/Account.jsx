@@ -23,12 +23,23 @@ export default function Account() {
       <Helmet>
         <title>FinFetch | Account</title>
       </Helmet>
-      <div className="account-header"></div>
       <div className="account-container">
+        <div className="account-header-text">Account</div>
         <div className="account-info">
           <div>ID:&nbsp;{info?.id}</div>
           <div>Email:&nbsp;{info?.email}</div>
           <div>Account Created:&nbsp;{info?.created}</div>
+          <div className="account-button-container">
+            <div className="account-buttons">
+              <button className="account-api-docs-button">API Docs</button>
+              <button className="account-api-regen-button">
+                Regenerate Key
+              </button>
+            </div>
+            <div className="account-logout">
+              <button className="account-logout-button">Log Out</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

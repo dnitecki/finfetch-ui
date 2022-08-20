@@ -7,7 +7,7 @@ import UserContext from "../../../../context/Context";
 import { Helmet } from "react-helmet";
 import { loginUser } from "../../../../requests/Requests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightLong, faUser } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
 export default function Login() {
