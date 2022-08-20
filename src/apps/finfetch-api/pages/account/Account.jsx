@@ -3,7 +3,11 @@ import "./Account.scss";
 import { Helmet } from "react-helmet";
 import { getUserAccount } from "../../../../requests/Requests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faRotate } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faRotate,
+  faCircleCheck,
+} from "@fortawesome/free-solid-svg-icons";
 import Moment from "moment";
 
 export default function Account() {
@@ -34,7 +38,7 @@ export default function Account() {
             <FontAwesomeIcon icon={faUser} />
             {info?.email}
           </div>
-          <div>Account Created:&nbsp;{created}</div>
+          <div className="account-created">Account Created:&nbsp;{created}</div>
           <label className="key-label" htmlFor="key">
             API Key
           </label>
