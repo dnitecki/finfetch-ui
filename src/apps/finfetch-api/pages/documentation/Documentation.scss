@@ -24,10 +24,7 @@
 }
 .documentation-content-container-scroll {
   display: flex;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+
   height: 100%;
   width: 100%;
   flex-direction: column;
@@ -38,6 +35,12 @@
   display: flex;
   width: 100%;
   border-bottom: 1px solid #ccc;
+}
+.documentation-content-wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .documentation-text {
   display: flex;
@@ -84,6 +87,7 @@
   font-size: 30px;
   color: #0b335b;
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 .documentation-content-header-text {
   display: flex;
@@ -111,13 +115,21 @@
   flex-direction: column;
   width: 100%;
   border-bottom: 1px solid #ccc;
+  background-color: #ccc;
   padding-bottom: 2rem;
   column-gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .documentation-register-text {
   display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
   font-size: 18px;
   font-weight: 400;
+  opacity: 0.9;
 }
 .documentation-register-button {
   display: grid;
