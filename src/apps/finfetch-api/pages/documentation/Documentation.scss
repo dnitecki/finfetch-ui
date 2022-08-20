@@ -49,6 +49,11 @@
   width: 25rem;
   font-size: 18px;
 }
+.documentation-nav-container {
+  display: flex;
+  width: 100%;
+  column-gap: 1rem;
+}
 .documentation-code {
   display: flex;
   flex-direction: column;
@@ -80,7 +85,6 @@
 .documentation-nav {
   display: flex;
   flex-direction: column;
-  // justify-content: flex-start;
   row-gap: 2.5rem;
   text-decoration: none;
 }
@@ -112,17 +116,15 @@
 .documentation-nav-text {
   display: flex;
   height: fit-content;
-  width: 25rem;
+  width: fit-content;
   align-items: center;
   font-size: 20px;
   font-weight: 400;
-  column-gap: 1rem;
+  opacity: 0.9;
   color: black;
   transition: all ease 0.2s;
 }
 .documentation-nav-text:hover {
-  font-weight: 500;
-  transform: scale(1.05);
   padding-left: 1rem;
 }
 .request-type-get {

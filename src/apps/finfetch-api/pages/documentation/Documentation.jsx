@@ -34,24 +34,21 @@ export default function Documentation() {
             </div>
             <div className="documentation-nav">
               <a href="#stock-price">
-                <div className="documentation-text">
-                  <div className="documentation-nav-text">
-                    Stock Price <div className="request-type-get">GET</div>
-                  </div>
+                <div className="documentation-nav-container">
+                  <div className="documentation-nav-text">Stock Price</div>
+                  <div className="request-type-get">GET</div>
                 </div>
               </a>
               <a href="#stock-info">
-                <div className="documentation-text">
-                  <div className="documentation-nav-text">
-                    Stock Info <div className="request-type-get">GET</div>
-                  </div>
+                <div className="documentation-nav-container">
+                  <div className="documentation-nav-text">Stock Info</div>
+                  <div className="request-type-get">GET</div>
                 </div>
               </a>
               <a href="#stock-news">
-                <div className="documentation-text">
-                  <div className="documentation-nav-text">
-                    Stock News <div className="request-type-get">GET</div>
-                  </div>
+                <div className="documentation-nav-container">
+                  <div className="documentation-nav-text">Stock News</div>
+                  <div className="request-type-get">GET</div>
                 </div>
               </a>
             </div>
