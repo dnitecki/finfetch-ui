@@ -4,9 +4,12 @@ import { Helmet } from "react-helmet";
 import { getUserAccount } from "../../../../requests/Requests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faRotate } from "@fortawesome/free-solid-svg-icons";
+import Moment from "moment";
 
 export default function Account() {
   const [info, setInfo] = useState({});
+  const date = info?.created;
+  const created = Moment(date).format("MMM D, YYYY");
 
   useEffect(() => {
     const updateUserAccount = async () => {
@@ -32,7 +35,7 @@ export default function Account() {
             <FontAwesomeIcon icon={faUser} />
             {info?.email}
           </div>
-          <div>Account Created:&nbsp;{info?.created}</div>
+          <div>Account Created:&nbsp;{created}</div>
           <label className="key-label" htmlFor="key">
             API Key
           </label>
