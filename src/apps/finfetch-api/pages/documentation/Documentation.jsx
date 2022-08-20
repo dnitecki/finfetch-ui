@@ -6,6 +6,7 @@ import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Helmet } from "react-helmet";
 import { stockPrice, stockInfo, stockNews } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
+import logo from "../../../../assets/FinFetch-icon-text-secondary.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -24,6 +25,13 @@ export default function Documentation() {
         <div className="documentation-sidebar">
           <div className="documentation-header"></div>
           <div className="documentation-sidebar-container">
+            <div className="documentation-nav-logo-wrapper">
+              <img
+                className="documentation-nav-logo"
+                src={logo}
+                alt="FinFetch.io"
+              ></img>
+            </div>
             <div className="documentation-nav">
               <a href="#stock-price">
                 <div className="documentation-text">

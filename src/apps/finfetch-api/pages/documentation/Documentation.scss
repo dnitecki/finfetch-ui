@@ -1,5 +1,5 @@
 .documentation {
-  background-color: #ececec;
+  background-color: #f2f3f5;
   position: relative;
   height: 100%;
   width: 100vw;
@@ -71,6 +71,7 @@
   height: 100vh;
   width: 20%;
   background-color: #fff;
+  border-right: 1px solid #ccc;
 }
 .documentation-sidebar-container {
   padding: 2rem;
@@ -79,7 +80,7 @@
 .documentation-nav {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 2.5rem;
   text-decoration: none;
 }
 .documentation-content-header {
@@ -112,13 +113,13 @@
   height: fit-content;
   width: 25rem;
   align-items: center;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
   column-gap: 1rem;
   color: black;
 }
 .documentation-nav-text:hover {
-  font-weight: bold;
+  font-weight: 500;
 }
 .request-type-get {
   display: flex;
@@ -238,4 +239,17 @@
   border-radius: 10%;
   padding: 0.25rem;
   background-color: rgba(0, 0, 0, 0.29);
+}
+.documentation-nav-logo-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.documentation-nav-logo {
+  display: flex;
+  width: 10rem;
+  height: 100%;
 }
