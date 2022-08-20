@@ -25,9 +25,27 @@ export default function Documentation() {
           <div className="documentation-header"></div>
           <div className="documentation-sidebar-container">
             <div className="documentation-nav">
-              <a href="#stock-price">One</a>
-              <a href="#stock-info">Two</a>
-              <a href="#stock-news">Three</a>
+              <a href="#stock-price">
+                <div className="documentation-text">
+                  <div className="documentation-nav-text">
+                    Stock Price <div className="request-type-get">GET</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#stock-info">
+                <div className="documentation-text">
+                  <div className="documentation-nav-text">
+                    Stock Info <div className="request-type-get">GET</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#stock-news">
+                <div className="documentation-text">
+                  <div className="documentation-nav-text">
+                    Stock News <div className="request-type-get">GET</div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
