@@ -6,7 +6,6 @@ import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Helmet } from "react-helmet";
 import { stockPrice, stockInfo, stockNews } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
-import banner from "../../../../assets/API-banner.png";
 
 export default function Documentation() {
   return (
@@ -19,6 +18,11 @@ export default function Documentation() {
           <div className="documentation-header"></div>
           <div className="documentation-sidebar-container">
             Sidebar Navigation
+            <div className="documentation-nav">
+              <a href="#stock-price">One</a>
+              <a href="#stock-info">Two</a>
+              <a href="#stock-news">Three</a>
+            </div>
           </div>
         </div>
         <div className="documentation-content-container">
@@ -32,7 +36,9 @@ export default function Documentation() {
                 <div>A truly democratized stock data RESTful API.</div>
                 <div>
                   Access real-time financial data to power your projects for
-                  <strong>&nbsp;FREE.</strong>
+                  <strong>
+                    &nbsp;<u>FREE.</u>
+                  </strong>
                 </div>
               </div>
               <div className="documentation-register-button">
@@ -52,7 +58,7 @@ export default function Documentation() {
               <div className="documentation-content-header">
                 API Documentation
               </div>
-              <div className="documentation-content">
+              <div id="stock-price" className="documentation-content">
                 <div className="documentation-text">
                   <div className="documentation-content-header-text">
                     Stock Price <div className="request-type-get">GET</div>
@@ -72,7 +78,7 @@ export default function Documentation() {
                   </SyntaxHighlighter>
                 </div>
               </div>
-              <div className="documentation-content">
+              <div id="stock-info" className="documentation-content">
                 <div className="documentation-text">
                   <div className="documentation-content-header-text">
                     Stock Info <div className="request-type-get">GET</div>
@@ -92,7 +98,7 @@ export default function Documentation() {
                   </SyntaxHighlighter>
                 </div>
               </div>
-              <div className="documentation-content">
+              <div id="stock-news" className="documentation-content">
                 <div className="documentation-text">
                   <div className="documentation-content-header-text">
                     Stock News <div className="request-type-get">GET</div>

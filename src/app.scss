@@ -19,6 +19,10 @@ body,
 html {
   margin: 0;
   overflow: overlay;
+  scroll-behavior: smooth !important;
+}
+html:focus-within {
+  scroll-behavior: smooth;
 }
 .form-input {
   border: none;
