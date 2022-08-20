@@ -6,6 +6,8 @@ import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Helmet } from "react-helmet";
 import { stockPrice, stockInfo, stockNews } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function Documentation() {
   return (
@@ -17,7 +19,6 @@ export default function Documentation() {
         <div className="documentation-sidebar">
           <div className="documentation-header"></div>
           <div className="documentation-sidebar-container">
-            Sidebar Navigation
             <div className="documentation-nav">
               <a href="#stock-price">One</a>
               <a href="#stock-info">Two</a>
@@ -25,7 +26,7 @@ export default function Documentation() {
             </div>
           </div>
         </div>
-        <div className="documentation-content-container">
+        <div id="page-top" className="documentation-content-container">
           <div className="documentation-header"></div>
           <div className="documentation-content-container-scroll">
             <div className="documentation-register">
@@ -120,6 +121,11 @@ export default function Documentation() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="documentation-top">
+          <a href="#page-top" className="top-button">
+            <FontAwesomeIcon icon={faArrowUp} />
+          </a>
         </div>
       </div>
     </div>
