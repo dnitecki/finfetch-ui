@@ -85,8 +85,9 @@
 .documentation-register-header {
   display: flex;
   font-size: 30px;
-  color: #0b335b;
+  color: #fff;
   font-weight: bold;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 .documentation-content-header-text {
@@ -114,14 +115,30 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-bottom: 1px solid #ccc;
-  background-color: #ccc;
+  height: 100%;
   padding-bottom: 2rem;
   column-gap: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  background: url(../../../../assets/API-banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.documentation-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 .documentation-register-text {
   display: flex;
@@ -130,6 +147,7 @@
   font-size: 18px;
   font-weight: 400;
   opacity: 0.9;
+  color: #fff;
 }
 .documentation-register-button {
   display: grid;
@@ -178,8 +196,8 @@
   border-radius: 25px;
   border: none;
   cursor: pointer;
-  background-color: #0b335b;
-  color: #fff;
+  background-color: #fff;
+  color: #0b335b;
   font-weight: 400;
   z-index: 1000;
 }

@@ -6,6 +6,7 @@ import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Helmet } from "react-helmet";
 import { stockPrice, stockInfo, stockNews } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
+import banner from "../../../../assets/API-banner.png";
 
 export default function Documentation() {
   return (
@@ -46,6 +47,11 @@ export default function Documentation() {
                   <img className="key-icon" src={key} alt="FinFetch.io" />
                 </div>
               </div>
+              {/* <img
+                src={banner}
+                alt="banner"
+                className="documentation-banner"
+              ></img> */}
             </div>
             <div className="documentation-content-wrapper">
               <div className="documentation-content-header">
