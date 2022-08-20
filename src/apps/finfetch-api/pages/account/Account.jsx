@@ -3,12 +3,9 @@ import "./Account.scss";
 import { Helmet } from "react-helmet";
 import { getUserAccount } from "../../../../requests/Requests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faRotate,
-  faCircleCheck,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUser, faRotate } from "@fortawesome/free-solid-svg-icons";
 import Moment from "moment";
+import { NavLink } from "react-router-dom";
 
 export default function Account() {
   const [info, setInfo] = useState({});
@@ -53,10 +50,12 @@ export default function Account() {
           </div>
           <div className="account-button-container">
             <div className="account-buttons">
-              <button className="account-api-docs-button">API Docs</button>
+              <NavLink to="/api/docs">
+                <button className="account-api-docs-button">API Docs</button>
+              </NavLink>
               <button className="account-api-regen-button">
                 Regenerate Key
-                <FontAwesomeIcon icon={faRotate} />
+                <FontAwesomeIcon className="rotate-icon" icon={faRotate} />
               </button>
             </div>
             <div className="account-logout">
