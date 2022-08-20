@@ -28,8 +28,12 @@ export default function Account() {
       <Helmet>
         <title>FinFetch | Account</title>
       </Helmet>
+      <div className="bg-animation">
+        <div className="bg-layer-3"></div>
+        <div className="bg-layer-4"></div>
+      </div>
       <div className="account-container">
-        <div className="account-header-text">Account</div>
+        <div className="account-header-text">Account Information</div>
         <div className="account-info">
           <div className="account-email">
             <FontAwesomeIcon icon={faUser} />
@@ -46,6 +50,7 @@ export default function Account() {
               type="text"
               readOnly="true"
               value={info?.key}
+              placeholder="API Key"
             />
           </div>
           <div className="account-button-container">
