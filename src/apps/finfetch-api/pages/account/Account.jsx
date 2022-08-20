@@ -8,8 +8,7 @@ import Moment from "moment";
 
 export default function Account() {
   const [info, setInfo] = useState({});
-  const date = info?.created;
-  const created = Moment(date).format("MMM D, YYYY");
+  const created = Moment(info?.created).format("MMM D, YYYY");
 
   useEffect(() => {
     const updateUserAccount = async () => {
