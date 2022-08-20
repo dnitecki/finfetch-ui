@@ -47,11 +47,6 @@ export default function Documentation() {
                   <img className="key-icon" src={key} alt="FinFetch.io" />
                 </div>
               </div>
-              {/* <img
-                src={banner}
-                alt="banner"
-                className="documentation-banner"
-              ></img> */}
             </div>
             <div className="documentation-content-wrapper">
               <div className="documentation-content-header">
