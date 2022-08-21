@@ -59,7 +59,7 @@ export default function Documentation() {
           <div className="documentation-content-container-scroll">
             <div id="page-top" className="documentation-register">
               <div className="documentation-register-header">
-                FinFetch Stock API
+                FinFetch <strong>Stock API</strong>
               </div>
               <div className="documentation-register-text">
                 <div>A truly democratized stock data RESTful API.</div>

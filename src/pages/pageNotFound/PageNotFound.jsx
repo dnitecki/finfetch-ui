@@ -15,7 +15,7 @@ export default function PageNotFound() {
       </div>
       <div className="pageNotFound-container">
         <div className="pageNotFound-header">404 :(</div>
-        <div className="pageNotFound-subHeader">Oops, page not found.</div>
+        <div className="pageNotFound-subHeader">Page not found.</div>
         <div className="pageNotFound-text">
           You've wandered off too far or I've broken something.
         </div>

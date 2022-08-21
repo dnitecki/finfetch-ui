@@ -100,7 +100,7 @@
   display: flex;
   font-size: 30px;
   color: #fff;
-  font-weight: bold;
+  column-gap: 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -152,6 +152,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
   background: url(../../../../assets/API-banner.png);
+  background-color: #0b335b;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
