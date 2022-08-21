@@ -158,7 +158,7 @@
   opacity: 0.8;
 }
 .account-api-regen-button:hover .rotate-icon {
-  animation: spin-animation 0.7s ease-in-out infinite;
+  animation: spin-animation 1s ease-in-out infinite;
   animation-timing-function: linear;
 }
 @keyframes spin-animation {
