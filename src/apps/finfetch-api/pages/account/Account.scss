@@ -164,6 +164,8 @@
   animation-timing-function: linear;
 }
 .account-copy {
+  border: 2px solid #ccc;
+  background: #f2f3f5;
   height: 100%;
   width: 3rem;
   padding: 0.5rem;
@@ -177,6 +179,7 @@
 }
 .account-copy:hover {
   cursor: pointer;
+  background: #e4e6ea;
 }
 @keyframes spin-animation {
   0% {

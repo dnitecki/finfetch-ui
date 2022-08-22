@@ -10,6 +10,8 @@ import { NavLink } from "react-router-dom";
 
 export default function Account() {
   const [info, setInfo] = useState({});
+  const [text, setText] = useState("Copy this text to clipboard");
+  const [isCopied, setIsCopied] = useState(false);
   const created = Moment(info?.created).format("MMM D, YYYY");
 
   useEffect(() => {
@@ -24,6 +26,14 @@ export default function Account() {
     };
     updateUserAccount();
   }, []);
+
+  const copyClick = () => {
+    navigator.clipboard.writeText(text);
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1000);
+  };
   return (
     <div className="account">
       <Helmet>
@@ -52,12 +62,15 @@ export default function Account() {
               readOnly="true"
               value={info?.key}
               placeholder="API Key"
+              onChange={({ target }) => {
+                setText(target.value);
+              }}
             />
-            <div className="account-copy">
+            <button className="account-copy">
               <div className="account-copy-icon">
                 <FontAwesomeIcon icon={faCopy} />
               </div>
-            </div>
+            </button>
           </div>
           <div className="account-button-container">
             <div className="account-buttons">
