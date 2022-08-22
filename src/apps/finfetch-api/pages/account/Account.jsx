@@ -33,7 +33,7 @@ export default function Account() {
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
-    }, 1000);
+    }, 2000);
   };
   return (
     <div className="account">
@@ -86,10 +86,17 @@ export default function Account() {
           </div>
         </div>
       </div>
-      <div className="account-copy-success">
-        <FontAwesomeIcon icon={faCheck} />
-        <div className="account-copy-success-text">API Key Copied!</div>
-      </div>
+      {isCopied ? (
+        <div className="account-copy-success success-on">
+          <FontAwesomeIcon icon={faCheck} />
+          <div className="account-copy-success-text">API Key Copied!</div>
+        </div>
+      ) : (
+        <div className="account-copy-success success-off">
+          <FontAwesomeIcon icon={faCheck} />
+          <div className="account-copy-success-text">API Key Copied!</div>
+        </div>
+      )}
     </div>
   );
 }
