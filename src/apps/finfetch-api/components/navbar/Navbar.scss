@@ -48,7 +48,7 @@
   .api-nav-button {
     border-bottom: 3px solid #ffffff;
     opacity: 1;
-    transition: all ease 0.25s;
+    transition: all ease 0.2s;
     padding-top: 3px;
   }
 }
@@ -64,6 +64,7 @@
   width: 7rem;
   opacity: 0.8;
   border-bottom: 3px solid transparent;
+  transition: all ease 0.2s;
 }
 .api-nav-button:hover {
   opacity: 1;
@@ -80,6 +81,7 @@
   width: 6rem;
   opacity: 0.8;
   border-bottom: 3px solid transparent;
+  transition: all ease 0.2s;
 }
 .api-logout-button:hover {
   cursor: pointer;
