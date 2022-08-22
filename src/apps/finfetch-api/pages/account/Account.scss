@@ -131,8 +131,9 @@
   font-size: 14px;
 }
 .account-key {
-  padding: 0.5rem;
+  display: flex;
   width: fit-content;
+  align-items: center;
   background-color: #fff;
   box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.179);
 }
@@ -142,6 +143,7 @@
   border: none;
   font-size: 16px;
   padding: 0.5rem;
+  margin: 0.5rem;
 }
 .key-label {
   margin-top: 2.2rem;
@@ -160,6 +162,21 @@
 .account-api-regen-button:hover .rotate-icon {
   animation: spin-animation 1s ease-in-out infinite;
   animation-timing-function: linear;
+}
+.account-copy {
+  height: 100%;
+  width: 3rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account-copy-icon {
+  font-size: 22px;
+  color: #0b335b;
+}
+.account-copy:hover {
+  cursor: pointer;
 }
 @keyframes spin-animation {
   0% {

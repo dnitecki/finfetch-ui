@@ -3,7 +3,8 @@ import "./Account.scss";
 import { Helmet } from "react-helmet";
 import { getUserAccount } from "../../../../requests/Requests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faRotate } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faRotate, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
 import Moment from "moment";
 import { NavLink } from "react-router-dom";
 
@@ -52,6 +53,11 @@ export default function Account() {
               value={info?.key}
               placeholder="API Key"
             />
+            <div className="account-copy">
+              <div className="account-copy-icon">
+                <FontAwesomeIcon icon={faCopy} />
+              </div>
+            </div>
           </div>
           <div className="account-button-container">
             <div className="account-buttons">
