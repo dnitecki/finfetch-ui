@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Account() {
   const [info, setInfo] = useState({});
-  const [text, setText] = useState("Copy this text to clipboard");
+  const [text, setText] = useState("");
   const [isCopied, setIsCopied] = useState(false);
   const created = Moment(info?.created).format("MMM D, YYYY");
 
@@ -28,6 +28,7 @@ export default function Account() {
   }, []);
 
   const copyClick = () => {
+    setText(info?.key);
     navigator.clipboard.writeText(text);
     setIsCopied(true);
     setTimeout(() => {
@@ -62,11 +63,8 @@ export default function Account() {
               readOnly="true"
               value={info?.key}
               placeholder="API Key"
-              onChange={({ target }) => {
-                setText(target.value);
-              }}
             />
-            <button className="account-copy">
+            <button className="account-copy" onClick={copyClick}>
               <div className="account-copy-icon">
                 <FontAwesomeIcon icon={faCopy} />
               </div>
@@ -87,6 +85,10 @@ export default function Account() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="account-copy-success">
+        <FontAwesomeIcon icon={faCheck} />
+        <div className="account-copy-success-text">API Key Copied!</div>
       </div>
     </div>
   );
