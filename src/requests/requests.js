@@ -15,7 +15,7 @@ export const loginUser = async (email, pwd) => {
       "Content-Type": "application/json",
       // "Access-Control-Allow-Credentials": "*",
     },
-    withCredentials: true,
+    // withCredentials: true,
   });
 };
 
