@@ -89,17 +89,16 @@ export default function Account() {
           </div>
         </div>
       </div>
-      {isCopied ? (
-        <div className="account-copy-success success-on">
-          <FontAwesomeIcon icon={faCheck} />
-          <div className="account-copy-success-text">API Key Copied!</div>
-        </div>
-      ) : (
-        <div className="account-copy-success success-off">
-          <FontAwesomeIcon icon={faCheck} />
-          <div className="account-copy-success-text">API Key Copied!</div>
-        </div>
-      )}
+      <div
+        className={
+          isCopied
+            ? "account-copy-success success-on"
+            : "account-copy-success success-off"
+        }
+      >
+        <FontAwesomeIcon icon={faCheck} />
+        <div className="account-copy-success-text">API Key Copied!</div>
+      </div>
     </div>
   );
 }
