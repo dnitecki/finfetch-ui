@@ -12,7 +12,10 @@ export default function Account() {
   const [info, setInfo] = useState({});
   const [text, setText] = useState("");
   const [isCopied, setIsCopied] = useState(false);
-  const created = Moment(info?.created).format("MMM D, YYYY");
+  const created =
+    info.created === undefined
+      ? ""
+      : Moment(info.created).format("MMM D, YYYY");
 
   useEffect(() => {
     const updateUserAccount = async () => {
