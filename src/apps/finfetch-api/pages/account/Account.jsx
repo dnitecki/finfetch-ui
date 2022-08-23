@@ -63,7 +63,6 @@ export default function Account() {
               className="account-key-input"
               id="key"
               type="text"
-              readOnly="true"
               value={info?.key}
               placeholder="API Key"
             />
