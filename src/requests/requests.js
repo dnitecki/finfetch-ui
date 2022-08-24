@@ -3,10 +3,11 @@ const basePath = "http://127.0.0.1:8000";
 
 export const getCsrf = async () => {
   const url = `${basePath}/api/csrf/`;
-  fetch(url, { credentials: "include" }).then((res) => {
-    return res;
+  const response = await fetch(url, { credentials: "include" }).then((res) => {
+    let csrfToken = res.headers.get("X-CSRFToken");
+    return csrfToken;
   });
-
+  return response;
   // const response = await axios.get(url, {
   //   headers: {
   //     "Content-Type": "application/json",
