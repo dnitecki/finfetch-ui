@@ -15,25 +15,25 @@ export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [csrfToken, setCsrf] = useState("");
+  // const [csrfToken, setCsrf] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { setLoginStatus } = useContext(UserContext);
 
-  useEffect(() => {
-    const updateCsrf = async () => {
-      try {
-        const result = await getCsrf();
-        setCsrf(result);
-      } catch (error) {
-        setCsrf("");
-        console.log(error);
-      }
-    };
-    updateCsrf();
-  }, []);
+  // useEffect(() => {
+  //   const updateCsrf = async () => {
+  //     try {
+  //       const result = await getCsrf();
+  //       setCsrf(result);
+  //     } catch (error) {
+  //       setCsrf("");
+  //       console.log(error);
+  //     }
+  //   };
+  //   updateCsrf();
+  // }, []);
   // console.log(csrfToken);
 
   const handleSubmit = async (e) => {
@@ -41,7 +41,7 @@ export default function Login() {
     setIsLoading(true);
     setErrMsg("");
     try {
-      await loginUser(email, pwd, csrfToken);
+      await loginUser(email, pwd);
       setLoginStatus(true);
       setEmail("");
       setPwd("");
