@@ -113,8 +113,6 @@ export default function Register() {
         <div className="register-container">
           <div className="register-header">
             <img className="register-icon" src={icon} alt="FinFetch.io" />
-
-            <div className="register-header-text">Register</div>
           </div>
           <p
             ref={errRef}

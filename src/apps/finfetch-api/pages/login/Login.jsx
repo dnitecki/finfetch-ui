@@ -56,7 +56,6 @@ export default function Login() {
       <div className="login-container">
         <div className="login-header">
           <img className="login-icon" src={icon} alt="FinFetch.io" />
-          <div className="login-header-text">Sign In</div>
         </div>
         <p
           ref={errRef}
