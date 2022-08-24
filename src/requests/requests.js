@@ -8,7 +8,6 @@ export const getCsrf = async () => {
       "Content-Type": "application/json",
     },
   });
-  // let csrfToken = response.headers.get("x-csrftoken");
   return response.headers["x-csrftoken"];
 };
 

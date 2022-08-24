@@ -15,7 +15,7 @@ export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // const [csrfToken, setCsrf] = useState("");
+  const [csrfToken, setCsrf] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
@@ -27,9 +27,9 @@ export default function Login() {
       try {
         const result = await getCsrf();
         console.log(result);
-        // setCsrf(result);
+        setCsrf(result);
       } catch (error) {
-        // setCsrf("");
+        setCsrf("");
         console.log(error);
       }
     };
