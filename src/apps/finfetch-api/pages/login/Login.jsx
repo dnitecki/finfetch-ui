@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
-import icon from "../../../../assets/FinFetch-icon.png";
+import icon from "../../../../assets/FinFetch-icon-text.png";
 import { useState } from "react";
 import UserContext from "../../../../context/Context";
 import { Helmet } from "react-helmet";
