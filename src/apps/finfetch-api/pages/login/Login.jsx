@@ -26,7 +26,6 @@ export default function Login() {
     const updateCsrf = async () => {
       try {
         const result = await getCsrf();
-        console.log(result);
         setCsrf(result);
       } catch (error) {
         setCsrf("");
@@ -35,18 +34,19 @@ export default function Login() {
     };
     updateCsrf();
   }, []);
+  // console.log(csrfToken);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setErrMsg("");
     try {
-      await loginUser(email, pwd);
-      navigate("/api/account", { state: { from: location }, replace: true });
+      await loginUser(email, pwd, csrfToken);
       setLoginStatus(true);
       setEmail("");
       setPwd("");
       setIsLoading(false);
+      // navigate("/api/account", { state: { from: location }, replace: true });
     } catch (error) {
       setIsLoading(false);
       if (!error?.response) {
