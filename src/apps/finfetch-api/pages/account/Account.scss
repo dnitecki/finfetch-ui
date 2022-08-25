@@ -183,6 +183,10 @@
   cursor: pointer;
   background: #e4e6ea;
 }
+.account-alerts {
+  display: flex;
+  flex-direction: column;
+}
 .account-copy-success {
   display: flex;
   align-items: center;
@@ -200,7 +204,24 @@
   left: 50%;
   transition: all ease 0.4s;
 }
-.account-copy-success-text {
+.account-regenerate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: fixed;
+  height: 4rem;
+  width: fit-content;
+  column-gap: 0.5rem;
+  border-radius: 10px;
+  background: rgba(255, 0, 0, 0.9);
+  color: #fff;
+  font-size: 20px;
+  bottom: 0;
+  left: 50%;
+  transition: all ease 0.4s;
+}
+.account-success-text {
   font-size: 16px;
 }
 .success-off {

@@ -3,7 +3,12 @@ import "./Account.scss";
 import { Helmet } from "react-helmet";
 import { getUserAccount } from "../../../../requests/Requests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faRotate, faCheck } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faRotate,
+  faCheck,
+  faCircleExclamation,
+} from "@fortawesome/free-solid-svg-icons";
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
 import Moment from "moment";
 import { NavLink } from "react-router-dom";
@@ -12,6 +17,7 @@ export default function Account() {
   const [info, setInfo] = useState({});
   const [text, setText] = useState("");
   const [isCopied, setIsCopied] = useState(false);
+  const [regen, setRegen] = useState(false);
   const created =
     info.created === undefined
       ? ""
@@ -38,6 +44,14 @@ export default function Account() {
       setIsCopied(false);
     }, 2000);
   };
+
+  const regenClick = () => {
+    setRegen(true);
+    setTimeout(() => {
+      setRegen(false);
+    }, 2000);
+  };
+
   return (
     <div className="account">
       <Helmet>
@@ -77,7 +91,7 @@ export default function Account() {
               <NavLink to="/api/docs">
                 <button className="account-api-docs-button">API Docs</button>
               </NavLink>
-              <button className="account-api-regen-button">
+              <button className="account-api-regen-button" onClick={regenClick}>
                 Regenerate Key
                 <FontAwesomeIcon className="rotate-icon" icon={faRotate} />
               </button>
@@ -88,15 +102,27 @@ export default function Account() {
           </div>
         </div>
       </div>
-      <div
-        className={
-          isCopied
-            ? "account-copy-success success-on"
-            : "account-copy-success success-off"
-        }
-      >
-        <FontAwesomeIcon icon={faCheck} />
-        <div className="account-copy-success-text">API Key Copied!</div>
+      <div className="account-alerts">
+        <div
+          className={
+            isCopied
+              ? "account-copy-success success-on"
+              : "account-copy-success success-off"
+          }
+        >
+          <FontAwesomeIcon icon={faCheck} />
+          <div className="account-success-text">API Key Copied!</div>
+        </div>
+        <div
+          className={
+            regen
+              ? "account-regenerate success-on"
+              : "account-regenerate success-off"
+          }
+        >
+          <FontAwesomeIcon icon={faCircleExclamation} />
+          <div className="account-success-text">Not yet available</div>
+        </div>
       </div>
     </div>
   );
