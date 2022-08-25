@@ -102,28 +102,28 @@ export default function Account() {
           </div>
         </div>
       </div>
-      <div className="account-alerts">
-        <div
-          className={
-            isCopied
-              ? "account-copy-success success-on"
-              : "account-copy-success success-off"
-          }
-        >
-          <FontAwesomeIcon icon={faCheck} />
-          <div className="account-success-text">API Key Copied!</div>
-        </div>
-        <div
-          className={
-            regen
-              ? "account-regenerate success-on"
-              : "account-regenerate success-off"
-          }
-        >
-          <FontAwesomeIcon icon={faCircleExclamation} />
-          <div className="account-success-text">Not yet available</div>
-        </div>
+      {/* <div className="account-alerts"> */}
+      <div
+        className={
+          isCopied
+            ? "account-copy-success success-on"
+            : "account-copy-success success-off"
+        }
+      >
+        <FontAwesomeIcon icon={faCheck} />
+        <div className="account-success-text">API Key Copied!</div>
       </div>
+      <div
+        className={
+          regen
+            ? "account-regenerate success-on"
+            : "account-regenerate success-off"
+        }
+      >
+        <FontAwesomeIcon icon={faCircleExclamation} />
+        <div className="account-success-text">Not yet available</div>
+      </div>
+      {/* </div> */}
     </div>
   );
 }
