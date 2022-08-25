@@ -40,6 +40,7 @@ export default function Account() {
     setText(info?.key);
     navigator.clipboard.writeText(text);
     setIsCopied(true);
+    setRegen(false);
     setTimeout(() => {
       setIsCopied(false);
     }, 2000);
@@ -47,6 +48,7 @@ export default function Account() {
 
   const regenClick = () => {
     setRegen(true);
+    setIsCopied(false);
     setTimeout(() => {
       setRegen(false);
     }, 2000);
@@ -102,7 +104,6 @@ export default function Account() {
           </div>
         </div>
       </div>
-      {/* <div className="account-alerts"> */}
       <div
         className={
           isCopied
@@ -123,7 +124,6 @@ export default function Account() {
         <FontAwesomeIcon icon={faCircleExclamation} />
         <div className="account-success-text">Not yet available</div>
       </div>
-      {/* </div> */}
     </div>
   );
 }
