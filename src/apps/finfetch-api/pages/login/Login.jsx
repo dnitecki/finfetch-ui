@@ -46,7 +46,7 @@ export default function Login() {
       setEmail("");
       setPwd("");
       setIsLoading(false);
-      // navigate("/api/account", { state: { from: location }, replace: true });
+      navigate("/api/account", { state: { from: location }, replace: true });
     } catch (error) {
       setIsLoading(false);
       if (!error?.response) {
