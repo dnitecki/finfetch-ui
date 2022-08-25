@@ -1,11 +1,11 @@
-import React, { useContext, useRef, useEffect } from "react";
+import React, { useContext, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon-text.png";
 import { useState } from "react";
 import UserContext from "../../../../context/Context";
 import { Helmet } from "react-helmet";
-import { getCsrf, loginUser } from "../../../../requests/Requests";
+import { loginUser } from "../../../../requests/Requests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
@@ -15,26 +15,11 @@ export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // const [csrfToken, setCsrf] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { setLoginStatus } = useContext(UserContext);
-
-  // useEffect(() => {
-  //   const updateCsrf = async () => {
-  //     try {
-  //       const result = await getCsrf();
-  //       setCsrf(result);
-  //     } catch (error) {
-  //       setCsrf("");
-  //       console.log(error);
-  //     }
-  //   };
-  //   updateCsrf();
-  // }, []);
-  // console.log(csrfToken);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
