@@ -15,13 +15,13 @@ export default function Navbar() {
     const response = await axios.post(LOGOUT_URL, {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials": "*",
+        // "Access-Control-Allow-Credentials": "*",
       },
       withCredentials: true,
     });
     console.log(response?.data);
-    navigate("/api/docs", { state: { from: location }, replace: true });
-    setLoginStatus(false);
+    // navigate("/api/docs", { state: { from: location }, replace: true });
+    // setLoginStatus(false);
   };
 
   return (
