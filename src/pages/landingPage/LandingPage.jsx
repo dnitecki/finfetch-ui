@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LandingPage.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import StockTicker from "../../components/stockTicker/StockTicker";
 import icon from "../../assets/FinFetch-icon.png";
 import iconText from "../../assets/FinFetch-icon-text.png";
 import apiIcon from "../../assets/API-icon.png";
+import apiIcon2 from "../../assets/API-icon-alternate.png";
 import dashIcon from "../../assets/Dashboard-icon.png";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,11 +30,34 @@ const resetBg = () => {
   document.getElementById("landingPage-main").style.display = "flex";
 };
 export default function LandingPage() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [apiNavigate, setApiNavigate] = useState(false);
+
+  const apiClick = () => {
+    setApiNavigate(true);
+    setTimeout(() => {
+      setApiNavigate(false);
+      navigate("/api/docs", { state: { from: location }, replace: true });
+    }, 1500);
+  };
+
   return (
     <div id="landingPage" className="landingPage">
       <Helmet>
         <title>FinFetch.io</title>
       </Helmet>
+      {apiNavigate ? (
+        <div className="landingPage-api-screen screen-on">
+          <img
+            className="landingPage-screen-icon-api"
+            src={apiIcon2}
+            alt="FinFetch.io"
+          />
+        </div>
+      ) : (
+        <div className="landingPage-api-screen screen-off"></div>
+      )}
       <div className="bg-animation">
         <div className="bg-layer-1"></div>
         <div className="bg-layer-2"></div>
@@ -101,7 +125,11 @@ export default function LandingPage() {
                 </div>
               </div>
             </NavLink>
-            <NavLink to="api/docs" onMouseOver={changeBgApi}>
+            <button
+              className="landingPage-button"
+              onClick={apiClick}
+              onMouseOver={changeBgApi}
+            >
               <div className="landingPage-card">
                 <div className="landingPage-circle-api">
                   <div className="landingPage-app-name">
@@ -124,7 +152,7 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-            </NavLink>
+            </button>
           </div>
         </div>
       </div>
