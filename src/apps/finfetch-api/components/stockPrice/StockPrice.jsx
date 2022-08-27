@@ -6,7 +6,7 @@ import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 export default function StockPrice() {
   return (
     <>
-      <div className="documentation-tryitout-header">Try It Out</div>
+      <div className="documentation-tryitout-header">Try It Out!</div>
       <div className="documentation-tryitout-content">
         <div className="documentation-tryitout-form">
           <form className="tryitout-form">
