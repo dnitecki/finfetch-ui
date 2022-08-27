@@ -104,7 +104,7 @@ export default function Register() {
               Please verify your account by clicking the activation link that
               has been send to your email.
             </p>
-            <NavLink to="/api/login">
+            <NavLink to="/api/signin">
               <p className="line">Sign In</p>
             </NavLink>
           </div>
