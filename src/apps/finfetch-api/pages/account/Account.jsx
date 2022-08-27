@@ -112,7 +112,7 @@ export default function Account() {
         }
       >
         <FontAwesomeIcon icon={faCheck} />
-        <div className="account-success-text">API Key Copied!</div>
+        <div className="success-text">API Key Copied!</div>
       </div>
       <div
         className={
@@ -122,7 +122,7 @@ export default function Account() {
         }
       >
         <FontAwesomeIcon icon={faCircleExclamation} />
-        <div className="account-success-text">Not yet available</div>
+        <div className="success-text">Not yet available</div>
       </div>
     </div>
   );

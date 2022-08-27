@@ -1,22 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.scss";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
 import UserContext from "../../../../context/Context";
 import { logoutUser } from "../../../../requests/Requests";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [logout, setLogout] = useState(false);
   const { loginStatus, setLoginStatus } = useContext(UserContext);
 
-  const logOut = async () => {
+  const logoutClick = async () => {
     try {
       await logoutUser();
       navigate("/api/docs", { state: { from: location }, replace: true });
       setLoginStatus(false);
+      setLogout(true);
+      setTimeout(() => {
+        setLogout(false);
+      }, 2000);
     } catch (error) {
       setLoginStatus(true);
+      setLogout(false);
     }
   };
 
@@ -42,7 +50,7 @@ export default function Navbar() {
             <NavLink to="account">
               <div className="api-nav-button">Account</div>
             </NavLink>
-            <div className="api-logout-button" onClick={logOut}>
+            <div className="api-logout-button" onClick={logoutClick}>
               Log Out
             </div>
           </div>
@@ -59,6 +67,16 @@ export default function Navbar() {
             </NavLink>
           </div>
         )}
+      </div>
+      <div
+        className={
+          logout
+            ? "api-logout-success success-on"
+            : "api-logout-success success-off"
+        }
+      >
+        <FontAwesomeIcon icon={faCheck} />
+        <div className="success-text">Successfully logged out</div>
       </div>
     </div>
   );

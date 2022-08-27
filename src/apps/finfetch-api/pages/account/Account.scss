@@ -221,18 +221,7 @@
   left: 50%;
   transition: all ease 0.4s;
 }
-.account-success-text {
-  font-size: 16px;
-}
-.success-off {
-  opacity: 0;
-  transform: translate(-50%, 80px);
-}
-.success-on {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
-}
+
 @keyframes spin-animation {
   0% {
     transform: rotate(0deg);

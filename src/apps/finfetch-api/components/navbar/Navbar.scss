@@ -87,3 +87,20 @@
   cursor: pointer;
   opacity: 1;
 }
+.api-logout-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: fixed;
+  height: 4rem;
+  width: fit-content;
+  column-gap: 0.5rem;
+  border-radius: 10px;
+  background: #0b335b;
+  color: #fff;
+  font-size: 20px;
+  bottom: 0;
+  left: 50%;
+  transition: all ease 0.4s;
+}
