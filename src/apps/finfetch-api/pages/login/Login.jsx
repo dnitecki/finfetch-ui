@@ -86,6 +86,17 @@ export default function Login() {
             onChange={(e) => setPwd(e.target.value)}
             required
           />
+          <div className="login-checkbox">
+            <input
+              className="form-checkbox"
+              type="checkbox"
+              id="rememberMe"
+              name="Remember email"
+            ></input>
+            <label for="rememberMe" className="form-label">
+              Remember Email
+            </label>
+          </div>
           {isLoading ? (
             <div className="loading-horizontal">
               <span></span>
