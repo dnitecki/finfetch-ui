@@ -11,17 +11,32 @@ export default function StockPrice() {
         <div className="documentation-tryitout-form">
           <form className="tryitout-form">
             <label className="form-label" htmlFor="ticker">
-              Ticker Symbol (ex. INTC)
+              Ticker Symbol (required)
             </label>
-            <input className="form-input" type="text" id="ticker" />
+            <input
+              className="form-input"
+              type="text"
+              id="ticker"
+              placeholder="example: INTC"
+            />
             <label className="form-label" htmlFor="start">
-              Start Date
+              Start Date (required)
             </label>
-            <input className="form-input" type="text" id="start" />
+            <input
+              className="form-input"
+              type="text"
+              id="start"
+              placeholder="format: yyyy-mm-dd"
+            />
             <label className="form-label" htmlFor="end">
-              End Date
+              End Date (required)
             </label>
-            <input className="form-input" type="text" id="end" />
+            <input
+              className="form-input"
+              type="text"
+              id="end"
+              placeholder="format: yyyy-mm-dd"
+            />
             <button className="form-button tryitout-button">
               Send Request
             </button>
