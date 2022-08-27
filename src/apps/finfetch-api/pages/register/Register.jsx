@@ -98,7 +98,7 @@ export default function Register() {
           <div className="register-header">
             <img className="register-icon" src={icon} alt="FinFetch.io" />
             <div className="register-header-text">
-              Your account has been created!{" "}
+              Your account has been created!
             </div>
             <p>
               Please verify your account by clicking the activation link that
