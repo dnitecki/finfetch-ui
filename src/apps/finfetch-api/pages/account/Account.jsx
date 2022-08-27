@@ -98,9 +98,9 @@ export default function Account() {
                 <FontAwesomeIcon className="rotate-icon" icon={faRotate} />
               </button>
             </div>
-            <div className="account-logout">
+            {/* <div className="account-logout">
               <button className="account-logout-button">Log Out</button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
