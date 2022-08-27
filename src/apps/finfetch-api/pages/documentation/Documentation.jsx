@@ -88,23 +88,64 @@ export default function Documentation() {
                 API Documentation
               </div>
               <div id="stock-price" className="documentation-content">
-                <div className="documentation-text">
-                  <div className="documentation-content-header-text">
-                    Stock Price <div className="request-type-get">GET</div>
+                <div className="documentation-content-top">
+                  <div className="documentation-text">
+                    <div className="documentation-content-header-text">
+                      Stock Price <div className="request-type-get">GET</div>
+                    </div>
+                  </div>
+                  <div className="documentation-code">
+                    <div className="documentation-code-header">
+                      Sample JSON response
+                    </div>
+                    <SyntaxHighlighter
+                      useInlineStyles={true}
+                      className="syntax-highlighter"
+                      language="json"
+                      style={coy}
+                    >
+                      {stockPrice}
+                    </SyntaxHighlighter>
                   </div>
                 </div>
-                <div className="documentation-code">
-                  <div className="documentation-code-header">
-                    Sample JSON response
+                <div className="documentation-content-bottom">
+                  <div className="documentation-tryitout-header">
+                    Try It Out
                   </div>
-                  <SyntaxHighlighter
-                    useInlineStyles={true}
-                    className="syntax-highlighter"
-                    language="json"
-                    style={coy}
-                  >
-                    {stockPrice}
-                  </SyntaxHighlighter>
+                  <div className="documentation-tryitout-content">
+                    <div className="documentation-tryitout-form">
+                      <form className="tryitout-form">
+                        <label className="form-label" htmlFor="ticker">
+                          Ticker Symbol (ex. INTC)
+                        </label>
+                        <input className="form-input" type="text" id="ticker" />
+                        <label className="form-label" htmlFor="start">
+                          Start Date
+                        </label>
+                        <input className="form-input" type="text" id="start" />
+                        <label className="form-label" htmlFor="end">
+                          End Date
+                        </label>
+                        <input className="form-input" type="text" id="end" />
+                        <button className="form-button tryitout-button">
+                          Send Request
+                        </button>
+                      </form>
+                    </div>
+                    <div className="documentation-tryitout-results">
+                      <div className="documentation-code-header">
+                        JSON response
+                      </div>
+                      <SyntaxHighlighter
+                        useInlineStyles={true}
+                        className="syntax-highlighter"
+                        language="json"
+                        style={coy}
+                      >
+                        yo
+                      </SyntaxHighlighter>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div id="stock-info" className="documentation-content">
