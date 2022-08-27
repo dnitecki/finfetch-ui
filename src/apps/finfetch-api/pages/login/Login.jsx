@@ -108,7 +108,10 @@ export default function Login() {
               <span></span>
             </div>
           ) : (
-            <button className="form-button" disabled={!pwd || !email}>
+            <button
+              className="form-button login-form-button"
+              disabled={!pwd || !email}
+            >
               Sign In
               <FontAwesomeIcon icon={faArrowRightLong} />
             </button>

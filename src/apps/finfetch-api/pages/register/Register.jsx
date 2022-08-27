@@ -252,7 +252,7 @@ export default function Register() {
               </div>
             ) : (
               <button
-                className="form-button"
+                className="form-button register-form-button"
                 disabled={
                   !validEmail || !validPwd || !validMatch ? true : false
                 }
