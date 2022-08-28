@@ -343,10 +343,11 @@
   border-top-right-radius: 10px;
   border: 1px solid #ccc;
   background: #fff;
+  opacity: 1;
   transition: all ease 0.2s;
 }
-.accordion-header:hover {
-  background: #f9f9f9;
+.accordion-header:hover a {
+  opacity: 1;
 }
 .accordion-header a {
   display: flex;
@@ -357,6 +358,8 @@
   column-gap: 0.5rem;
   text-decoration: none;
   color: #0b335b;
+  transition: all ease 0.2s;
+  opacity: 1;
 }
 .accordion-content {
   display: flex;
