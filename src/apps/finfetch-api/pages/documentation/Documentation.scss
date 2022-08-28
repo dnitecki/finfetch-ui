@@ -342,7 +342,11 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid #0b335b;
-  background: linear-gradient(135deg, #0b335b, #0982cc 90%);
+  background: url(../../../../assets/API-banner.png);
+  background-color: #0b335b;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 160%;
   opacity: 1;
   transition: all ease 0.2s;
 }
