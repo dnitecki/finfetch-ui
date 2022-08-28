@@ -342,12 +342,12 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid #0b335b;
-  background: #0b335b;
+  background: linear-gradient(135deg, #0b335b, #0982cc 90%);
   opacity: 1;
   transition: all ease 0.2s;
 }
 .accordion-header:hover {
-  opacity: 0.9;
+  opacity: 1;
 }
 .accordion-header:hover a {
   opacity: 1;
