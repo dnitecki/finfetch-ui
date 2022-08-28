@@ -7,7 +7,6 @@ import PageNotFound from "./pages/pageNotFound/PageNotFound";
 import Home from "./apps/finfetch-api/Home";
 import UserContext from "./context/Context";
 import "primereact/resources/primereact.min.css"; //core css
-// import "primereact/resources/themes/bootstrap4-light-blue/theme.css"; //theme
 import "primeicons/primeicons.css"; //icons
 
 function App() {
