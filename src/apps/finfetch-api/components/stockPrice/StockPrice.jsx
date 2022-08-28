@@ -2,6 +2,8 @@ import React from "react";
 import "./StockPrice.scss";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 export default function StockPrice() {
   return (
@@ -38,6 +40,7 @@ export default function StockPrice() {
             />
             <button className="form-button tryitout-button">
               Send Request
+              <FontAwesomeIcon icon={faPaperPlane} />
             </button>
           </form>
         </div>
