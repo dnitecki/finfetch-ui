@@ -42,7 +42,6 @@
 .documentation-content-top {
   display: flex;
   width: 100%;
-  border-bottom: 1px solid #ccc;
 }
 
 .documentation-content-wrapper {
@@ -297,11 +296,19 @@
 }
 .documentation-tryitout-content {
   display: flex;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  width: 65rem;
 }
 .documentation-tryitout-form {
   margin-top: 1rem;
   display: flex;
-  width: 25rem;
+  width: 40rem;
 }
 .tryitout-form {
   width: 80%;
@@ -313,7 +320,7 @@
 }
 .documentation-tryitout-results {
   display: flex;
-  width: 40rem;
+  width: 100%;
   flex-direction: column;
 }
 .tryitout-button {
@@ -321,7 +328,39 @@
   opacity: 1;
   color: #fff;
   margin-top: 0.5rem;
+  transition: all ease 0.2s;
 }
 .tryitout-button:hover {
   opacity: 0.9;
+}
+.accordion-header {
+  display: flex;
+  height: fit-content;
+  width: 65rem;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: all ease 0.2s;
+}
+.accordion-header:hover {
+  background: #f9f9f9;
+}
+.accordion-header a {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  column-gap: 0.5rem;
+  text-decoration: none;
+  color: #0b335b;
+}
+.accordion-content {
+  display: flex;
+}
+.tryitout-border {
+  border: 1px solid #ccc;
 }

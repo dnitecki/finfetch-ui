@@ -10,6 +10,7 @@ import key from "../../../../assets/Key-icon.png";
 import logo from "../../../../assets/FinFetch-icon-text-secondary.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { Accordion, AccordionTab } from "primereact/accordion";
 
 export default function Documentation() {
   return (
@@ -110,7 +111,15 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <StockPrice />
+                  <Accordion>
+                    <AccordionTab
+                      header="Try it out!"
+                      headerClassName="accordion-header"
+                      contentClassName="accordion-content"
+                    >
+                      <StockPrice />
+                    </AccordionTab>
+                  </Accordion>
                 </div>
               </div>
               <div id="stock-info" className="documentation-content">
@@ -135,7 +144,15 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <StockPrice />
+                  <Accordion>
+                    <AccordionTab
+                      header="Try it out!"
+                      headerClassName="accordion-header"
+                      contentClassName="accordion-content"
+                    >
+                      <StockPrice />
+                    </AccordionTab>
+                  </Accordion>
                 </div>
               </div>
               <div id="stock-news" className="documentation-content">
@@ -160,7 +177,15 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <StockPrice />
+                  <Accordion>
+                    <AccordionTab
+                      header="Try it out!"
+                      headerClassName="accordion-header"
+                      contentClassName="accordion-content"
+                    >
+                      <StockPrice />
+                    </AccordionTab>
+                  </Accordion>
                 </div>
               </div>
             </div>

@@ -5,7 +5,6 @@ import Overview from "./pages/overview/Overview";
 import WatchList from "./pages/watchlist/WatchList";
 import ReportBug from "./pages/reportbug/ReportBug";
 import Sidebar from "./components/sidebar/Sidebar";
-import "primeicons/primeicons.css"; //icons
 
 export default function Dashboard() {
   return (

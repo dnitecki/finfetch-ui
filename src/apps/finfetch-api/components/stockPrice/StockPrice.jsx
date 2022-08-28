@@ -6,7 +6,6 @@ import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 export default function StockPrice() {
   return (
     <>
-      <div className="documentation-tryitout-header">Try It Out!</div>
       <div className="documentation-tryitout-content">
         <div className="documentation-tryitout-form">
           <form className="tryitout-form">
@@ -14,7 +13,7 @@ export default function StockPrice() {
               Ticker Symbol (required)
             </label>
             <input
-              className="form-input"
+              className="form-input tryitout-border"
               type="text"
               id="ticker"
               placeholder="example: INTC"
@@ -23,7 +22,7 @@ export default function StockPrice() {
               Start Date (required)
             </label>
             <input
-              className="form-input"
+              className="form-input tryitout-border"
               type="text"
               id="start"
               placeholder="format: yyyy-mm-dd"
@@ -32,7 +31,7 @@ export default function StockPrice() {
               End Date (required)
             </label>
             <input
-              className="form-input"
+              className="form-input tryitout-border"
               type="text"
               id="end"
               placeholder="format: yyyy-mm-dd"
@@ -46,11 +45,11 @@ export default function StockPrice() {
           <div className="documentation-code-header">JSON response</div>
           <SyntaxHighlighter
             useInlineStyles={true}
-            className="syntax-highlighter"
+            className="syntax-highlighter tryitout-border"
             language="json"
             style={coy}
           >
-            yo
+            TEST
           </SyntaxHighlighter>
         </div>
       </div>
