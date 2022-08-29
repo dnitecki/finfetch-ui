@@ -36,7 +36,7 @@ export default function StockPrice() {
       <div className="documentation-tryitout-content">
         <div className="documentation-tryitout-form">
           <form className="tryitout-form" onSubmit={handleSubmit}>
-            <label className="form-label" htmlFor="ticker">
+            <label className="form-label tryitout-label" htmlFor="ticker">
               Ticker Symbol (required)
             </label>
             <input
@@ -46,7 +46,7 @@ export default function StockPrice() {
               placeholder="example: INTC"
               onChange={(e) => setTicker(e.target.value)}
             />
-            <label className="form-label" htmlFor="start">
+            <label className="form-label tryitout-label" htmlFor="start">
               Start Date (required)
             </label>
             <input
@@ -56,7 +56,7 @@ export default function StockPrice() {
               placeholder="format: yyyy-mm-dd"
               onChange={(e) => setStart(e.target.value)}
             />
-            <label className="form-label" htmlFor="end">
+            <label className="form-label tryitout-label" htmlFor="end">
               End Date (required)
             </label>
             <input

@@ -297,7 +297,10 @@
 }
 .documentation-tryitout-content {
   display: flex;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-color: #f9f9f9;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -317,6 +320,10 @@
   align-content: center;
   justify-content: center;
   row-gap: 0.5rem;
+}
+.tryitout-label {
+  font-weight: 500;
+  color: #0b335b;
 }
 .documentation-tryitout-results {
   display: flex;
