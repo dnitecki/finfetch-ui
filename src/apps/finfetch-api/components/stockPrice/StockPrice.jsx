@@ -1,7 +1,7 @@
 import React from "react";
 import "./StockPrice.scss";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { getStockPrice } from "../../../../requests/Requests";
@@ -12,13 +12,17 @@ export default function StockPrice() {
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
   const [data, setData] = useState();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const result = await getStockPrice(ticker, start, end);
       setData(JSON.stringify(result));
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       let text = error.request.response;
       if (!error?.response) {
         setData("No Server Response");
