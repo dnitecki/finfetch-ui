@@ -11,16 +11,22 @@ export default function StockPrice() {
   const [ticker, setTicker] = useState("");
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
-  const [data, setData] = useState("");
+  const [data, setData] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const result = await getStockPrice(ticker, start, end);
-      const stockData = JSON.stringify(result);
-      setData(stockData);
+      setData(JSON.stringify(result));
     } catch (error) {
-      setData(error.request.response);
+      let text = error.request.response;
+      if (!error?.response) {
+        setData("No Server Response");
+      } else if (error.response?.status === 500) {
+        setData("Invalid Parameters");
+      } else {
+        setData(text.substring(1, text.length - 1));
+      }
     }
   };
   return (
@@ -66,14 +72,15 @@ export default function StockPrice() {
         </div>
         <div className="documentation-tryitout-results">
           <div className="documentation-code-header">JSON response</div>
-          <SyntaxHighlighter
+          {/* <SyntaxHighlighter
             useInlineStyles={true}
             className="syntax-highlighter tryitout-border"
             language="json"
             style={coy}
           >
             {data}
-          </SyntaxHighlighter>
+          </SyntaxHighlighter> */}
+          <div className="syntax-highlighter tryitout-border">{data}</div>
         </div>
       </div>
     </>
