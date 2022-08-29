@@ -4,7 +4,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { getStockPrice } from "../../../../requests/Requests";
+import { getStockPrice } from "../../../../requests/Requeasddadsts";
 import { useState } from "react";
 
 export default function StockPrice() {

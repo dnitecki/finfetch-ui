@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Account.scss";
 import { Helmet } from "react-helmet";
-import { getUserAccount } from "../../../../requests/Requests";
+import { getUserAccount } from "../../../../requests/Requeasddadsts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
