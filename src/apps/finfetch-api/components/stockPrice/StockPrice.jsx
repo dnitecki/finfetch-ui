@@ -76,7 +76,7 @@ export default function StockPrice() {
           </form>
         </div>
         <div className="documentation-tryitout-results">
-          <div className="documentation-code-header">JSON response</div>
+          <div className="documentation-code-header">API response</div>
           {loading ? (
             <div className="tryitout-response tryitout-center">
               <img
