@@ -69,6 +69,7 @@
 }
 .syntax-highlighter {
   width: 100%;
+  border-radius: 10px;
   max-height: 22rem;
   min-height: 12rem;
   margin: 0;
@@ -306,7 +307,6 @@
   width: 65rem;
 }
 .documentation-tryitout-form {
-  margin-top: 1rem;
   display: flex;
   width: 40rem;
 }
@@ -334,6 +334,12 @@
 }
 .tryitout-button:hover {
   opacity: 0.9;
+}
+.tryitout-button:disabled {
+  opacity: 0.7;
+}
+.tryitout-input {
+  border: solid 1px #ccc;
 }
 .accordion-header {
   display: flex;
@@ -373,7 +379,26 @@
 .accordion-content {
   display: flex;
 }
-.tryitout-border {
+.tryitout-response {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  max-height: 22rem;
+  min-height: 12rem;
+  margin-top: 0.5rem;
   border: 1px solid #ccc;
+  border-radius: 10px;
   background-color: #fff;
+}
+.tryitout-center {
+  align-items: center;
+  justify-content: center;
+}
+.tryitout-loading-icon {
+  height: 5rem;
+  -webkit-animation: pulse 1.5s infinite ease-in-out;
+  -o-animation: pulse 1.5s infinite ease-in-out;
+  -ms-animation: pulse 1.5s infinite ease-in-out;
+  -moz-animation: pulse 1.5s infinite ease-in-out;
+  animation: pulse 1.5s infinite ease-in-out;
 }

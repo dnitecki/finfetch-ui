@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./StockPrice.scss";
-// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-// import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { getStockPrice } from "../../../../requests/Requests";
-import { useState } from "react";
+import apiIcon from "../../../../assets/API-icon.png";
 
 export default function StockPrice() {
   const [ticker, setTicker] = useState("");
@@ -42,7 +40,7 @@ export default function StockPrice() {
               Ticker Symbol (required)
             </label>
             <input
-              className="form-input tryitout-border"
+              className="form-input tryitout-input"
               type="text"
               id="ticker"
               placeholder="example: INTC"
@@ -52,7 +50,7 @@ export default function StockPrice() {
               Start Date (required)
             </label>
             <input
-              className="form-input tryitout-border"
+              className="form-input tryitout-input"
               type="text"
               id="start"
               placeholder="format: yyyy-mm-dd"
@@ -62,13 +60,16 @@ export default function StockPrice() {
               End Date (required)
             </label>
             <input
-              className="form-input tryitout-border"
+              className="form-input tryitout-input"
               type="text"
               id="end"
               placeholder="format: yyyy-mm-dd"
               onChange={(e) => setEnd(e.target.value)}
             />
-            <button className="form-button tryitout-button">
+            <button
+              className="form-button tryitout-button"
+              disabled={!ticker || !start || !end}
+            >
               Send Request
               <FontAwesomeIcon icon={faPaperPlane} />
             </button>
@@ -76,15 +77,17 @@ export default function StockPrice() {
         </div>
         <div className="documentation-tryitout-results">
           <div className="documentation-code-header">JSON response</div>
-          {/* <SyntaxHighlighter
-            useInlineStyles={true}
-            className="syntax-highlighter tryitout-border"
-            language="json"
-            style={coy}
-          >
-            {data}
-          </SyntaxHighlighter> */}
-          <div className="syntax-highlighter tryitout-border">{data}</div>
+          {loading ? (
+            <div className="tryitout-response tryitout-center">
+              <img
+                className="tryitout-loading-icon"
+                src={apiIcon}
+                alt="FinFetch.io"
+              />
+            </div>
+          ) : (
+            <div className="tryitout-response">{data}</div>
+          )}
         </div>
       </div>
     </>
