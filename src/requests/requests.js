@@ -3,6 +3,8 @@ const basePath = "http://127.0.0.1:8000";
 
 axios.defaults.withCredentials = true;
 
+// USER AUTHENTICATION
+
 export const registerUser = async (email, pwd) => {
   const url = `${basePath}/api/register/`;
   await axios.post(url, JSON.stringify({ email: email, password: pwd }), {
@@ -39,4 +41,14 @@ export const logoutUser = async () => {
     },
     withCredentials: true,
   });
+};
+
+// STOCK API
+
+export const getStockPrice = async (ticker, start, end) => {
+  const url = `${basePath}/api/stock?ticker=${ticker}&startDate=${start}&endDate=${end}`;
+  const response = await axios.get(url, {
+    headers: { "Content-Type": "application/json" },
+  });
+  return response.data;
 };
