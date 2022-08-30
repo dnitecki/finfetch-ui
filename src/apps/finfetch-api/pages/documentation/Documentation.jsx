@@ -113,7 +113,12 @@ export default function Documentation() {
                 <div className="documentation-content-bottom">
                   <Accordion>
                     <AccordionTab
-                      header="Try it out!"
+                      header={
+                        <div className="tryitout-header">
+                          Try it out!
+                          <img src={key} className="header-icon" />
+                        </div>
+                      }
                       headerClassName="accordion-header"
                       contentClassName="accordion-content"
                     >
@@ -146,7 +151,12 @@ export default function Documentation() {
                 <div className="documentation-content-bottom">
                   <Accordion>
                     <AccordionTab
-                      header="Try it out!"
+                      header={
+                        <div className="tryitout-header">
+                          Try it out!
+                          <img src={key} className="header-icon" />
+                        </div>
+                      }
                       headerClassName="accordion-header"
                       contentClassName="accordion-content"
                     >
@@ -179,7 +189,12 @@ export default function Documentation() {
                 <div className="documentation-content-bottom">
                   <Accordion>
                     <AccordionTab
-                      header="Try it out!"
+                      header={
+                        <div className="tryitout-header">
+                          Try it out!
+                          <img src={key} className="header-icon" />
+                        </div>
+                      }
                       headerClassName="accordion-header"
                       contentClassName="accordion-content"
                     >
