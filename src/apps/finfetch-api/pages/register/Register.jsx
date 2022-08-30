@@ -136,7 +136,7 @@ export default function Register() {
               />
             </label>
             <input
-              className="form-input"
+              className="form-input register-input"
               type="text"
               id="email"
               ref={emailRef}
@@ -175,7 +175,7 @@ export default function Register() {
               />
             </label>
             <input
-              className="form-input"
+              className="form-input register-input"
               type="password"
               id="password"
               onChange={(e) => setPwd(e.target.value)}
@@ -220,7 +220,7 @@ export default function Register() {
               />
             </label>
             <input
-              className="form-input"
+              className="form-input register-input"
               type="password"
               id="confirm_pwd"
               onChange={(e) => setMatchPwd(e.target.value)}

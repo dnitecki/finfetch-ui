@@ -49,6 +49,17 @@
   justify-content: center;
   row-gap: 0.5rem;
 }
+.register-input {
+  border: 2px solid transparent;
+  background: #f2f3f5;
+  box-shadow: 0 0 7px transparent;
+  transition: all ease 0.3s;
+}
+.register-input:focus {
+  background: #fff;
+  border: 2px solid #0982cc;
+  box-shadow: 0 0 7px #0982cc;
+}
 .register-form-button {
   margin-top: 1rem;
 }

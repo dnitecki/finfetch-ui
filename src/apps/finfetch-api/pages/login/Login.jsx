@@ -69,7 +69,7 @@ export default function Login() {
             Email:
           </label>
           <input
-            className="form-input"
+            className="form-input login-input"
             type="text"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -80,7 +80,7 @@ export default function Login() {
             Password:
           </label>
           <input
-            className="form-input"
+            className="form-input login-input"
             type="password"
             id="password"
             onChange={(e) => setPwd(e.target.value)}

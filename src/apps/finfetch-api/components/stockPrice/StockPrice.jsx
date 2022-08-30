@@ -10,17 +10,17 @@ export default function StockPrice() {
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
   const [data, setData] = useState();
-  const [loading, setLoading] = useState(false);
+  const [isloading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setIsLoading(true);
     try {
       const result = await getStockPrice(ticker, start, end);
       setData(JSON.stringify(result));
-      setLoading(false);
+      setIsLoading(false);
     } catch (error) {
-      setLoading(false);
+      setIsLoading(false);
       let text = error.request.response;
       if (!error?.response) {
         setData("No Server Response");
@@ -77,7 +77,7 @@ export default function StockPrice() {
         </div>
         <div className="documentation-tryitout-results">
           <div className="documentation-code-header">API response</div>
-          {loading ? (
+          {isloading ? (
             <div className="tryitout-response tryitout-center">
               <div className="tryitout-loading-container">
                 <span class="loading-spinner"></span>

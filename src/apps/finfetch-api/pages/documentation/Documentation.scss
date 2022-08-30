@@ -347,7 +347,14 @@
   opacity: 0.7;
 }
 .tryitout-input {
-  border: solid 1px #ccc;
+  border: solid 2px #ccc;
+  box-shadow: 0 0 7px transparent;
+  transition: all ease 0.3s;
+}
+.tryitout-input:focus {
+  border: solid 2px #0b335b;
+  box-shadow: 0 0 7px #0982cc;
+  background: #fff;
 }
 .accordion-header {
   display: flex;
