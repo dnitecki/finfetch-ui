@@ -402,11 +402,30 @@
   align-items: center;
   justify-content: center;
 }
+.tryitout-loading-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
 .tryitout-loading-icon {
-  height: 5rem;
-  -webkit-animation: pulse 1.5s infinite ease-in-out;
-  -o-animation: pulse 1.5s infinite ease-in-out;
-  -ms-animation: pulse 1.5s infinite ease-in-out;
-  -moz-animation: pulse 1.5s infinite ease-in-out;
-  animation: pulse 1.5s infinite ease-in-out;
+  position: absolute;
+  height: 55px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: opacity 1s infinite ease-in-out;
+  -o-animation: opacity 1s infinite ease-in-out;
+  -ms-animation: opacity 1s infinite ease-in-out;
+  -moz-animation: opacity 1s infinite ease-in-out;
+  animation: opacity 1s infinite ease-in-out;
+}
+.loading-spinner {
+  width: 85px;
+  height: 85px;
+  border: 2px solid #0b335b;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
 }

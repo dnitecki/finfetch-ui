@@ -161,7 +161,7 @@
   opacity: 0.8;
 }
 .account-api-regen-button:hover .rotate-icon {
-  animation: spin-animation 1s ease-in-out infinite;
+  animation: rotation 1s ease-in-out infinite;
   animation-timing-function: linear;
 }
 .account-copy {
@@ -220,13 +220,4 @@
   bottom: 0;
   left: 50%;
   transition: all ease 0.4s;
-}
-
-@keyframes spin-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }

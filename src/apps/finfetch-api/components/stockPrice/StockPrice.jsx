@@ -3,7 +3,7 @@ import "./StockPrice.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { getStockPrice } from "../../../../requests/Requests";
-import apiIcon from "../../../../assets/API-icon.png";
+import icon from "../../../../assets/FinFetch-letter.png";
 
 export default function StockPrice() {
   const [ticker, setTicker] = useState("");
@@ -79,11 +79,14 @@ export default function StockPrice() {
           <div className="documentation-code-header">API response</div>
           {loading ? (
             <div className="tryitout-response tryitout-center">
-              <img
-                className="tryitout-loading-icon"
-                src={apiIcon}
-                alt="FinFetch.io"
-              />
+              <div className="tryitout-loading-container">
+                <span class="loading-spinner"></span>
+                <img
+                  className="tryitout-loading-icon"
+                  src={icon}
+                  alt="FinFetch.io"
+                />
+              </div>
             </div>
           ) : (
             <div className="tryitout-response">{data}</div>
