@@ -17,9 +17,11 @@ export default function StockPrice() {
   const date = new Date();
   const today = date.toISOString().split("T")[0];
 
-  const changeStart = () => {
-    document.getElementById("end").value = "";
-    setEnd("");
+  const setDates = (start) => {
+    setStart(start);
+    setEnd(start);
+    console.log(start);
+    document.getElementById("end").value = `${start}`;
   };
 
   const handleSubmit = async (e) => {
@@ -78,8 +80,7 @@ export default function StockPrice() {
               id="start"
               max={today}
               onChange={(e) => {
-                setStart(e.target.value);
-                changeStart();
+                setDates(e.target.value);
               }}
             />
             <label className="form-label tryitout-label" htmlFor="end">
