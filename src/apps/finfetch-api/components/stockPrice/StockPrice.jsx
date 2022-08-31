@@ -13,6 +13,10 @@ export default function StockPrice() {
   const [data, setData] = useState();
   const [isloading, setIsLoading] = useState(false);
 
+  // Date Handling
+  const date = new Date();
+  const today = date.toISOString().split("T")[0];
+
   const changeStart = () => {
     document.getElementById("end").value = "";
     setEnd("");
@@ -21,7 +25,6 @@ export default function StockPrice() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log(start + 1);
     try {
       const result = await getStockPrice(key, ticker, start, end);
 
@@ -73,6 +76,7 @@ export default function StockPrice() {
               className="form-input tryitout-input"
               type="date"
               id="start"
+              max={today}
               onChange={(e) => {
                 setStart(e.target.value);
                 changeStart();
@@ -87,6 +91,7 @@ export default function StockPrice() {
               type="date"
               id="end"
               min={start}
+              max={today}
               onChange={(e) => setEnd(e.target.value)}
             />
             <button
