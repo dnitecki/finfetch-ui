@@ -15,6 +15,7 @@ export default function StockPrice() {
 
   const changeStart = () => {
     document.getElementById("end").value = "";
+    setEnd("");
   };
 
   const handleSubmit = async (e) => {
