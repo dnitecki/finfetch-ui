@@ -46,7 +46,7 @@ export default function StockPrice() {
               className="form-input tryitout-input"
               type="text"
               id="key"
-              placeholder="example: INTC"
+              placeholder="API Key"
               onChange={(e) => setKey(e.target.value)}
             />
             <label className="form-label tryitout-label" htmlFor="ticker">
