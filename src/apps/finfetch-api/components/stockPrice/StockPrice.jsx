@@ -6,6 +6,7 @@ import { getStockPrice } from "../../../../requests/Requests";
 import icon from "../../../../assets/FinFetch-letter.png";
 
 export default function StockPrice() {
+  const [key, setKey] = useState("");
   const [ticker, setTicker] = useState("");
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
@@ -16,7 +17,7 @@ export default function StockPrice() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const result = await getStockPrice(ticker, start, end);
+      const result = await getStockPrice(key, ticker, start, end);
       setData(JSON.stringify(result));
       setIsLoading(false);
     } catch (error) {
@@ -26,6 +27,8 @@ export default function StockPrice() {
         setData("No Server Response");
       } else if (error.response?.status === 500) {
         setData("Invalid Parameters");
+      } else if (error.response?.status === 403) {
+        setData("Invalid or Missing API Key");
       } else {
         setData(text.substring(1, text.length - 1));
       }
@@ -36,6 +39,16 @@ export default function StockPrice() {
       <div className="documentation-tryitout-content">
         <div className="documentation-tryitout-form">
           <form className="tryitout-form" onSubmit={handleSubmit}>
+            <label className="form-label tryitout-label" htmlFor="key">
+              API Key (required)
+            </label>
+            <input
+              className="form-input tryitout-input"
+              type="text"
+              id="key"
+              placeholder="example: INTC"
+              onChange={(e) => setKey(e.target.value)}
+            />
             <label className="form-label tryitout-label" htmlFor="ticker">
               Ticker Symbol (required)
             </label>
