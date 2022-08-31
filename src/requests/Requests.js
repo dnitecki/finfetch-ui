@@ -45,10 +45,13 @@ export const logoutUser = async () => {
 
 // STOCK API
 
-export const getStockPrice = async (ticker, start, end) => {
+export const getStockPrice = async (key, ticker, start, end) => {
   const url = `${basePath}/api/stock?ticker=${ticker}&startDate=${start}&endDate=${end}`;
   const response = await axios.get(url, {
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: ` Api-Key ${key}`,
+    },
   });
   return response.data;
 };
