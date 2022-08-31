@@ -112,7 +112,9 @@ export default function StockPrice() {
               </div>
             </div>
           ) : (
-            <div className="tryitout-response">{data}</div>
+            <div className="tryitout-response">
+              <div className="tryitout-response-text">{data}</div>
+            </div>
           )}
         </div>
       </div>
