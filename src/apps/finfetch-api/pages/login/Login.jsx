@@ -31,6 +31,7 @@ export default function Login() {
       setEmail("");
       setPwd("");
       setIsLoading(false);
+      window.localStorage.setItem("loggedIn", true);
       navigate("/api/account", { state: { from: location }, replace: true });
     } catch (error) {
       setIsLoading(false);

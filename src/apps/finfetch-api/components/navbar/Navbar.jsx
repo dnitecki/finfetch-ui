@@ -12,15 +12,19 @@ export default function Navbar() {
   const location = useLocation();
   const [logout, setLogout] = useState(false);
   const { loginStatus, setLoginStatus } = useContext(UserContext);
+  const [userLogged, setUserLogged] = useState(
+    JSON.parse(localStorage.getItem("isLogged"))
+  );
 
   useEffect(() => {
-    console.log("Yo");
+    localStorage.setItem("isLogged", JSON.stringify(userLogged));
   }, [loginStatus]);
 
   const logoutClick = async () => {
     try {
       await logoutUser();
       navigate("/api/docs", { state: { from: location }, replace: true });
+      setUserLogged(false);
       setLoginStatus(false);
       setLogout(true);
       setTimeout(() => {
@@ -46,7 +50,7 @@ export default function Navbar() {
             </div>
           </NavLink>
         </div>
-        {loginStatus ? (
+        {userLogged ? (
           <div className="api-navbar-links">
             <NavLink to="docs">
               <div className="api-nav-button">API Docs</div>
