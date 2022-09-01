@@ -18,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     localStorage.setItem("isLogged", JSON.stringify(userLogged));
-  }, [loginStatus]);
+  }, [loginStatus, userLogged]);
 
   const logoutClick = async () => {
     try {
@@ -26,6 +26,7 @@ export default function Navbar() {
       navigate("/api/docs", { state: { from: location }, replace: true });
       setUserLogged(false);
       setLoginStatus(false);
+      window.localStorage.setItem("isLogged", false);
       setLogout(true);
       setTimeout(() => {
         setLogout(false);
