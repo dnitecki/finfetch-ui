@@ -15,7 +15,6 @@ import { NavLink } from "react-router-dom";
 
 export default function Account() {
   const [info, setInfo] = useState({});
-  const [text, setText] = useState("");
   const [isCopied, setIsCopied] = useState(false);
   const [regen, setRegen] = useState(false);
   const created =
@@ -36,9 +35,8 @@ export default function Account() {
     updateUserAccount();
   }, []);
 
-  const copyClick = () => {
-    setText(info?.key);
-    navigator.clipboard.writeText(text);
+  const copyClick = async () => {
+    await navigator.clipboard.writeText(info.key);
     setIsCopied(true);
     setRegen(false);
     setTimeout(() => {
