@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Login.scss";
 import icon from "../../../../assets/FinFetch-icon-text.png";
@@ -11,6 +11,7 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
 export default function Login() {
+  const emailRef = useRef();
   const errRef = useRef();
   const navigate = useNavigate();
   const location = useLocation();
@@ -20,6 +21,10 @@ export default function Login() {
   const [errMsg, setErrMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { setLoginStatus } = useContext(UserContext);
+
+  useEffect(() => {
+    emailRef.current.focus();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -74,6 +79,7 @@ export default function Login() {
             className="form-input login-input"
             type="text"
             id="email"
+            ref={emailRef}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="off"
             required
