@@ -84,7 +84,7 @@ export default function Navbar() {
         }
       >
         <FontAwesomeIcon icon={faCheck} />
-        <div className="success-text">Logged out successfully</div>
+        <div className="success-text">Logged out successfully!</div>
       </div>
     </div>
   );

@@ -15,7 +15,6 @@ import { NavLink } from "react-router-dom";
 
 export default function Account() {
   const [info, setInfo] = useState({});
-  const [text, setText] = useState("");
   const [isCopied, setIsCopied] = useState(false);
   const [regen, setRegen] = useState(false);
   const created =
@@ -36,9 +35,8 @@ export default function Account() {
     updateUserAccount();
   }, []);
 
-  const copyClick = () => {
-    setText(info?.key);
-    navigator.clipboard.writeText(text);
+  const copyClick = async () => {
+    await navigator.clipboard.writeText(info.key);
     setIsCopied(true);
     setRegen(false);
     setTimeout(() => {
@@ -66,11 +64,17 @@ export default function Account() {
       <div className="account-container">
         <div className="account-header-text">Account Information</div>
         <div className="account-info">
-          <div className="account-email">
-            <FontAwesomeIcon icon={faUser} />
-            {info?.email}
+          <div className="account-info-header">
+            <div className="account-info-icon">
+              <FontAwesomeIcon icon={faUser} />
+            </div>
+            <div className="account-info-data">
+              <div className="account-email">{info?.email}</div>
+              <div className="account-created">
+                Account Created:&nbsp;{created}
+              </div>
+            </div>
           </div>
-          <div className="account-created">Account Created:&nbsp;{created}</div>
           <label className="key-label" htmlFor="key">
             API Key
           </label>
