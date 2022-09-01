@@ -11,22 +11,21 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [logout, setLogout] = useState(false);
+  const [userLogged, setUserLogged] = useState(false);
   const { loginStatus, setLoginStatus } = useContext(UserContext);
-  const [userLogged, setUserLogged] = useState(
-    JSON.parse(localStorage.getItem("isLogged"))
-  );
 
   useEffect(() => {
-    localStorage.setItem("isLogged", JSON.stringify(userLogged));
-  }, [loginStatus, userLogged]);
+    const login = localStorage.getItem("isLogged");
+    setUserLogged(JSON.parse(login));
+  }, [loginStatus]);
 
   const logoutClick = async () => {
     try {
       await logoutUser();
+      window.localStorage.setItem("isLogged", false);
       navigate("/api/docs", { state: { from: location }, replace: true });
       setUserLogged(false);
       setLoginStatus(false);
-      window.localStorage.setItem("isLogged", false);
       setLogout(true);
       setTimeout(() => {
         setLogout(false);
