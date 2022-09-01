@@ -64,11 +64,17 @@ export default function Account() {
       <div className="account-container">
         <div className="account-header-text">Account Information</div>
         <div className="account-info">
-          <div className="account-email">
-            <FontAwesomeIcon icon={faUser} />
-            {info?.email}
+          <div className="account-info-header">
+            <div className="account-info-icon">
+              <FontAwesomeIcon icon={faUser} />
+            </div>
+            <div className="account-info-data">
+              <div className="account-email">{info?.email}</div>
+              <div className="account-created">
+                Account Created:&nbsp;{created}
+              </div>
+            </div>
           </div>
-          <div className="account-created">Account Created:&nbsp;{created}</div>
           <label className="key-label" htmlFor="key">
             API Key
           </label>
