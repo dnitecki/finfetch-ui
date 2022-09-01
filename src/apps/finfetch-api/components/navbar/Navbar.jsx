@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Navbar.scss";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
@@ -12,6 +12,10 @@ export default function Navbar() {
   const location = useLocation();
   const [logout, setLogout] = useState(false);
   const { loginStatus, setLoginStatus } = useContext(UserContext);
+
+  useEffect(() => {
+    console.log("Yo");
+  }, [loginStatus]);
 
   const logoutClick = async () => {
     try {
