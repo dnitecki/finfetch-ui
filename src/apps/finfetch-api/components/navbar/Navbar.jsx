@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Navbar.scss";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import icon from "../../../../assets/FinFetch-icon.png";
@@ -11,12 +11,20 @@ export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [logout, setLogout] = useState(false);
+  const [userLogged, setUserLogged] = useState(false);
   const { loginStatus, setLoginStatus } = useContext(UserContext);
+
+  useEffect(() => {
+    const login = localStorage.getItem("isLogged");
+    setUserLogged(JSON.parse(login));
+  }, [loginStatus]);
 
   const logoutClick = async () => {
     try {
       await logoutUser();
+      window.localStorage.setItem("isLogged", false);
       navigate("/api/docs", { state: { from: location }, replace: true });
+      setUserLogged(false);
       setLoginStatus(false);
       setLogout(true);
       setTimeout(() => {
@@ -42,7 +50,7 @@ export default function Navbar() {
             </div>
           </NavLink>
         </div>
-        {loginStatus ? (
+        {userLogged ? (
           <div className="api-navbar-links">
             <NavLink to="docs">
               <div className="api-nav-button">API Docs</div>

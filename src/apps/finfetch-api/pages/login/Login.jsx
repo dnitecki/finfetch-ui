@@ -27,10 +27,12 @@ export default function Login() {
     setErrMsg("");
     try {
       await loginUser(email, pwd);
+      window.localStorage.setItem("isLogged", true);
       setLoginStatus(true);
       setEmail("");
       setPwd("");
       setIsLoading(false);
+
       navigate("/api/account", { state: { from: location }, replace: true });
     } catch (error) {
       setIsLoading(false);

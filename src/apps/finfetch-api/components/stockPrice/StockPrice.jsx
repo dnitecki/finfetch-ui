@@ -13,11 +13,23 @@ export default function StockPrice() {
   const [data, setData] = useState();
   const [isloading, setIsLoading] = useState(false);
 
+  // Date Handling
+  const date = new Date();
+  const today = date.toISOString().split("T")[0];
+
+  const setDates = (start) => {
+    setStart(start);
+    setEnd(start);
+    console.log(start);
+    document.getElementById("end").value = `${start}`;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     try {
       const result = await getStockPrice(key, ticker, start, end);
+
       setData(JSON.stringify(result));
       setIsLoading(false);
     } catch (error) {
@@ -64,24 +76,28 @@ export default function StockPrice() {
             </label>
             <input
               className="form-input tryitout-input"
-              type="text"
+              type="date"
               id="start"
-              placeholder="format: yyyy-mm-dd"
-              onChange={(e) => setStart(e.target.value)}
+              max={today}
+              onChange={(e) => {
+                setDates(e.target.value);
+              }}
             />
             <label className="form-label tryitout-label" htmlFor="end">
               End Date (required)
             </label>
             <input
               className="form-input tryitout-input"
-              type="text"
+              disabled={!start}
+              type="date"
               id="end"
-              placeholder="format: yyyy-mm-dd"
+              min={start}
+              max={today}
               onChange={(e) => setEnd(e.target.value)}
             />
             <button
               className="form-button tryitout-button"
-              disabled={!ticker || !start || !end}
+              disabled={!key || !ticker || !start || !end}
             >
               Send Request
               <FontAwesomeIcon icon={faPaperPlane} />
@@ -93,7 +109,7 @@ export default function StockPrice() {
           {isloading ? (
             <div className="tryitout-response tryitout-center">
               <div className="tryitout-loading-container">
-                <span class="loading-spinner"></span>
+                <span className="loading-spinner"></span>
                 <img
                   className="tryitout-loading-icon"
                   src={icon}
@@ -102,7 +118,9 @@ export default function StockPrice() {
               </div>
             </div>
           ) : (
-            <div className="tryitout-response">{data}</div>
+            <div className="tryitout-response">
+              <div className="tryitout-response-text">{data}</div>
+            </div>
           )}
         </div>
       </div>
