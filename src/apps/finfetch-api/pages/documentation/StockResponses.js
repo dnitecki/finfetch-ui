@@ -1,3 +1,6 @@
+const requestHeader = `Authorization: Api-Key <APIKEY>`;
+export { requestHeader };
+
 const stockPrice = `{
   "data": {
     "High": [49.900001525878906],
