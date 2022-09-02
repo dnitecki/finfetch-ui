@@ -5,7 +5,12 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { NavLink } from "react-router-dom";
 import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Helmet } from "react-helmet";
-import { stockPrice, stockInfo, stockNews } from "./StockResponses";
+import {
+  stockPrice,
+  stockInfo,
+  stockNews,
+  requestHeader,
+} from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
 import logo from "../../../../assets/FinFetch-icon-text-secondary.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -35,6 +40,11 @@ export default function Documentation() {
               ></img>
             </div>
             <div className="documentation-nav">
+              <a href="#authentication">
+                <div className="documentation-nav-container">
+                  <div className="documentation-nav-text">Authentication</div>
+                </div>
+              </a>
               <a href="#stock-price">
                 <div className="documentation-nav-container">
                   <div className="documentation-nav-text">Stock Price</div>
@@ -89,11 +99,45 @@ export default function Documentation() {
               <div className="documentation-content-header">
                 API Documentation
               </div>
+              <div id="authentication" className="documentation-content">
+                <div className="documentation-text">
+                  <div className="documentation-content-header-text">
+                    Authentication
+                  </div>
+                  <div className="documentation-content-text">
+                    <span>
+                      All requests <strong>require</strong> an API token in the
+                      header.
+                    </span>
+                  </div>
+                  <div className="documentation-api-header-example">
+                    {requestHeader}
+                  </div>
+                  <div className="documentation-content-text">
+                    <span>
+                      To access your API Key,{" "}
+                      <span>
+                        <NavLink to="/api/signin">
+                          <span className="page-link">Sign In</span>
+                        </NavLink>
+                      </span>{" "}
+                      and go to the account page. If you're a new user, an API
+                      Key is assigned to you upon{" "}
+                      <span>
+                        <NavLink to="/api/register">
+                          <span className="page-link">Registration</span>
+                        </NavLink>
+                      </span>
+                      .
+                    </span>
+                  </div>
+                </div>
+              </div>
               <div id="stock-price" className="documentation-content">
                 <div className="documentation-content-top">
                   <div className="documentation-text">
                     <div className="documentation-content-header-text">
-                      Stock Price <div className="request-type-get">GET</div>
+                      Stock Price <span className="request-type-get">GET</span>
                     </div>
                   </div>
                   <div className="documentation-code">
