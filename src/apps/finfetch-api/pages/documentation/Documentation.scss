@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #ccc;
-  scroll-margin-top: 10rem;
+  scroll-margin-top: 15rem;
   row-gap: 1rem;
 }
 .documentation-content-top {
@@ -62,7 +62,7 @@
 .documentation-text {
   display: flex;
   flex-direction: column;
-  row-gap: 0.5rem;
+  row-gap: 1rem;
   width: 25rem;
   font-size: 16px;
 }

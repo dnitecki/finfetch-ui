@@ -160,7 +160,7 @@ export default function Documentation() {
                       header={
                         <div className="tryitout-header">
                           Try it out!
-                          <img src={key} className="header-icon" />
+                          <img src={key} className="header-icon" alt="key" />
                         </div>
                       }
                       headerClassName="accordion-header"
@@ -198,7 +198,7 @@ export default function Documentation() {
                       header={
                         <div className="tryitout-header">
                           Try it out!
-                          <img src={key} className="header-icon" />
+                          <img src={key} className="header-icon" alt="key" />
                         </div>
                       }
                       headerClassName="accordion-header"
@@ -236,7 +236,7 @@ export default function Documentation() {
                       header={
                         <div className="tryitout-header">
                           Try it out!
-                          <img src={key} className="header-icon" />
+                          <img src={key} className="header-icon" alt="key" />
                         </div>
                       }
                       headerClassName="accordion-header"
