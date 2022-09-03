@@ -67,7 +67,7 @@ export default function Documentation() {
                 API Documentation
               </div>
               <div id="authentication" className="documentation-content">
-                <div className="documentation-text">
+                <div className="documentation-instructions-text">
                   <div className="documentation-content-header-text">
                     Authentication
                   </div>

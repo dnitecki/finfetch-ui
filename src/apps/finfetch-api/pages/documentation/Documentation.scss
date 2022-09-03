@@ -50,7 +50,7 @@
 }
 .documentation-content-top {
   display: flex;
-  width: 100%;
+  width: 65rem;
 }
 
 .documentation-content-wrapper {
@@ -59,11 +59,18 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.documentation-instructions-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 30rem;
+  font-size: 16px;
+}
 .documentation-text {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  width: 25rem;
+  width: 40%;
   font-size: 16px;
 }
 .documentation-content-text {
@@ -75,7 +82,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 0;
-  width: 40rem;
+  width: 60%;
   z-index: 0;
 }
 .documentation-code-header {
@@ -303,5 +310,5 @@
 .documentation-content-bottom {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 65rem;
 }
