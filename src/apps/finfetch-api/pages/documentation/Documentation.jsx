@@ -1,6 +1,8 @@
 import React from "react";
 import "./Documentation.scss";
 import StockPrice from "../../components/stockPrice/StockPrice";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Dropdown from "../../components/dropdown/Dropdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { NavLink } from "react-router-dom";
 import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -12,10 +14,8 @@ import {
   requestHeader,
 } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
-import logo from "../../../../assets/FinFetch-icon-text-secondary.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { Accordion, AccordionTab } from "primereact/accordion";
 
 export default function Documentation() {
   return (
@@ -31,40 +31,7 @@ export default function Documentation() {
         </div>
         <div className="documentation-sidebar">
           <div className="documentation-header"></div>
-          <div className="documentation-sidebar-container">
-            <div className="documentation-nav-logo-wrapper">
-              <img
-                className="documentation-nav-logo"
-                src={logo}
-                alt="FinFetch.io"
-              ></img>
-            </div>
-            <div className="documentation-nav">
-              <a href="#authentication">
-                <div className="documentation-nav-container">
-                  <div className="documentation-nav-text">Authentication</div>
-                </div>
-              </a>
-              <a href="#stock-price">
-                <div className="documentation-nav-container">
-                  <div className="documentation-nav-text">Stock Price</div>
-                  <div className="request-type-get">GET</div>
-                </div>
-              </a>
-              <a href="#stock-info">
-                <div className="documentation-nav-container">
-                  <div className="documentation-nav-text">Stock Info</div>
-                  <div className="request-type-get">GET</div>
-                </div>
-              </a>
-              <a href="#stock-news">
-                <div className="documentation-nav-container">
-                  <div className="documentation-nav-text">Stock News</div>
-                  <div className="request-type-get">GET</div>
-                </div>
-              </a>
-            </div>
-          </div>
+          <Sidebar />
         </div>
         <div className="documentation-content-container">
           <div className="documentation-header"></div>
@@ -155,20 +122,7 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <Accordion>
-                    <AccordionTab
-                      header={
-                        <div className="tryitout-header">
-                          Try it out!
-                          <img src={key} className="header-icon" alt="key" />
-                        </div>
-                      }
-                      headerClassName="accordion-header"
-                      contentClassName="accordion-content"
-                    >
-                      <StockPrice />
-                    </AccordionTab>
-                  </Accordion>
+                  <Dropdown tryItOut={<StockPrice />} />
                 </div>
               </div>
               <div id="stock-info" className="documentation-content">
@@ -193,20 +147,7 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <Accordion>
-                    <AccordionTab
-                      header={
-                        <div className="tryitout-header">
-                          Try it out!
-                          <img src={key} className="header-icon" alt="key" />
-                        </div>
-                      }
-                      headerClassName="accordion-header"
-                      contentClassName="accordion-content"
-                    >
-                      <StockPrice />
-                    </AccordionTab>
-                  </Accordion>
+                  <Dropdown tryItOut={<StockPrice />} />
                 </div>
               </div>
               <div id="stock-news" className="documentation-content">
@@ -231,20 +172,7 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <Accordion>
-                    <AccordionTab
-                      header={
-                        <div className="tryitout-header">
-                          Try it out!
-                          <img src={key} className="header-icon" alt="key" />
-                        </div>
-                      }
-                      headerClassName="accordion-header"
-                      contentClassName="accordion-content"
-                    >
-                      <StockPrice />
-                    </AccordionTab>
-                  </Accordion>
+                  <Dropdown tryItOut={<StockPrice />} />
                 </div>
               </div>
             </div>
