@@ -5,7 +5,6 @@ import "./Sidebar.scss";
 export default function Sidebar() {
   return (
     <>
-      {" "}
       <div className="documentation-sidebar-container">
         <div className="documentation-nav-logo-wrapper">
           <img

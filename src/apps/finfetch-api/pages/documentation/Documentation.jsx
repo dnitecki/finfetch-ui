@@ -15,7 +15,7 @@ import {
 } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp, faFingerprint } from "@fortawesome/free-solid-svg-icons";
 
 export default function Documentation() {
   return (
@@ -69,7 +69,7 @@ export default function Documentation() {
               <div id="authentication" className="documentation-content">
                 <div className="documentation-instructions-text">
                   <div className="documentation-content-header-text">
-                    Authentication
+                    Authentication <FontAwesomeIcon icon={faFingerprint} />
                   </div>
                   <div className="documentation-content-text">
                     <span>
