@@ -8,6 +8,7 @@ import {
   faRotate,
   faCheck,
   faCircleExclamation,
+  faArrowRightLong,
 } from "@fortawesome/free-solid-svg-icons";
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
 import Moment from "moment";
@@ -118,8 +119,15 @@ export default function Account() {
             <>
               <div className="account-login">
                 <div className="account-login-text">
-                  {" "}
                   Sign in to view account
+                </div>
+                <div className="account-login-button">
+                  <NavLink to="/api/signin">
+                    <button className="account-api-docs-button">
+                      Sign In
+                      <FontAwesomeIcon icon={faArrowRightLong} />
+                    </button>
+                  </NavLink>
                 </div>
               </div>
             </>
