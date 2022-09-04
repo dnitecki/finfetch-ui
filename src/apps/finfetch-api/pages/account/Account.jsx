@@ -9,6 +9,7 @@ import {
   faCheck,
   faCircleExclamation,
   faArrowRightLong,
+  faIdCardClip,
 } from "@fortawesome/free-solid-svg-icons";
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
 import Moment from "moment";
@@ -67,7 +68,10 @@ export default function Account() {
       </div>
       <div className="account-container">
         <div className="account-header">
-          <div className="account-header-text">My Account</div>
+          <div className="account-header-text">
+            <FontAwesomeIcon icon={faIdCardClip} />
+            Account Info
+          </div>
         </div>
         <div className="account-info">
           {userLogged ? (
