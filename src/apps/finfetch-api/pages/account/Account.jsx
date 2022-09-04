@@ -66,7 +66,9 @@ export default function Account() {
         <div className="bg-layer-4"></div>
       </div>
       <div className="account-container">
-        <div className="account-header-text">Account Information</div>
+        <div className="account-header">
+          <div className="account-header-text">My Account</div>
+        </div>
         <div className="account-info">
           {userLogged ? (
             <>
@@ -119,7 +121,7 @@ export default function Account() {
             <>
               <div className="account-login">
                 <div className="account-login-text">
-                  Sign in to view account
+                  Sign in to view account information
                 </div>
                 <div className="account-login-button">
                   <NavLink to="/api/signin">

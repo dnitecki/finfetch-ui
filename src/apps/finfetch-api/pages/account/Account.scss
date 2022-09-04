@@ -13,11 +13,21 @@
   width: 40rem;
   display: flex;
   flex-direction: column;
+  z-index: 1000;
+}
+.account-header {
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.325);
+  width: fit-content;
 }
 .account-header-text {
   padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
-  font-size: 30px;
+  font-size: 26px;
   color: #0b335b;
   font-weight: bold;
   margin-top: 0.5rem;
@@ -30,11 +40,12 @@
   row-gap: 0.2rem;
   display: flex;
   flex-direction: column;
-  border-radius: 2rem;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   background-color: #f2f3f5;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.325);
   padding: 1.5rem;
-  z-index: 1000;
 }
 .account-info-header {
   display: flex;
@@ -241,6 +252,9 @@
   align-items: center;
 }
 .account-login-text {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
+}
+.account-login-button {
+  display: flex;
 }
