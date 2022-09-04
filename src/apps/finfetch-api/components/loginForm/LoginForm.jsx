@@ -17,6 +17,7 @@ export default function LoginForm() {
 
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const [checked, setChecked] = useState(false);
   const [errMsg, setErrMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { setLoginStatus } = useContext(UserContext);
@@ -25,12 +26,19 @@ export default function LoginForm() {
     emailRef.current.focus();
   }, []);
 
+  const rememberEmail = async (checked, email) => {
+    if (checked) {
+      window.localStorage.setItem("email", email);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setErrMsg("");
     try {
       await loginUser(email, pwd);
+      await rememberEmail(checked, email);
       window.localStorage.setItem("isLogged", true);
       setLoginStatus(true);
       setEmail("");
@@ -95,8 +103,9 @@ export default function LoginForm() {
               type="checkbox"
               id="rememberMe"
               name="Remember email"
+              onChange={(e) => setChecked(e.target.checked)}
             ></input>
-            <label for="rememberMe" className="form-label">
+            <label htmlFor="rememberMe" className="form-label">
               Remember Email
             </label>
           </div>
