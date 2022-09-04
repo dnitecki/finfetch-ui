@@ -22,8 +22,17 @@ export default function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
   const { setLoginStatus } = useContext(UserContext);
 
+  const getSavedEmail = () => {
+    if (localStorage.getItem("email") === null) {
+      setEmail("");
+    } else {
+      const getEmail = localStorage.getItem("email");
+      setEmail(getEmail);
+    }
+  };
   useEffect(() => {
     emailRef.current.focus();
+    getSavedEmail();
   }, []);
 
   const rememberEmail = async (checked, email) => {
@@ -83,6 +92,7 @@ export default function LoginForm() {
             type="text"
             id="email"
             ref={emailRef}
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="off"
             required
