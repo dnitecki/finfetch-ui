@@ -232,3 +232,13 @@
   left: 50%;
   transition: all ease 0.4s;
 }
+.account-login {
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.account-login-text {
+  font-size: 18px;
+  font-weight: 500;
+}
