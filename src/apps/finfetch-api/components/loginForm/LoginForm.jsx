@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 
 export default function LoginForm() {
   const emailRef = useRef();
+  const passRef = useRef();
   const errRef = useRef();
   const navigate = useNavigate();
   const location = useLocation();
@@ -25,19 +26,23 @@ export default function LoginForm() {
   const getSavedEmail = () => {
     if (localStorage.getItem("email") === null) {
       setEmail("");
+      setChecked(false);
+      emailRef.current.focus();
     } else {
-      const getEmail = localStorage.getItem("email");
-      setEmail(getEmail);
+      setEmail(localStorage.getItem("email"));
+      setChecked(true);
+      passRef.current.focus();
     }
   };
   useEffect(() => {
-    emailRef.current.focus();
     getSavedEmail();
   }, []);
 
   const rememberEmail = async (checked, email) => {
     if (checked) {
       window.localStorage.setItem("email", email);
+    } else {
+      localStorage.removeItem("email");
     }
   };
 
@@ -104,6 +109,7 @@ export default function LoginForm() {
             className="form-input login-input"
             type="password"
             id="password"
+            ref={passRef}
             onChange={(e) => setPwd(e.target.value)}
             required
           />
@@ -113,6 +119,7 @@ export default function LoginForm() {
               type="checkbox"
               id="rememberMe"
               name="Remember email"
+              checked={checked}
               onChange={(e) => setChecked(e.target.checked)}
             ></input>
             <label htmlFor="rememberMe" className="form-label">
