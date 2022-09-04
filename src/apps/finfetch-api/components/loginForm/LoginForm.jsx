@@ -17,13 +17,29 @@ export default function LoginForm() {
 
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const [checked, setChecked] = useState(false);
   const [errMsg, setErrMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { setLoginStatus } = useContext(UserContext);
 
+  const getSavedEmail = () => {
+    if (localStorage.getItem("email") === null) {
+      setEmail("");
+    } else {
+      const getEmail = localStorage.getItem("email");
+      setEmail(getEmail);
+    }
+  };
   useEffect(() => {
     emailRef.current.focus();
+    getSavedEmail();
   }, []);
+
+  const rememberEmail = async (checked, email) => {
+    if (checked) {
+      window.localStorage.setItem("email", email);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +47,7 @@ export default function LoginForm() {
     setErrMsg("");
     try {
       await loginUser(email, pwd);
+      await rememberEmail(checked, email);
       window.localStorage.setItem("isLogged", true);
       setLoginStatus(true);
       setEmail("");
@@ -75,6 +92,7 @@ export default function LoginForm() {
             type="text"
             id="email"
             ref={emailRef}
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="off"
             required
@@ -95,8 +113,9 @@ export default function LoginForm() {
               type="checkbox"
               id="rememberMe"
               name="Remember email"
+              onChange={(e) => setChecked(e.target.checked)}
             ></input>
-            <label for="rememberMe" className="form-label">
+            <label htmlFor="rememberMe" className="form-label">
               Remember Email
             </label>
           </div>

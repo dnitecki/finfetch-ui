@@ -69,7 +69,7 @@ export default function Account() {
       <div className="account-container">
         <div className="account-header">
           <div className="account-header-text">
-            <FontAwesomeIcon icon={faIdCardClip} />
+            <FontAwesomeIcon icon={faUser} />
             Account Info
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function Account() {
             <>
               <div className="account-info-header">
                 <div className="account-info-icon">
-                  <FontAwesomeIcon icon={faUser} />
+                  <FontAwesomeIcon icon={faIdCardClip} />
                 </div>
                 <div className="account-info-data">
                   <div className="account-email">{info?.email}</div>
@@ -97,6 +97,7 @@ export default function Account() {
                   type="text"
                   value={info?.key}
                   placeholder="API Key"
+                  readOnly
                 />
                 <button className="account-copy" onClick={copyClick}>
                   <div className="account-copy-icon">
