@@ -149,7 +149,7 @@ export default function Account() {
         }
       >
         <FontAwesomeIcon icon={faCheck} />
-        <div className="success-text">API Key Copied!</div>
+        <div className="success-text">API Key copied!</div>
       </div>
       <div
         className={
