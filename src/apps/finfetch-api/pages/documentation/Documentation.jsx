@@ -16,6 +16,7 @@ import {
 import key from "../../../../assets/Key-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faFingerprint } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../../components/footer/Footer";
 
 export default function Documentation() {
   return (
@@ -176,6 +177,7 @@ export default function Documentation() {
                 </div>
               </div>
             </div>
+            <Footer />
           </div>
         </div>
       </div>
