@@ -7,14 +7,16 @@
 .footer-container {
   display: flex;
   width: 100%;
-  padding: 2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .footer-left {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 0.5rem;
+  align-items: flex-start;
   width: 50%;
+  column-gap: 2.5rem;
 }
 .footer-right {
   display: flex;
@@ -26,6 +28,9 @@
 }
 .footer-logo-container {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 0.5rem;
 }
 .footer-logo {
   display: flex;
@@ -33,5 +38,19 @@
   height: 100%;
 }
 .footer-text {
+  display: flex;
   font-size: 14px;
+}
+.footer-policies {
+  display: flex;
+  height: 100%;
+  column-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text-links {
+  display: flex;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 400;
 }
