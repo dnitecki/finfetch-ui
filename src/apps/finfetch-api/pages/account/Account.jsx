@@ -70,7 +70,7 @@ export default function Account() {
         <div className="account-header">
           <div className="account-header-text">
             <FontAwesomeIcon icon={faUser} />
-            Account Information
+            Account Info
           </div>
         </div>
         <div className="account-info">
