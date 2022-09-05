@@ -1,6 +1,8 @@
 import React from "react";
 import "./Footer.scss";
 import logo from "../../../../assets/FinFetch-icon-text.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -19,7 +21,15 @@ export default function Footer() {
               <div className="footer-text-links">Legal Stuff</div>
             </div>
           </div>
-          <div className="footer-right"></div>
+          <div className="footer-right">
+            <div className="footer-aboutme">
+              <div className="footer-text">About Me</div>
+              <div className="footer-socials">
+                <FontAwesomeIcon icon={faLinkedin} />
+                <FontAwesomeIcon icon={faGithub} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
