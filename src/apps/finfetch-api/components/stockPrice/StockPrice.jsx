@@ -20,7 +20,6 @@ export default function StockPrice() {
   const setDates = (start) => {
     setStart(start);
     setEnd(start);
-    console.log(start);
     document.getElementById("end").value = `${start}`;
   };
 
