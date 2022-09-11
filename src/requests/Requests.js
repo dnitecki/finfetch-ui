@@ -1,6 +1,5 @@
 import axios from "axios";
-const basePath =
-  "http://env-finfetch-api.eba-phmmb2x7.us-east-2.elasticbeanstalk.com";
+const basePath = "http://www.api.finfetch.net/";
 
 axios.defaults.withCredentials = true;
 
