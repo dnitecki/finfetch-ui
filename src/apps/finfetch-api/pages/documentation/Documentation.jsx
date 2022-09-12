@@ -21,7 +21,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUp,
   faFingerprint,
-  faPlay,
+  faRocket,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
 
@@ -77,7 +77,7 @@ export default function Documentation() {
               <div id="gettingStarted" className="documentation-content">
                 <div className="documentation-instructions-text">
                   <div className="documentation-content-header-text">
-                    Getting Started <FontAwesomeIcon icon={faPlay} />
+                    Getting Started <FontAwesomeIcon icon={faRocket} />
                   </div>
                   <div className="documentation-content-text">
                     FinFetch Stock API has predictable resource-oriented URLs,
