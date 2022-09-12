@@ -1,5 +1,5 @@
 import axios from "axios";
-const basePath = "http://www.api.finfetch.net/";
+const basePath = "http://127.0.0.1:8000";
 
 axios.defaults.withCredentials = true;
 
