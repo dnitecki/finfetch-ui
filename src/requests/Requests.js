@@ -55,3 +55,14 @@ export const getStockPrice = async (key, ticker, start, end) => {
   });
   return response.data;
 };
+
+export const getStockInfo = async (key, ticker) => {
+  const url = `${basePath}/api/stock/info?ticker=${ticker}`;
+  const response = await axios.get(url, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: ` Api-Key ${key}`,
+    },
+  });
+  return response.data;
+};
