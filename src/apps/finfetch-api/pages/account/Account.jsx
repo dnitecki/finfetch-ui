@@ -14,6 +14,7 @@ import {
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
 import Moment from "moment";
 import { NavLink } from "react-router-dom";
+import icon from "../../../../assets/FinFetch-icon-text-secondary.png";
 
 export default function Account() {
   const [userLogged, setUserLogged] = useState(false);
@@ -125,6 +126,7 @@ export default function Account() {
           ) : (
             <>
               <div className="account-login">
+                <img className="account-icon" src={icon} alt="FinFetch.io" />
                 <div className="account-login-text">
                   Sign in to view account information
                 </div>

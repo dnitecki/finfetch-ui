@@ -246,9 +246,9 @@
   transition: all ease 0.4s;
 }
 .account-login {
-  height: 10rem;
+  height: fit-content;
   display: flex;
-  row-gap: 0.5rem;
+  row-gap: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -259,4 +259,7 @@
 }
 .account-login-button {
   display: flex;
+}
+.account-icon {
+  height: 4rem;
 }
