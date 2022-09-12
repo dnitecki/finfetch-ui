@@ -22,8 +22,10 @@ import {
   faArrowUp,
   faFingerprint,
   faRocket,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
+import Tabs from "../../components/tabs/Tabs";
 
 export default function Documentation() {
   return (
@@ -128,6 +130,12 @@ export default function Documentation() {
                     </span>
                   </div>
                 </div>
+              </div>
+              <div id="sampleRequest" className="documentation-content">
+                <div className="documentation-content-header-text">
+                  Sample Requests <FontAwesomeIcon icon={faCode} />
+                </div>
+                <Tabs />
               </div>
               <div id="stock-price" className="documentation-content">
                 <div className="documentation-content-top">
