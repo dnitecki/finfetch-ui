@@ -1,5 +1,5 @@
 import axios from "axios";
-const basePath = "http://127.0.0.1:8000";
+const basePath = "http://www.api.finfetch.net/";
 
 axios.defaults.withCredentials = true;
 
@@ -58,6 +58,17 @@ export const getStockPrice = async (key, ticker, start, end) => {
 
 export const getStockInfo = async (key, ticker) => {
   const url = `${basePath}/api/stock/info?ticker=${ticker}`;
+  const response = await axios.get(url, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: ` Api-Key ${key}`,
+    },
+  });
+  return response.data;
+};
+
+export const getStockNews = async (key, ticker) => {
+  const url = `${basePath}/api/stock/news?ticker=${ticker}`;
   const response = await axios.get(url, {
     headers: {
       "Content-Type": "application/json",

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Documentation.scss";
 import StockPrice from "../../components/stockPrice/StockPrice";
+import StockInfo from "../../components/stockInfo/StockInfo";
+import StockNews from "../../components/stockNews/StockNews";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Dropdown from "../../components/dropdown/Dropdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -148,7 +150,7 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <Dropdown tryItOut={<StockPrice />} />
+                  <Dropdown tryItOut={<StockInfo />} />
                 </div>
               </div>
               <div id="stock-news" className="documentation-content">
@@ -173,7 +175,7 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <Dropdown tryItOut={<StockPrice />} />
+                  <Dropdown tryItOut={<StockNews />} />
                 </div>
               </div>
             </div>
