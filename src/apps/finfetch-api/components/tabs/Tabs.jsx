@@ -1,5 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  sampleJsRequest,
+  sampleNodeJsRequest,
+  samplePythonRequest,
+} from "../../pages/documentation/StockResponses";
 import "./Tabs.scss";
 
 export default function Tabs() {
@@ -16,13 +23,13 @@ export default function Tabs() {
             className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
             onClick={() => toggleTab(1)}
           >
-            Python
+            Python - Requests
           </button>
           <button
             className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
             onClick={() => toggleTab(2)}
           >
-            JavaScript
+            JavaScript - Fetch
           </button>
           <button
             className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
@@ -40,7 +47,14 @@ export default function Tabs() {
                 : "tabs-content"
             }
           >
-            python
+            <SyntaxHighlighter
+              useInlineStyles={true}
+              className="request-syntax-highlighter"
+              language="python"
+              style={coy}
+            >
+              {samplePythonRequest}
+            </SyntaxHighlighter>
           </div>
 
           <div
@@ -50,7 +64,14 @@ export default function Tabs() {
                 : "tabs-content"
             }
           >
-            JS
+            <SyntaxHighlighter
+              useInlineStyles={true}
+              className="request-syntax-highlighter"
+              language="javascript"
+              style={coy}
+            >
+              {sampleJsRequest}
+            </SyntaxHighlighter>
           </div>
 
           <div
@@ -60,7 +81,14 @@ export default function Tabs() {
                 : "tabs-content"
             }
           >
-            NodeJS
+            <SyntaxHighlighter
+              useInlineStyles={true}
+              className="request-syntax-highlighter"
+              language="javascript"
+              style={coy}
+            >
+              {sampleNodeJsRequest}
+            </SyntaxHighlighter>
           </div>
         </div>
       </div>

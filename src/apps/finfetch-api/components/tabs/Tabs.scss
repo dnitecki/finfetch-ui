@@ -3,11 +3,13 @@
   flex-direction: column;
   position: relative;
   margin-top: 0.5rem;
-  width: 500px;
-  height: 300px;
+  width: 45rem;
+  height: 100%;
   background: #f1f1f1;
   word-break: break-all;
-  border: 1px solid rgba(0, 0, 0, 0.274);
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .bloc-tabs {
@@ -20,21 +22,23 @@
   border: none;
   background: rgba(128, 128, 128, 0.075);
   cursor: pointer;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  border-bottom: 1px solid #ccc;
   box-sizing: content-box;
   position: relative;
   outline: none;
   font-size: 18px;
   font-weight: 500;
   color: #0b335b9e;
+  border-radius: 0;
 }
 .tabs:not(:last-child) {
-  border-right: 1px solid rgba(0, 0, 0, 0.274);
+  border-right: 1px solid #ccc;
 }
 
 .active-tabs {
   background: white;
   border-bottom: 1px solid transparent;
+  border-radius: none;
   color: #0b335b;
 }
 
@@ -42,11 +46,11 @@
   content: "";
   display: block;
   position: absolute;
-  top: -5px;
+  top: -3px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% + 2px);
-  height: 5px;
+  height: 3px;
   background: #0b335b;
 }
 
@@ -56,23 +60,19 @@
 .tabs-content {
   background: white;
   padding: 1rem;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   width: 100%;
   height: 100%;
   display: none;
 }
-.content h2 {
-  padding: 0px 0 5px 0px;
-}
-.content hr {
-  width: 100px;
-  height: 2px;
-  background: #222;
-  margin-bottom: 5px;
-}
-.content p {
-  width: 100%;
-  height: 100%;
-}
 .active-content {
   display: block;
+}
+.request-syntax-highlighter {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  height: 20rem;
+  margin: 0;
 }
