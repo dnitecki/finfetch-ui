@@ -5,7 +5,7 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { getStockInfo } from "../../../../requests/Requests";
 import icon from "../../../../assets/FinFetch-letter.png";
 
-export default function StockPrice() {
+export default function StockInfo() {
   const [key, setKey] = useState("");
   const [ticker, setTicker] = useState("");
   const [data, setData] = useState();
