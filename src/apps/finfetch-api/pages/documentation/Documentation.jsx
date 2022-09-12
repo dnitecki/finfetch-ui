@@ -14,10 +14,15 @@ import {
   stockInfo,
   stockNews,
   requestHeader,
+  baseUrl,
 } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp, faFingerprint } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUp,
+  faFingerprint,
+  faRocket,
+} from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
 
 export default function Documentation() {
@@ -68,6 +73,27 @@ export default function Documentation() {
             <div className="documentation-content-wrapper">
               <div className="documentation-content-header">
                 API Documentation
+              </div>
+              <div id="gettingStarted" className="documentation-content">
+                <div className="documentation-instructions-text">
+                  <div className="documentation-content-header-text">
+                    Getting Started <FontAwesomeIcon icon={faRocket} />
+                  </div>
+                  <div className="documentation-content-text">
+                    FinFetch Stock API has predictable resource-oriented URLs,
+                    accepts form-encoded request bodies, returns JSON-encoded
+                    responses, and uses standard HTTP response codes and
+                    authentication.
+                  </div>
+                  <div className="documentation-content-text">
+                    <span>
+                      <strong>Base URL: </strong>
+                      <span className="documentation-api-header-example">
+                        {baseUrl}
+                      </span>
+                    </span>
+                  </div>
+                </div>
               </div>
               <div id="authentication" className="documentation-content">
                 <div className="documentation-instructions-text">
