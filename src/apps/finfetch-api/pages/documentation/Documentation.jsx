@@ -1,6 +1,8 @@
 import React from "react";
 import "./Documentation.scss";
 import StockPrice from "../../components/stockPrice/StockPrice";
+import StockInfo from "../../components/stockInfo/StockInfo";
+import StockNews from "../../components/stockNews/StockNews";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Dropdown from "../../components/dropdown/Dropdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -12,11 +14,18 @@ import {
   stockInfo,
   stockNews,
   requestHeader,
+  baseUrl,
 } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp, faFingerprint } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUp,
+  faFingerprint,
+  faRocket,
+  faCode,
+} from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
+import Tabs from "../../components/tabs/Tabs";
 
 export default function Documentation() {
   return (
@@ -67,6 +76,27 @@ export default function Documentation() {
               <div className="documentation-content-header">
                 API Documentation
               </div>
+              <div id="gettingStarted" className="documentation-content">
+                <div className="documentation-instructions-text">
+                  <div className="documentation-content-header-text">
+                    Getting Started <FontAwesomeIcon icon={faRocket} />
+                  </div>
+                  <div className="documentation-content-text">
+                    FinFetch Stock API has predictable resource-oriented URLs,
+                    accepts form-encoded request bodies, returns JSON-encoded
+                    responses, and uses standard HTTP response codes and
+                    authentication.
+                  </div>
+                  <div className="documentation-content-text">
+                    <span>
+                      <strong>Base URL: </strong>
+                      <span className="documentation-api-header-example">
+                        {baseUrl}
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
               <div id="authentication" className="documentation-content">
                 <div className="documentation-instructions-text">
                   <div className="documentation-content-header-text">
@@ -75,12 +105,15 @@ export default function Documentation() {
                   <div className="documentation-content-text">
                     <span>
                       All requests <strong>require</strong> an API token in the
-                      header.
+                      request header.
                     </span>
                   </div>
-                  <div className="documentation-api-header-example">
-                    {requestHeader}
-                  </div>
+                  <span>
+                    <strong>Request Header: </strong>
+                    <span className="documentation-api-header-example">
+                      {requestHeader}
+                    </span>
+                  </span>
                   <div className="documentation-content-text">
                     <span>
                       To access your API Key,{" "}
@@ -100,6 +133,12 @@ export default function Documentation() {
                     </span>
                   </div>
                 </div>
+              </div>
+              <div id="sampleRequest" className="documentation-content">
+                <div className="documentation-content-header-text">
+                  Sample Requests <FontAwesomeIcon icon={faCode} />
+                </div>
+                <Tabs />
               </div>
               <div id="stock-price" className="documentation-content">
                 <div className="documentation-content-top">
@@ -148,7 +187,7 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <Dropdown tryItOut={<StockPrice />} />
+                  <Dropdown tryItOut={<StockInfo />} />
                 </div>
               </div>
               <div id="stock-news" className="documentation-content">
@@ -173,7 +212,7 @@ export default function Documentation() {
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
-                  <Dropdown tryItOut={<StockPrice />} />
+                  <Dropdown tryItOut={<StockNews />} />
                 </div>
               </div>
             </div>

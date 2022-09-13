@@ -1,6 +1,48 @@
+const baseUrl = "http://www.api.finfetch.net/";
+export { baseUrl };
+
 const requestHeader = `Authorization: Api-Key <APIKEY>`;
 export { requestHeader };
 
+export const samplePythonRequest = `import requests
+url = "http://www.api.finfetch.net/api/stock/news?ticker=intc"
+payload = ""
+headers = {
+  'Authorization': ' Api-Key <APIKEY>'
+}
+response = requests.request("GET", url, headers=headers, data=payload)
+print(response.text)`;
+
+export const sampleJsRequest = `var myHeaders = new Headers();
+myHeaders.append("Authorization", " Api-Key <APIKEY>");
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+fetch("http://www.api.finfetch.net/api/stock/news?ticker=intc", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));`;
+
+export const sampleNodeJsRequest = `var axios = require('axios');
+var data = '';
+var config = {
+  method: 'get',
+  url: 'http://www.api.finfetch.net/api/stock/news?ticker=intc',
+  headers: { 
+    'Authorization': ' Api-Key <APIKEY>'
+  },
+  data : data
+};
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+`;
 const stockPrice = `{
   "data": {
     "High": [49.900001525878906],

@@ -14,9 +14,19 @@ export default function Sidebar() {
           ></img>
         </div>
         <div className="documentation-nav">
+          <a href="#gettingStarted">
+            <div className="documentation-nav-container">
+              <div className="documentation-nav-text">Getting Started</div>
+            </div>
+          </a>
           <a href="#authentication">
             <div className="documentation-nav-container">
               <div className="documentation-nav-text">Authentication</div>
+            </div>
+          </a>
+          <a href="#sampleRequest">
+            <div className="documentation-nav-container">
+              <div className="documentation-nav-text">Sample Requests</div>
             </div>
           </a>
           <a href="#stock-price">
