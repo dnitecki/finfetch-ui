@@ -13,9 +13,7 @@ export default function Footer() {
           <div className="footer-left">
             <div className="footer-logo-container">
               <img className="footer-logo" src={logo} alt="FinFetch.io"></img>
-              <div className="footer-text">
-                Copyright © 2022 FinFetch.io, Inc.
-              </div>
+              <div className="footer-text">Copyright © 2022 FinFetch Inc.</div>
             </div>
             <div className="footer-policies">
               <NavLink className="footer-link" to="/api/privacy-policy">
