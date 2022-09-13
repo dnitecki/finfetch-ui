@@ -30,6 +30,7 @@ export default function Footer() {
                   className="footer-link"
                   href="https://www.linkedin.com/in/dnitecki/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
@@ -37,6 +38,7 @@ export default function Footer() {
                   className="footer-link"
                   href="https://github.com/dnitecki"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
