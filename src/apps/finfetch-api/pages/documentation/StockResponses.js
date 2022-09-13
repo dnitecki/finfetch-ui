@@ -26,14 +26,12 @@ fetch("http://www.api.finfetch.net/api/stock/news?ticker=intc", requestOptions)
   .catch(error => console.log('error', error));`;
 
 export const sampleNodeJsRequest = `var axios = require('axios');
-var data = '';
 var config = {
   method: 'get',
   url: 'http://www.api.finfetch.net/api/stock/news?ticker=intc',
   headers: { 
     'Authorization': ' Api-Key <APIKEY>'
   },
-  data : data
 };
 axios(config)
 .then(function (response) {
