@@ -15,6 +15,12 @@ import {
   stockNews,
   requestHeader,
   baseUrl,
+  quoteUrl,
+  quoteUrlExample,
+  infoUrl,
+  infoUrlExample,
+  newsUrl,
+  newsUrlExample,
 } from "./StockResponses";
 import key from "../../../../assets/Key-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -140,50 +146,147 @@ export default function Documentation() {
                 </div>
                 <Tabs />
               </div>
-              <div id="stock-price" className="documentation-content">
+              <div id="stock-quote" className="documentation-content">
                 <div className="documentation-content-top">
                   <div className="documentation-text">
                     <div className="documentation-content-header-text">
-                      Stock Price <span className="request-type-get">GET</span>
+                      Stock Quote <span className="request-type-get">GET</span>
+                    </div>
+                    <div className="documentation-content-text">
+                      Get real-time and historical stock price data.
+                    </div>
+                    <div className="documentation-details">
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong>Endpoint: </strong>
+                          <span className="documentation-api-header-example">
+                            {quoteUrl}
+                          </span>
+                        </span>
+                      </div>
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong>Parameters: </strong>
+                        </span>
+                      </div>
+                      <div className="documentation-parameters">
+                        <div className="documentation-content-text parameters">
+                          <span>
+                            <strong>ticker</strong>
+                            <span> (eg. intc)</span>
+                            <span className="required">
+                              &nbsp;&nbsp;&nbsp;REQUIRED
+                            </span>
+                          </span>
+                        </div>
+                        <div className="documentation-content-text parameters">
+                          <span>
+                            <strong>startDate</strong>
+                            <span> (yyyy-mm-dd)</span>
+                            <span className="required">
+                              &nbsp;&nbsp;&nbsp;REQUIRED
+                            </span>
+                          </span>
+                        </div>
+                        <div className="documentation-content-text parameters">
+                          <span>
+                            <strong>endDate</strong>
+                            <span> (yyyy-mm-dd)</span>
+                            <span className="required">
+                              &nbsp;&nbsp;&nbsp;REQUIRED
+                            </span>
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="documentation-code">
-                    <div className="documentation-code-header">
-                      Sample JSON response
+                    <div className="documentation-content-text">
+                      <span>
+                        <strong>Example: </strong>
+                        <span className="documentation-api-header-example">
+                          {quoteUrlExample}
+                        </span>
+                      </span>
                     </div>
-                    <SyntaxHighlighter
-                      useInlineStyles={true}
-                      className="syntax-highlighter"
-                      language="json"
-                      style={coy}
-                    >
-                      {stockPrice}
-                    </SyntaxHighlighter>
+                    <div>
+                      <div className="documentation-code-header">
+                        Sample JSON response
+                      </div>
+                      <SyntaxHighlighter
+                        useInlineStyles={true}
+                        className="syntax-highlighter"
+                        language="json"
+                        style={coy}
+                      >
+                        {stockPrice}
+                      </SyntaxHighlighter>
+                    </div>
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
                   <Dropdown tryItOut={<StockPrice />} />
                 </div>
               </div>
-              <div id="stock-info" className="documentation-content">
+              <div id="stock-overview" className="documentation-content">
                 <div className="documentation-content-top">
                   <div className="documentation-text">
                     <div className="documentation-content-header-text">
-                      Stock Info <div className="request-type-get">GET</div>
+                      Stock Overview
+                      <span className="request-type-get">GET</span>
+                    </div>
+                    <div className="documentation-content-text">
+                      Get general information and financials for a stock.
+                    </div>
+                    <div className="documentation-details">
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong>Endpoint: </strong>
+                          <span className="documentation-api-header-example">
+                            {infoUrl}
+                          </span>
+                        </span>
+                      </div>
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong>Parameters: </strong>
+                        </span>
+                      </div>
+                      <div className="documentation-parameters">
+                        <div className="documentation-content-text parameters">
+                          <span>
+                            <strong>ticker</strong>
+                            <span> (eg. intc)</span>
+                            <span className="required">
+                              &nbsp;&nbsp;&nbsp;REQUIRED
+                            </span>
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="documentation-code">
-                    <div className="documentation-code-header">
-                      Sample JSON response
+                    <div className="documentation-content-text">
+                      <span>
+                        <strong>Example: </strong>
+                        <span className="documentation-api-header-example">
+                          {infoUrlExample}
+                        </span>
+                      </span>
                     </div>
-                    <SyntaxHighlighter
-                      useInlineStyles={true}
-                      className="syntax-highlighter"
-                      language="json"
-                      style={coy}
-                    >
-                      {stockInfo}
-                    </SyntaxHighlighter>
+                    <div>
+                      <div className="documentation-code-header">
+                        Sample JSON response
+                      </div>
+                      <SyntaxHighlighter
+                        useInlineStyles={true}
+                        className="syntax-highlighter"
+                        language="json"
+                        style={coy}
+                      >
+                        {stockInfo}
+                      </SyntaxHighlighter>
+                    </div>
                   </div>
                 </div>
                 <div className="documentation-content-bottom">
@@ -194,21 +297,60 @@ export default function Documentation() {
                 <div className="documentation-content-top">
                   <div className="documentation-text">
                     <div className="documentation-content-header-text">
-                      Stock News <div className="request-type-get">GET</div>
+                      Stock News <span className="request-type-get">GET</span>
+                    </div>
+                    <div className="documentation-content-text">
+                      List latest company news by symbol.
+                    </div>
+                    <div className="documentation-details">
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong>Endpoint: </strong>
+                          <span className="documentation-api-header-example">
+                            {newsUrl}
+                          </span>
+                        </span>
+                      </div>
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong>Parameters: </strong>
+                        </span>
+                      </div>
+                      <div className="documentation-parameters">
+                        <div className="documentation-content-text parameters">
+                          <span>
+                            <strong>ticker</strong>
+                            <span> (eg. intc)</span>
+                            <span className="required">
+                              &nbsp;&nbsp;&nbsp;REQUIRED
+                            </span>
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="documentation-code">
-                    <div className="documentation-code-header">
-                      Sample JSON response
+                    <div className="documentation-content-text">
+                      <span>
+                        <strong>Example: </strong>
+                        <span className="documentation-api-header-example">
+                          {newsUrlExample}
+                        </span>
+                      </span>
                     </div>
-                    <SyntaxHighlighter
-                      useInlineStyles={true}
-                      className="syntax-highlighter"
-                      language="json"
-                      style={coy}
-                    >
-                      {stockNews}
-                    </SyntaxHighlighter>
+                    <div>
+                      <div className="documentation-code-header">
+                        Sample JSON response
+                      </div>
+                      <SyntaxHighlighter
+                        useInlineStyles={true}
+                        className="syntax-highlighter"
+                        language="json"
+                        style={coy}
+                      >
+                        {stockNews}
+                      </SyntaxHighlighter>
+                    </div>
                   </div>
                 </div>
                 <div className="documentation-content-bottom">

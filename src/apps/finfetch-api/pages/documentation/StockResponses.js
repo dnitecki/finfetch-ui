@@ -1,8 +1,25 @@
-const baseUrl = "http://www.api.finfetch.net/";
-export { baseUrl };
+//api headers
 
-const requestHeader = `Authorization: Api-Key <APIKEY>`;
-export { requestHeader };
+export const baseUrl = "http://www.api.finfetch.net";
+
+export const requestHeader = `Authorization: Api-Key <APIKEY>`;
+
+//api endpoints
+
+export const quoteUrl = "/api/stock";
+
+export const quoteUrlExample =
+  "/api/stock?ticker=intc&startDate=2022-04-01&endDate=2022-04-01";
+
+export const infoUrl = "/api/stock/info";
+
+export const infoUrlExample = "/api/stock/info?ticker=intc";
+
+export const newsUrl = "/api/stock/news";
+
+export const newsUrlExample = "/api/stock/news?ticker=intc";
+
+//sample responses
 
 export const samplePythonRequest = `import requests
 url = "http://www.api.finfetch.net/api/stock/news?ticker=intc"
@@ -10,7 +27,7 @@ payload = ""
 headers = {
   'Authorization': ' Api-Key <APIKEY>'
 }
-response = requests.request("GET", url, headers=headers, data=payload)
+response = requests.request("GET", url, headers=headers)
 print(response.text)`;
 
 export const sampleJsRequest = `var myHeaders = new Headers();
