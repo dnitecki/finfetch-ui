@@ -45,7 +45,7 @@ export default function LandingPage() {
   return (
     <div id="landingPage" className="landingPage">
       <Helmet>
-        <title>FinFetch.io</title>
+        <title>FinFetch</title>
       </Helmet>
       {apiNavigate ? (
         <div className="landingPage-api-screen screen-on">

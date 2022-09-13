@@ -29,15 +29,15 @@ export default function Sidebar() {
               <div className="documentation-nav-text">Sample Requests</div>
             </div>
           </a>
-          <a href="#stock-price">
+          <a href="#stock-quote">
             <div className="documentation-nav-container">
-              <div className="documentation-nav-text">Stock Price</div>
+              <div className="documentation-nav-text">Stock Quote</div>
               <div className="request-type-get">GET</div>
             </div>
           </a>
-          <a href="#stock-info">
+          <a href="#stock-overview">
             <div className="documentation-nav-container">
-              <div className="documentation-nav-text">Stock Info</div>
+              <div className="documentation-nav-text">Stock Overview</div>
               <div className="request-type-get">GET</div>
             </div>
           </a>
