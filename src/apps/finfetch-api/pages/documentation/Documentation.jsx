@@ -109,7 +109,7 @@ export default function Documentation() {
                     </span>
                   </div>
                   <span>
-                    <strong>Header: </strong>
+                    <strong>Request Header: </strong>
                     <span className="documentation-api-header-example">
                       {requestHeader}
                     </span>
