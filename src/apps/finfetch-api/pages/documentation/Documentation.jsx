@@ -105,12 +105,15 @@ export default function Documentation() {
                   <div className="documentation-content-text">
                     <span>
                       All requests <strong>require</strong> an API token in the
-                      header.
+                      request header.
                     </span>
                   </div>
-                  <div className="documentation-api-header-example">
-                    {requestHeader}
-                  </div>
+                  <span>
+                    <strong>Request Header: </strong>
+                    <span className="documentation-api-header-example">
+                      {requestHeader}
+                    </span>
+                  </span>
                   <div className="documentation-content-text">
                     <span>
                       To access your API Key,{" "}
