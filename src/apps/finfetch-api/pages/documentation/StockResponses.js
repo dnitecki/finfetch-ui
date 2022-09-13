@@ -15,11 +15,9 @@ print(response.text)`;
 
 export const sampleJsRequest = `var myHeaders = new Headers();
 myHeaders.append("Authorization", " Api-Key <APIKEY>");
-var raw = "";
 var requestOptions = {
   method: 'GET',
   headers: myHeaders,
-  body: raw,
   redirect: 'follow'
 };
 fetch("http://www.api.finfetch.net/api/stock/news?ticker=intc", requestOptions)
