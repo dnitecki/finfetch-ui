@@ -7,6 +7,7 @@ import Register from "./pages/register/Register";
 import Account from "./pages/account/Account";
 import PageNotFound from "../../pages/pageNotFound/PageNotFound";
 import { Route, Routes } from "react-router-dom";
+import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <Route path="register" element={<Register />} />
           <Route path="signin" element={<Login />} />
           <Route path="account" element={<Account />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
