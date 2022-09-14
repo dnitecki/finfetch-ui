@@ -81,3 +81,19 @@
   margin: 0;
   transition: all ease 0.2s;
 }
+@media all and (max-width: 600px) {
+  .tabs-container {
+    width: 100%;
+  }
+  .tabs {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+  .tabs-content {
+    font-size: 14px;
+    padding: 0.25rem;
+  }
+  .request-syntax-highlighter {
+    border: none;
+  }
+}

@@ -318,7 +318,7 @@
     text-align: center;
   }
   .documentation-register-text {
-    font-size: 15px;
+    font-size: 16px;
   }
   #documentation-register-icon {
     opacity: 1;
@@ -337,11 +337,14 @@
   }
   .documentation-instructions-text {
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
   }
   .mobile-wrap {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+  }
+  .documentation-syntax-highlighter {
+    font-size: 14px;
   }
 }
