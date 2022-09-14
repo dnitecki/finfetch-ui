@@ -29,7 +29,6 @@ import {
   faFingerprint,
   faRocket,
   faCode,
-  faScroll,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
 import Tabs from "../../components/tabs/Tabs";
@@ -81,7 +80,7 @@ export default function Documentation() {
             </div>
             <div className="documentation-content-wrapper">
               <div className="documentation-content-header">
-                API Documentation <FontAwesomeIcon icon={faScroll} />
+                API Documentation
               </div>
               <div id="gettingStarted" className="documentation-content">
                 <div className="documentation-instructions-text">
