@@ -298,10 +298,6 @@
 .parameters {
   padding-left: 1rem;
 }
-.required {
-  font-size: 12px;
-  opacity: 0.8;
-}
 .strong-blue {
   color: #0b335b;
 }
@@ -311,6 +307,10 @@
 @media all and (max-width: 600px) {
   .documentation-sidebar {
     display: none;
+  }
+  .documentation-content-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .documentation-register {
     justify-content: center;
@@ -331,6 +331,7 @@
   }
   .documentation-content-header {
     font-size: 26px;
+    margin-top: 0;
   }
   .documentation-content-header-text {
     font-size: 24px;

@@ -81,6 +81,10 @@ html:focus-within {
   text-decoration: underline;
   color: #ffffff;
 }
+.required {
+  font-size: 12px;
+  opacity: 0.8;
+}
 .page-link {
   text-decoration: none;
   font-weight: bold;
