@@ -318,7 +318,7 @@
     text-align: center;
   }
   .documentation-register-text {
-    font-size: 16px;
+    font-size: 18px;
   }
   #documentation-register-icon {
     opacity: 1;
@@ -330,15 +330,14 @@
     padding-bottom: 1.5rem;
   }
   .documentation-content-header {
-    font-size: 26px;
-    margin-top: 0;
+    font-size: 30px;
   }
   .documentation-content-header-text {
-    font-size: 24px;
+    font-size: 26px;
   }
   .documentation-instructions-text {
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
   }
   .mobile-wrap {
     display: flex;
@@ -354,22 +353,30 @@
   }
   .documentation-text {
     width: 100%;
+    font-size: 18px;
   }
   .documentation-code {
     margin-top: 1.5rem;
     width: 100%;
   }
+  .documentation-code-header {
+    font-size: 18px;
+  }
   .documentation-api-header-example {
-    line-height: 2rem;
     word-break: break-all;
+    height: fit-content;
+    font-size: 16px;
   }
   .strong-blue {
-    font-size: 16px;
+    font-size: 18px;
   }
   .documentation-content-bottom {
     width: 100%;
   }
   .documentation-details {
-    row-gap: 0.5rem;
+    row-gap: 1rem;
+  }
+  .example-wrap {
+    line-height: 2rem;
   }
 }

@@ -72,3 +72,32 @@
 .footer-link {
   color: #fff;
 }
+@media all and (max-width: 600px) {
+  .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .footer-left {
+    width: 70%;
+    column-gap: 1rem;
+  }
+  .footer-logo {
+    width: 5rem;
+  }
+  .footer-text {
+    font-size: 12px;
+    text-align: center;
+  }
+  .footer-right {
+    width: 30%;
+  }
+  .footer-policies {
+    column-gap: 1rem;
+  }
+  .footer-text-links {
+    font-size: 18px;
+  }
+  .footer-aboutme {
+    padding: 0;
+  }
+}
