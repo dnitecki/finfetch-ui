@@ -221,14 +221,16 @@ export default function Documentation() {
                       <div className="documentation-code-header">
                         Sample JSON response
                       </div>
-                      <SyntaxHighlighter
-                        useInlineStyles={true}
-                        className="syntax-highlighter"
-                        language="json"
-                        style={coy}
-                      >
-                        {stockPrice}
-                      </SyntaxHighlighter>
+                      <div className="documentation-syntax-highlighter">
+                        <SyntaxHighlighter
+                          useInlineStyles={true}
+                          className="syntax-highlighter"
+                          language="json"
+                          style={coy}
+                        >
+                          {stockPrice}
+                        </SyntaxHighlighter>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -292,14 +294,16 @@ export default function Documentation() {
                       <div className="documentation-code-header">
                         Sample JSON response
                       </div>
-                      <SyntaxHighlighter
-                        useInlineStyles={true}
-                        className="syntax-highlighter"
-                        language="json"
-                        style={coy}
-                      >
-                        {stockInfo}
-                      </SyntaxHighlighter>
+                      <div className="documentation-syntax-highlighter">
+                        <SyntaxHighlighter
+                          useInlineStyles={true}
+                          className="syntax-highlighter"
+                          language="json"
+                          style={coy}
+                        >
+                          {stockInfo}
+                        </SyntaxHighlighter>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -364,14 +368,16 @@ export default function Documentation() {
                       <div className="documentation-code-header">
                         Sample JSON response
                       </div>
-                      <SyntaxHighlighter
-                        useInlineStyles={true}
-                        className="syntax-highlighter"
-                        language="json"
-                        style={coy}
-                      >
-                        {stockNews}
-                      </SyntaxHighlighter>
+                      <div className="documentation-syntax-highlighter">
+                        <SyntaxHighlighter
+                          useInlineStyles={true}
+                          className="syntax-highlighter"
+                          language="json"
+                          style={coy}
+                        >
+                          {stockNews}
+                        </SyntaxHighlighter>
+                      </div>
                     </div>
                   </div>
                 </div>

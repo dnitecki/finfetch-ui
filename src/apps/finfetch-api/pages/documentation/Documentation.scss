@@ -88,20 +88,27 @@
 .documentation-code {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  padding-bottom: 1rem;
+  row-gap: 1.5rem;
   width: 60%;
   z-index: 0;
+  height: 100%;
 }
 .documentation-code-header {
   font-weight: bold;
   color: #0b335b;
   width: 100%;
 }
+.documentation-syntax-highlighter {
+  display: flex;
+  width: 100%;
+  height: 16rem;
+}
 .syntax-highlighter {
   width: 100%;
   border-radius: 10px;
   border: 1px solid #ccc;
-  height: 16rem;
+  height: 100%;
   margin: 0;
 }
 .documentation-sidebar {
