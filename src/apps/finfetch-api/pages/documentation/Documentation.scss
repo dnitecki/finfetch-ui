@@ -305,3 +305,11 @@
 .strong-blue {
   color: #0b335b;
 }
+
+// Mobile CSS
+
+@media all and (max-width: 600px) {
+  .documentation-sidebar {
+    display: none;
+  }
+}

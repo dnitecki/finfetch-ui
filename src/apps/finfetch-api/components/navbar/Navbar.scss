@@ -104,3 +104,21 @@
   left: 50%;
   transition: all ease 0.4s;
 }
+
+@media all and (max-width: 600px) {
+  .api-navbar-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .api-nav-button {
+    font-size: 15px;
+    width: 5rem;
+  }
+  .api-navbar-icon {
+    align-items: center;
+    justify-content: center;
+  }
+  .api-navbar-finfetch-icon {
+    height: 2.5rem;
+  }
+}
