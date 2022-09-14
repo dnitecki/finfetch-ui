@@ -312,4 +312,16 @@
   .documentation-sidebar {
     display: none;
   }
+  .documentation-register {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .documentation-register-text {
+    font-size: 15px;
+  }
+  #documentation-register-icon {
+    opacity: 1;
+    transform: none;
+  }
 }
