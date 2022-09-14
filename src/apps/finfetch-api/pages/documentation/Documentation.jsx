@@ -115,7 +115,7 @@ export default function Documentation() {
                       token in the request header.
                     </span>
                   </div>
-                  <span>
+                  <span className="mobile-wrap">
                     <strong className="strong-blue">Request Header: </strong>
                     <span className="documentation-api-header-example">
                       {requestHeader}

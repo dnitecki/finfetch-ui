@@ -324,4 +324,18 @@
     opacity: 1;
     transform: none;
   }
+  .documentation-content-wrapper {
+  }
+  .documentation-content {
+    width: 100%;
+  }
+  .documentation-instructions-text {
+    width: 100%;
+    word-wrap: normal;
+  }
+  .mobile-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
 }
