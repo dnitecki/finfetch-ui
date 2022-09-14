@@ -29,6 +29,7 @@ import {
   faFingerprint,
   faRocket,
   faCode,
+  faScroll,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
 import Tabs from "../../components/tabs/Tabs";
@@ -80,7 +81,7 @@ export default function Documentation() {
             </div>
             <div className="documentation-content-wrapper">
               <div className="documentation-content-header">
-                API Documentation
+                API Documentation <FontAwesomeIcon icon={faScroll} />
               </div>
               <div id="gettingStarted" className="documentation-content">
                 <div className="documentation-instructions-text">
@@ -95,7 +96,7 @@ export default function Documentation() {
                   </div>
                   <div className="documentation-content-text">
                     <span>
-                      <strong>Base URL: </strong>
+                      <strong className="strong-blue">Base URL: </strong>
                       <span className="documentation-api-header-example">
                         {baseUrl}
                       </span>
@@ -110,12 +111,13 @@ export default function Documentation() {
                   </div>
                   <div className="documentation-content-text">
                     <span>
-                      All requests <strong>require</strong> an API token in the
-                      request header.
+                      All requests{" "}
+                      <strong className="strong-blue">require</strong> an API
+                      token in the request header.
                     </span>
                   </div>
                   <span>
-                    <strong>Request Header: </strong>
+                    <strong className="strong-blue">Request Header: </strong>
                     <span className="documentation-api-header-example">
                       {requestHeader}
                     </span>
@@ -158,21 +160,28 @@ export default function Documentation() {
                     <div className="documentation-details">
                       <div className="documentation-content-text">
                         <span>
-                          <strong>Endpoint: </strong>
+                          <strong className="strong-blue">Method: </strong>
+                          <span>GET</span>
+                        </span>
+                      </div>
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong className="strong-blue">Endpoint: </strong>
                           <span className="documentation-api-header-example">
                             {quoteUrl}
                           </span>
                         </span>
                       </div>
-                      <div className="documentation-content-text">
-                        <span>
-                          <strong>Parameters: </strong>
-                        </span>
-                      </div>
                       <div className="documentation-parameters">
+                        <div className="documentation-content-text">
+                          <span>
+                            <strong className="strong-blue">Parameters:</strong>
+                          </span>
+                        </div>
+
                         <div className="documentation-content-text parameters">
                           <span>
-                            <strong>ticker</strong>
+                            <strong className="strong-blue">ticker</strong>
                             <span> (eg. intc)</span>
                             <span className="required">
                               &nbsp;&nbsp;&nbsp;REQUIRED
@@ -181,7 +190,7 @@ export default function Documentation() {
                         </div>
                         <div className="documentation-content-text parameters">
                           <span>
-                            <strong>startDate</strong>
+                            <strong className="strong-blue">startDate</strong>
                             <span> (yyyy-mm-dd)</span>
                             <span className="required">
                               &nbsp;&nbsp;&nbsp;REQUIRED
@@ -190,7 +199,7 @@ export default function Documentation() {
                         </div>
                         <div className="documentation-content-text parameters">
                           <span>
-                            <strong>endDate</strong>
+                            <strong className="strong-blue">endDate</strong>
                             <span> (yyyy-mm-dd)</span>
                             <span className="required">
                               &nbsp;&nbsp;&nbsp;REQUIRED
@@ -203,7 +212,7 @@ export default function Documentation() {
                   <div className="documentation-code">
                     <div className="documentation-content-text">
                       <span>
-                        <strong>Example: </strong>
+                        <strong className="strong-blue">Example: </strong>
                         <span className="documentation-api-header-example">
                           {quoteUrlExample}
                         </span>
@@ -241,21 +250,27 @@ export default function Documentation() {
                     <div className="documentation-details">
                       <div className="documentation-content-text">
                         <span>
-                          <strong>Endpoint: </strong>
+                          <strong className="strong-blue">Method: </strong>
+                          <span>GET</span>
+                        </span>
+                      </div>
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong className="strong-blue">Endpoint: </strong>
                           <span className="documentation-api-header-example">
                             {infoUrl}
                           </span>
                         </span>
                       </div>
-                      <div className="documentation-content-text">
-                        <span>
-                          <strong>Parameters: </strong>
-                        </span>
-                      </div>
                       <div className="documentation-parameters">
+                        <div className="documentation-content-text">
+                          <span>
+                            <strong className="strong-blue">Parameters:</strong>
+                          </span>
+                        </div>
                         <div className="documentation-content-text parameters">
                           <span>
-                            <strong>ticker</strong>
+                            <strong className="strong-blue">ticker</strong>
                             <span> (eg. intc)</span>
                             <span className="required">
                               &nbsp;&nbsp;&nbsp;REQUIRED
@@ -268,7 +283,7 @@ export default function Documentation() {
                   <div className="documentation-code">
                     <div className="documentation-content-text">
                       <span>
-                        <strong>Example: </strong>
+                        <strong className="strong-blue">Example: </strong>
                         <span className="documentation-api-header-example">
                           {infoUrlExample}
                         </span>
@@ -305,21 +320,29 @@ export default function Documentation() {
                     <div className="documentation-details">
                       <div className="documentation-content-text">
                         <span>
-                          <strong>Endpoint: </strong>
+                          <strong className="strong-blue">Method: </strong>
+                          <span>GET</span>
+                        </span>
+                      </div>
+                      <div className="documentation-content-text">
+                        <span>
+                          <strong className="strong-blue">Endpoint: </strong>
                           <span className="documentation-api-header-example">
                             {newsUrl}
                           </span>
                         </span>
                       </div>
-                      <div className="documentation-content-text">
-                        <span>
-                          <strong>Parameters: </strong>
-                        </span>
-                      </div>
+
                       <div className="documentation-parameters">
+                        <div className="documentation-content-text">
+                          <span>
+                            <strong className="strong-blue">Parameters:</strong>
+                          </span>
+                        </div>
+
                         <div className="documentation-content-text parameters">
                           <span>
-                            <strong>ticker</strong>
+                            <strong className="strong-blue">ticker</strong>
                             <span> (eg. intc)</span>
                             <span className="required">
                               &nbsp;&nbsp;&nbsp;REQUIRED
@@ -332,7 +355,7 @@ export default function Documentation() {
                   <div className="documentation-code">
                     <div className="documentation-content-text">
                       <span>
-                        <strong>Example: </strong>
+                        <strong className="strong-blue">Example: </strong>
                         <span className="documentation-api-header-example">
                           {newsUrlExample}
                         </span>
