@@ -39,7 +39,8 @@ export default function StockInfo() {
         <div className="documentation-tryitout-form">
           <form className="tryitout-form" onSubmit={handleSubmit}>
             <label className="form-label tryitout-label" htmlFor="key">
-              API Key (required)
+              API Key
+              <span className="required">&nbsp;&nbsp;&nbsp;REQUIRED</span>
             </label>
             <input
               className="form-input tryitout-input"
@@ -49,7 +50,8 @@ export default function StockInfo() {
               onChange={(e) => setKey(e.target.value)}
             />
             <label className="form-label tryitout-label" htmlFor="ticker">
-              Ticker Symbol (required)
+              Ticker Symbol
+              <span className="required">&nbsp;&nbsp;&nbsp;REQUIRED</span>
             </label>
             <input
               className="form-input tryitout-input"

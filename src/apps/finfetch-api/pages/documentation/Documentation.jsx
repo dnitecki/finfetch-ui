@@ -115,7 +115,7 @@ export default function Documentation() {
                       token in the request header.
                     </span>
                   </div>
-                  <span>
+                  <span className="mobile-wrap">
                     <strong className="strong-blue">Request Header: </strong>
                     <span className="documentation-api-header-example">
                       {requestHeader}
@@ -212,7 +212,7 @@ export default function Documentation() {
                     <div className="documentation-content-text">
                       <span>
                         <strong className="strong-blue">Example: </strong>
-                        <span className="documentation-api-header-example">
+                        <span className="documentation-api-header-example example-wrap">
                           {quoteUrlExample}
                         </span>
                       </span>

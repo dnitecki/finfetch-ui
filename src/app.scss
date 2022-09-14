@@ -81,6 +81,10 @@ html:focus-within {
   text-decoration: underline;
   color: #ffffff;
 }
+.required {
+  font-size: 12px;
+  opacity: 0.8;
+}
 .page-link {
   text-decoration: none;
   font-weight: bold;
@@ -280,5 +284,10 @@ html:focus-within {
   }
   100% {
     opacity: 0.7;
+  }
+}
+@media all and (max-width: 600px) {
+  .form-label {
+    font-size: 16px;
   }
 }

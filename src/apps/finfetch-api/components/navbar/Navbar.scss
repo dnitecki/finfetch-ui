@@ -1,6 +1,6 @@
 .api-navbar {
   background: #0b335b;
-  position: absolute;
+  position: fixed;
   color: #fff;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.325);
   width: 100vw;
@@ -103,4 +103,23 @@
   bottom: 0;
   left: 50%;
   transition: all ease 0.4s;
+}
+
+@media all and (max-width: 600px) {
+  .api-navbar-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .api-nav-button {
+    font-size: 16px;
+    font-weight: 500;
+    width: 5rem;
+  }
+  .api-navbar-icon {
+    align-items: center;
+    justify-content: center;
+  }
+  .api-navbar-finfetch-icon {
+    height: 2.5rem;
+  }
 }

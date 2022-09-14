@@ -298,10 +298,85 @@
 .parameters {
   padding-left: 1rem;
 }
-.required {
-  font-size: 12px;
-  opacity: 0.8;
-}
 .strong-blue {
   color: #0b335b;
+}
+
+// Mobile CSS
+
+@media all and (max-width: 600px) {
+  .documentation-sidebar {
+    display: none;
+  }
+  .documentation-content-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .documentation-register {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .documentation-register-text {
+    font-size: 18px;
+  }
+  #documentation-register-icon {
+    opacity: 1;
+    transform: none;
+  }
+  .documentation-content {
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .documentation-content-header {
+    font-size: 30px;
+  }
+  .documentation-content-header-text {
+    font-size: 26px;
+  }
+  .documentation-instructions-text {
+    width: 100%;
+    font-size: 18px;
+  }
+  .mobile-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  .documentation-syntax-highlighter {
+    font-size: 14px;
+  }
+  .documentation-content-top {
+    flex-direction: column;
+    width: 100%;
+  }
+  .documentation-text {
+    width: 100%;
+    font-size: 18px;
+  }
+  .documentation-code {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  .documentation-code-header {
+    font-size: 18px;
+  }
+  .documentation-api-header-example {
+    word-break: break-all;
+    height: fit-content;
+    font-size: 16px;
+  }
+  .strong-blue {
+    font-size: 18px;
+  }
+  .documentation-content-bottom {
+    width: 100%;
+  }
+  .documentation-details {
+    row-gap: 1rem;
+  }
+  .example-wrap {
+    line-height: 2rem;
+  }
 }

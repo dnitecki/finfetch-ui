@@ -114,3 +114,21 @@
   border-radius: 50%;
   animation: rotation 1s linear infinite;
 }
+@media all and (max-width: 600px) {
+  .documentation-tryitout-content {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+  .documentation-tryitout-form {
+    width: 100%;
+  }
+  .documentation-tryitout-results {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .tryitout-response {
+    height: 12rem;
+    max-height: 16rem;
+  }
+}

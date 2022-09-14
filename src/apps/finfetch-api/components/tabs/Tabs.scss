@@ -21,7 +21,7 @@
   text-align: center;
   width: 50%;
   border: none;
-  background: rgba(128, 128, 128, 0.075);
+  background: #f2f3f5;
   cursor: pointer;
   border-bottom: 1px solid #ccc;
   box-sizing: content-box;
@@ -80,4 +80,20 @@
   min-height: 12rem;
   margin: 0;
   transition: all ease 0.2s;
+}
+@media all and (max-width: 600px) {
+  .tabs-container {
+    width: 100%;
+  }
+  .tabs {
+    font-size: 18px;
+    word-break: keep-all;
+  }
+  .tabs-content {
+    font-size: 14px;
+    padding: 0.25rem;
+  }
+  .request-syntax-highlighter {
+    border: none;
+  }
 }

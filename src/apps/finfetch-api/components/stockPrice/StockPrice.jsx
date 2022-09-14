@@ -51,7 +51,8 @@ export default function StockPrice() {
         <div className="documentation-tryitout-form">
           <form className="tryitout-form" onSubmit={handleSubmit}>
             <label className="form-label tryitout-label" htmlFor="key">
-              API Key (required)
+              API Key
+              <span className="required">&nbsp;&nbsp;&nbsp;REQUIRED</span>
             </label>
             <input
               className="form-input tryitout-input"
@@ -61,7 +62,8 @@ export default function StockPrice() {
               onChange={(e) => setKey(e.target.value)}
             />
             <label className="form-label tryitout-label" htmlFor="ticker">
-              Ticker Symbol (required)
+              Ticker Symbol
+              <span className="required">&nbsp;&nbsp;&nbsp;REQUIRED</span>
             </label>
             <input
               className="form-input tryitout-input"
@@ -71,7 +73,8 @@ export default function StockPrice() {
               onChange={(e) => setTicker(e.target.value)}
             />
             <label className="form-label tryitout-label" htmlFor="start">
-              Start Date (required)
+              Start Date
+              <span className="required">&nbsp;&nbsp;&nbsp;REQUIRED</span>
             </label>
             <input
               className="form-input tryitout-input"
@@ -83,7 +86,8 @@ export default function StockPrice() {
               }}
             />
             <label className="form-label tryitout-label" htmlFor="end">
-              End Date (required)
+              End Date
+              <span className="required">&nbsp;&nbsp;&nbsp;REQUIRED</span>
             </label>
             <input
               className="form-input tryitout-input"
