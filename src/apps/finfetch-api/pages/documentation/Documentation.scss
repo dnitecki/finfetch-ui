@@ -324,14 +324,20 @@
     opacity: 1;
     transform: none;
   }
-  .documentation-content-wrapper {
-  }
   .documentation-content {
     width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .documentation-content-header {
+    font-size: 26px;
+  }
+  .documentation-content-header-text {
+    font-size: 24px;
   }
   .documentation-instructions-text {
     width: 100%;
-    word-wrap: normal;
+    font-size: 15px;
   }
   .mobile-wrap {
     display: flex;
