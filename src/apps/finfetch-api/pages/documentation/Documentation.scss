@@ -347,4 +347,28 @@
   .documentation-syntax-highlighter {
     font-size: 14px;
   }
+  .documentation-content-top {
+    flex-direction: column;
+    width: 100%;
+  }
+  .documentation-text {
+    width: 100%;
+  }
+  .documentation-code {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  .documentation-api-header-example {
+    line-height: 2rem;
+    word-break: break-all;
+  }
+  .strong-blue {
+    font-size: 16px;
+  }
+  .documentation-content-bottom {
+    width: 100%;
+  }
+  .documentation-details {
+    row-gap: 0.5rem;
+  }
 }
