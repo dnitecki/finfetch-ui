@@ -224,3 +224,35 @@
 .screen-off {
   opacity: 0;
 }
+@media all and (max-width: 600px) {
+  .landingPage {
+    background: #0b335b;
+  }
+  .landingPage-container {
+    justify-content: center;
+  }
+  .landingPage-apps {
+    width: 100%;
+  }
+  #landingPage-api {
+    display: none;
+  }
+  #landingPage-dashboard {
+    display: none;
+  }
+  #landingPage-main {
+    display: none;
+  }
+  .landingPage-card-container {
+    flex-direction: column;
+    row-gap: 1rem;
+    column-gap: 0;
+  }
+  .landingPage-card {
+    height: 17.5rem;
+    width: 10rem;
+  }
+  .landingPage-text {
+    display: none;
+  }
+}

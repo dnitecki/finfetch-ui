@@ -1,9 +1,11 @@
 .app-api {
   background-color: #fff;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  overflow: -moz-hidden-unscrollable;
 }
 .app-api-container {
   display: flex;
   transition: all ease 0.2s;
+  overflow: none;
 }

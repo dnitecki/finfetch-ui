@@ -206,7 +206,30 @@ html:focus-within {
   stroke-dashoffset: 48;
   animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
-
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(720deg);
+  }
+  100% {
+    transform: rotateX(1080deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @keyframes stroke {
   100% {
     stroke-dashoffset: 0;

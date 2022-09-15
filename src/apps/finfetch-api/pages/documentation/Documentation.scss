@@ -327,7 +327,12 @@
   }
   #documentation-register-icon {
     opacity: 1;
+    animation: bounce 1.5s ease;
     transform: none;
+  }
+  .key-icon {
+    transform-style: preserve-3d;
+    animation: flip 1.3s linear;
   }
   .documentation-content {
     width: 100%;
@@ -398,12 +403,12 @@
   .hidden {
     opacity: 0;
     transition: all 1s;
-    transform: translateX(-20%);
-    filter: blur(5px);
+    // transform: translateY(10px);
+    // filter: blur(5px);
   }
   .reveal {
     opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
+    // transform: translateY(0);
+    // filter: blur(0);
   }
 }
