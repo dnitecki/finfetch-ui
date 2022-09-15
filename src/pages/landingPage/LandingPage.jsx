@@ -71,6 +71,14 @@ export default function LandingPage() {
       <StockTicker />
       <div className="landingPage-container">
         <div className="landingPage-text">
+          <div className="landingPage-mobile">
+            <img
+              className="landingPage-finfetch-text"
+              src={iconText}
+              alt="FinFetch.io"
+            />
+            APPS
+          </div>
           <div id="landingPage-main">
             <div className="landingPage-icon-container">
               <img
@@ -105,7 +113,7 @@ export default function LandingPage() {
         <div className="landingPage-apps">
           <div className="landingPage-card-container" onMouseLeave={resetBg}>
             <button
-              className="landingPage-button"
+              className="landingPage-button app-reveal-1"
               onClick={apiClick}
               onMouseOver={changeBgDashboard}
             >
@@ -136,7 +144,7 @@ export default function LandingPage() {
               </div>
             </button>
             <button
-              className="landingPage-button"
+              className="landingPage-button app-reveal-2"
               onClick={apiClick}
               onMouseOver={changeBgApi}
             >

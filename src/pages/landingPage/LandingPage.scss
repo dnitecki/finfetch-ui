@@ -198,6 +198,9 @@
   display: none;
   transition: display ease 0.3s;
 }
+.landingPage-mobile {
+  display: none;
+}
 .landingPage-api-screen {
   position: absolute;
   display: flex;
@@ -230,6 +233,8 @@
   }
   .landingPage-container {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .landingPage-apps {
     width: 100%;
@@ -252,7 +257,7 @@
     border-radius: 15px;
   }
   .landingPage-text {
-    display: none;
+    display: flex;
   }
   .landingPage-screen-icon-api {
     height: 8rem;
@@ -290,5 +295,26 @@
   }
   .landingPage-card-button-api {
     font-size: 16px;
+  }
+  .landingPage-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .landingPage-finfetch-text {
+    height: 100%;
+    width: 12rem;
+  }
+  .app-reveal-1 {
+    animation: reveal-1 1s ease;
+  }
+  .app-reveal-2 {
+    animation: reveal-2 1s ease;
   }
 }
