@@ -98,7 +98,11 @@ export default function LandingPage() {
         </div>
         <div className="landingPage-apps">
           <div className="landingPage-card-container" onMouseLeave={resetBg}>
-            <NavLink to="dashboard/overview" onMouseOver={changeBgDashboard}>
+            <button
+              className="landingPage-button"
+              onClick={apiClick}
+              onMouseOver={changeBgApi}
+            >
               <div className="landingPage-card">
                 <div className="landingPage-circle-dash">
                   <div className="landingPage-app-name">
@@ -124,7 +128,7 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-            </NavLink>
+            </button>
             <button
               className="landingPage-button"
               onClick={apiClick}
