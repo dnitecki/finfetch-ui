@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Documentation.scss";
 import StockPrice from "../../components/stockPrice/StockPrice";
 import StockInfo from "../../components/stockInfo/StockInfo";
@@ -34,6 +34,22 @@ import Footer from "../../components/footer/Footer";
 import Tabs from "../../components/tabs/Tabs";
 
 export default function Documentation() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+        } else {
+          entry.target.classList.remove("reveal");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <div className="documentation">
       <Helmet>
@@ -53,10 +69,10 @@ export default function Documentation() {
           <div className="documentation-header"></div>
           <div className="documentation-content-container-scroll">
             <div id="page-top" className="documentation-register">
-              <div className="documentation-register-header">
+              <div className="documentation-register-header hidden">
                 FinFetch <strong>Stock API</strong>
               </div>
-              <div className="documentation-register-text">
+              <div className="documentation-register-text hidden">
                 <div>A truly democratized stock data RESTful API.</div>
                 <div>
                   Access real-time financial data to power your projects for
@@ -82,7 +98,7 @@ export default function Documentation() {
               <div className="documentation-content-header">
                 API Documentation
               </div>
-              <div id="gettingStarted" className="documentation-content">
+              <div id="gettingStarted" className="documentation-content hidden">
                 <div className="documentation-instructions-text">
                   <div className="documentation-content-header-text">
                     Getting Started <FontAwesomeIcon icon={faRocket} />
@@ -103,7 +119,7 @@ export default function Documentation() {
                   </div>
                 </div>
               </div>
-              <div id="authentication" className="documentation-content">
+              <div id="authentication" className="documentation-content hidden">
                 <div className="documentation-instructions-text">
                   <div className="documentation-content-header-text">
                     Authentication <FontAwesomeIcon icon={faFingerprint} />
@@ -141,13 +157,15 @@ export default function Documentation() {
                   </div>
                 </div>
               </div>
-              <div id="sampleRequest" className="documentation-content">
+              <div id="sampleRequest" className="documentation-content hidden">
                 <div className="documentation-content-header-text">
                   Sample Requests <FontAwesomeIcon icon={faCode} />
                 </div>
-                <Tabs />
+                <div>
+                  <Tabs />
+                </div>
               </div>
-              <div id="stock-quote" className="documentation-content">
+              <div id="stock-quote" className="documentation-content hidden">
                 <div className="documentation-content-top">
                   <div className="documentation-text">
                     <div className="documentation-content-header-text">
@@ -177,7 +195,6 @@ export default function Documentation() {
                             <strong className="strong-blue">Parameters:</strong>
                           </span>
                         </div>
-
                         <div className="documentation-content-text parameters">
                           <span>
                             <strong className="strong-blue">ticker</strong>
@@ -238,7 +255,7 @@ export default function Documentation() {
                   <Dropdown tryItOut={<StockPrice />} />
                 </div>
               </div>
-              <div id="stock-overview" className="documentation-content">
+              <div id="stock-overview" className="documentation-content hidden">
                 <div className="documentation-content-top">
                   <div className="documentation-text">
                     <div className="documentation-content-header-text">
@@ -311,7 +328,7 @@ export default function Documentation() {
                   <Dropdown tryItOut={<StockInfo />} />
                 </div>
               </div>
-              <div id="stock-news" className="documentation-content">
+              <div id="stock-news" className="documentation-content hidden">
                 <div className="documentation-content-top">
                   <div className="documentation-text">
                     <div className="documentation-content-header-text">
