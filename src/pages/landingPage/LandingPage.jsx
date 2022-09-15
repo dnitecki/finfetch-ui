@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LandingPage.scss";
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import StockTicker from "../../components/stockTicker/StockTicker";
 import icon from "../../assets/FinFetch-icon.png";
 import iconText from "../../assets/FinFetch-icon-text.png";
@@ -12,22 +12,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const changeBgDashboard = () => {
-  document.getElementById("landingPage").style.background = "#5C4EB3";
-  document.getElementById("landingPage-main").style.display = "none";
-  document.getElementById("landingPage-api").style.display = "none";
-  document.getElementById("landingPage-dashboard").style.display = "flex";
+  if (window.screen.width > 600) {
+    document.getElementById("landingPage").style.background = "#5C4EB3";
+    document.getElementById("landingPage-main").style.display = "none";
+    document.getElementById("landingPage-api").style.display = "none";
+    document.getElementById("landingPage-dashboard").style.display = "flex";
+  }
 };
 const changeBgApi = () => {
-  document.getElementById("landingPage").style.background = "#0982cc";
-  document.getElementById("landingPage-main").style.display = "none";
-  document.getElementById("landingPage-dashboard").style.display = "none";
-  document.getElementById("landingPage-api").style.display = "flex";
+  if (window.screen.width > 600) {
+    document.getElementById("landingPage").style.background = "#0982cc";
+    document.getElementById("landingPage-main").style.display = "none";
+    document.getElementById("landingPage-dashboard").style.display = "none";
+    document.getElementById("landingPage-api").style.display = "flex";
+  }
 };
 const resetBg = () => {
-  document.getElementById("landingPage").style.background = "#0b335b";
-  document.getElementById("landingPage-api").style.display = "none";
-  document.getElementById("landingPage-dashboard").style.display = "none";
-  document.getElementById("landingPage-main").style.display = "flex";
+  if (window.screen.width > 600) {
+    document.getElementById("landingPage").style.background = "#0b335b";
+    document.getElementById("landingPage-api").style.display = "none";
+    document.getElementById("landingPage-dashboard").style.display = "none";
+    document.getElementById("landingPage-main").style.display = "flex";
+  }
 };
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -101,7 +107,7 @@ export default function LandingPage() {
             <button
               className="landingPage-button"
               onClick={apiClick}
-              onMouseOver={changeBgApi}
+              onMouseOver={changeBgDashboard}
             >
               <div className="landingPage-card">
                 <div className="landingPage-circle-dash">
