@@ -333,6 +333,10 @@
     width: 100%;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    border-bottom: 1px solid #0b335b;
+  }
+  .documentation-content:last-of-type {
+    border-bottom: none;
   }
   .documentation-content-header {
     font-size: 30px;

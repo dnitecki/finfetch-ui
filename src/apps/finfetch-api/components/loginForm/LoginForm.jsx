@@ -24,14 +24,16 @@ export default function LoginForm() {
   const { setLoginStatus } = useContext(UserContext);
 
   const getSavedEmail = () => {
-    if (localStorage.getItem("email") === null) {
-      setEmail("");
-      setChecked(false);
-      emailRef.current.focus();
-    } else {
-      setEmail(localStorage.getItem("email"));
-      setChecked(true);
-      passRef.current.focus();
+    if (window.screen.width > 600) {
+      if (localStorage.getItem("email") === null) {
+        setEmail("");
+        setChecked(false);
+        emailRef.current.focus();
+      } else {
+        setEmail(localStorage.getItem("email"));
+        setChecked(true);
+        passRef.current.focus();
+      }
     }
   };
   useEffect(() => {
