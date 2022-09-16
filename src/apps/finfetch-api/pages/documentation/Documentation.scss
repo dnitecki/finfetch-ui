@@ -159,6 +159,9 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.finfetch-mobile-icon {
+  display: none;
+}
 .documentation-content-header-text {
   display: flex;
   height: fit-content;
@@ -185,11 +188,11 @@
 
 .documentation-register-text {
   display: flex;
-  flex-direction: column;
-  row-gap: 0.2rem;
-  font-size: 18px;
-  font-weight: 400;
-  opacity: 0.9;
+  align-items: center;
+  height: 3rem;
+  column-gap: 0.5rem;
+  font-size: 28px;
+  font-weight: 500;
   color: #fff;
 }
 .documentation-register-button {
@@ -299,6 +302,11 @@
 .strong-blue {
   color: #0b335b;
 }
+.typewriter {
+  font-size: 28px;
+  padding-top: 0.1rem;
+  font-weight: 300;
+}
 
 // Mobile CSS
 
@@ -318,13 +326,16 @@
     padding-bottom: 2rem;
     row-gap: 2rem;
   }
-  .documentation-register-header {
-    font-size: 36px;
+  .finfetch-mobile-icon {
+    display: flex;
+    justify-content: center;
   }
-  .documentation-register-text {
-    font-size: 18px;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .finfetch-text-icon {
+    display: none;
+  }
+  .documentation-register-header {
+    font-size: 24px;
+    flex-direction: column;
   }
   #documentation-register-icon {
     opacity: 1;
