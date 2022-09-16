@@ -32,18 +32,13 @@
 }
 .documentation-content-container {
   display: flex;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  overflow: hidden;
-}
-.documentation-content-container-scroll {
-  display: flex;
   scroll-behavior: smooth !important;
   height: 100%;
   width: 100%;
   flex-direction: column;
   overflow-y: auto;
+}
+.documentation-content-container-scroll {
 }
 .documentation-content {
   padding-top: 2rem;
@@ -114,7 +109,7 @@
 .documentation-sidebar {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 325px;
   min-width: 325px;
   background-color: #fff;
@@ -132,6 +127,25 @@
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
+}
+.documentation-register {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  column-gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: url(../../../../assets/API-banner.png);
+  background-color: #0b335b;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 .documentation-register-header {
   display: flex;
@@ -164,26 +178,7 @@
   font-weight: 500;
   color: rgb(30, 144, 255);
 }
-.documentation-register {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  column-gap: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  background: url(../../../../assets/API-banner.png);
-  background-color: #0b335b;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-}
+
 .documentation-register-text {
   display: flex;
   flex-direction: column;
