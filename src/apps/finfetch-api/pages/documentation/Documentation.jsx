@@ -78,7 +78,8 @@ export default function Documentation() {
                 ></img>
               </div>
               <span>
-                REST <strong>Stock API</strong>
+                <span className="mobile-font-header">REST </span>
+                <strong>Stock API</strong>
               </span>
             </div>
             <div className="documentation-register-text">

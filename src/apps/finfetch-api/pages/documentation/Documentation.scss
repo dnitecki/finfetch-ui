@@ -337,6 +337,9 @@
     font-size: 24px;
     flex-direction: column;
   }
+  .mobile-font-header {
+    font-weight: 300;
+  }
   #documentation-register-icon {
     opacity: 1;
     animation: bounce 1.5s ease;
@@ -350,7 +353,6 @@
     width: 100%;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #0b335b;
   }
   .documentation-content-header {
     font-size: 30px;
