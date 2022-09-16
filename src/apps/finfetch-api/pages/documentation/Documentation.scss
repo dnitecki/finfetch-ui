@@ -185,11 +185,9 @@
 
 .documentation-register-text {
   display: flex;
-  flex-direction: column;
-  row-gap: 0.2rem;
-  font-size: 18px;
-  font-weight: 400;
-  opacity: 0.9;
+  column-gap: 0.2rem;
+  font-size: 26px;
+  font-weight: 500;
   color: #fff;
 }
 .documentation-register-button {
@@ -299,6 +297,10 @@
 .strong-blue {
   color: #0b335b;
 }
+.typewriter {
+  font-size: 26px;
+  font-weight: 400;
+}
 
 // Mobile CSS
 
@@ -320,11 +322,6 @@
   }
   .documentation-register-header {
     font-size: 36px;
-  }
-  .documentation-register-text {
-    font-size: 18px;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
   #documentation-register-icon {
     opacity: 1;

@@ -32,6 +32,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
 import Tabs from "../../components/tabs/Tabs";
+import TypewriterEffect from "../../components/typewriter/Typewriter";
 
 export default function Documentation() {
   useEffect(() => {
@@ -68,14 +69,9 @@ export default function Documentation() {
             <div className="documentation-register-header hidden">
               FinFetch <strong>Stock API</strong>
             </div>
-            <div className="documentation-register-text hidden">
-              <div>A truly democratized stock data RESTful API.</div>
-              <div>
-                Access real-time financial data to power your projects for
-                <strong>
-                  &nbsp;<u>FREE.</u>
-                </strong>
-              </div>
+            <div className="documentation-register-text">
+              <TypewriterEffect />
+              <span className="typewriter">Data</span>
             </div>
             <div className="documentation-register-button">
               <div id="register-button-container">
