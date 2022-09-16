@@ -185,8 +185,10 @@
 
 .documentation-register-text {
   display: flex;
+  align-items: center;
+  height: 3rem;
   column-gap: 0.5rem;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   color: #fff;
 }
@@ -298,7 +300,7 @@
   color: #0b335b;
 }
 .typewriter {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 400;
 }
 
