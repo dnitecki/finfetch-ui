@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Documentation.scss";
+import icon from "../../../../assets/FinFetch-icon-text.png";
 import StockPrice from "../../components/stockPrice/StockPrice";
 import StockInfo from "../../components/stockInfo/StockInfo";
 import StockNews from "../../components/stockNews/StockNews";
@@ -29,6 +30,7 @@ import {
   faFingerprint,
   faRocket,
   faCode,
+  faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
 import Tabs from "../../components/tabs/Tabs";
@@ -67,9 +69,20 @@ export default function Documentation() {
         <div className="documentation-content-container">
           <div id="page-top" className="documentation-register">
             <div className="documentation-register-header hidden">
-              FinFetch <strong>Stock API</strong>
+              <div className="finfetch-text-icon">FinFetch</div>
+              <div className="finfetch-mobile-icon">
+                <img
+                  className="documentation-nav-logo"
+                  src={icon}
+                  alt="FinFetch.io"
+                ></img>
+              </div>
+              <span>
+                REST <strong>Stock API</strong>
+              </span>
             </div>
             <div className="documentation-register-text">
+              <FontAwesomeIcon icon={faCircleCheck} />
               <TypewriterEffect />
               <span className="typewriter">Data</span>
             </div>
