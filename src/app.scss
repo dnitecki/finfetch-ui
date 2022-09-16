@@ -342,6 +342,11 @@ html:focus-within {
   .bg-layer-2 {
     animation: diagonal-2 10s ease-in-out infinite alternate;
   }
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
   @keyframes diagonal-1 {
     0% {
       transform: translate(400px, -1200px);

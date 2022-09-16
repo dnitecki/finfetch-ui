@@ -7,6 +7,7 @@ export default function Register() {
   return (
     <>
       <div className="register">
+        <div className="documentation-header"></div>
         <Helmet>
           <title>FinFetch | Register</title>
         </Helmet>
