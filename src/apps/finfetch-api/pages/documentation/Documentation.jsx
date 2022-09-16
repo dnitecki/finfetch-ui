@@ -110,7 +110,7 @@ export default function Documentation() {
                 <div className="documentation-content-text">
                   FinFetch Stock API has predictable resource-oriented URLs,
                   accepts form-encoded request bodies, returns JSON-encoded
-                  responses, and uses standard HTTP response codes and
+                  responses, and uses standard HTTP response codes and API Key
                   authentication.
                 </div>
                 <div className="documentation-content-text">
