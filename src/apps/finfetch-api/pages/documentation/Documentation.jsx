@@ -159,6 +159,7 @@ export default function Documentation() {
                 <Tabs />
               </div>
             </div>
+            <div className="documentation-content-header">API Endpoints</div>
             <div id="stock-quote" className="documentation-content hidden">
               <div className="documentation-content-top">
                 <div className="documentation-text">
