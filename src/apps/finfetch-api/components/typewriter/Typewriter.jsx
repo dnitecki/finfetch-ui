@@ -10,7 +10,6 @@ export default function TypewriterEffect() {
           autoStart: true,
           delay: 75,
           loop: true,
-          stringSplitter: true,
         }}
       />
     </>
