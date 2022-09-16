@@ -37,7 +37,9 @@ export default function RegistrationForm() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    emailRef.current.focus();
+    if (window.screen.width > 600) {
+      emailRef.current.focus();
+    }
   }, []);
 
   useEffect(() => {
