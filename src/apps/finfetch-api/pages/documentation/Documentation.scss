@@ -38,8 +38,6 @@
   flex-direction: column;
   overflow-y: auto;
 }
-.documentation-content-container-scroll {
-}
 .documentation-content {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -315,10 +313,12 @@
     row-gap: 2rem;
   }
   .documentation-register-header {
-    font-size: 34px;
+    font-size: 36px;
   }
   .documentation-register-text {
-    font-size: 16px;
+    font-size: 18px;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   #documentation-register-icon {
     opacity: 1;
