@@ -1,5 +1,5 @@
 import axios from "axios";
-const basePath = "http://www.api.finfetch.net";
+const basePath = "https://www.api.finfetch.net";
 
 axios.defaults.withCredentials = true;
 
