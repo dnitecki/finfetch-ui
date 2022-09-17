@@ -6,7 +6,7 @@ export default function TypewriterEffect() {
     <>
       <Typewriter
         options={{
-          strings: ["Verified ", "Real-Time ", "Truly Free "],
+          strings: ["Verified ", "Real-Time ", "100% Free "],
           autoStart: true,
           delay: 75,
           loop: true,
