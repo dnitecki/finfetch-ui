@@ -1,6 +1,6 @@
 //api headers
 
-export const baseUrl = "http://www.api.finfetch.net";
+export const baseUrl = "https://www.api.finfetch.net";
 
 export const requestHeader = `Authorization: Api-Key <APIKEY>`;
 
