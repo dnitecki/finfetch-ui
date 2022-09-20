@@ -72,7 +72,7 @@ export default function Documentation() {
               <div className="finfetch-text-icon">FinFetch</div>
               <div className="finfetch-mobile-icon">
                 <img
-                  className="documentation-nav-logo"
+                  className="documentation-finfetch-logo"
                   src={icon}
                   alt="FinFetch.io"
                 ></img>

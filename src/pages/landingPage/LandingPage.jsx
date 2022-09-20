@@ -9,7 +9,11 @@ import apiIcon2 from "../../assets/API-icon-alternate.png";
 import dashIcon from "../../assets/Dashboard-icon.png";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRightLong,
+  faArrowUpRightFromSquare,
+  faTriangleExclamation,
+} from "@fortawesome/free-solid-svg-icons";
 
 const changeBgDashboard = () => {
   if (window.screen.width > 600) {
@@ -77,7 +81,10 @@ export default function LandingPage() {
               src={iconText}
               alt="FinFetch.io"
             />
-            APPS
+            <span className="landingPage-mobile-text">
+              Select Application
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            </span>
           </div>
           <div id="landingPage-main">
             <div className="landingPage-icon-container">
@@ -117,7 +124,12 @@ export default function LandingPage() {
               onClick={apiClick}
               onMouseOver={changeBgDashboard}
             >
-              <div className="landingPage-card">
+              <div className="landingPage-card landingPage-app-dashboard ">
+                <div className="landingPage-construction">
+                  <FontAwesomeIcon icon={faTriangleExclamation} />
+                  Under Construction
+                  <FontAwesomeIcon icon={faTriangleExclamation} />
+                </div>
                 <div className="landingPage-circle-dash">
                   <div className="landingPage-app-name">
                     Stock Analyzer
@@ -148,7 +160,7 @@ export default function LandingPage() {
               onClick={apiClick}
               onMouseOver={changeBgApi}
             >
-              <div className="landingPage-card">
+              <div className="landingPage-card landingPage-app-api">
                 <div className="landingPage-circle-api">
                   <div className="landingPage-app-name">
                     Financial Data <div className="landingPage-bold">API</div>
