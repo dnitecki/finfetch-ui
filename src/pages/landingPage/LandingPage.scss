@@ -243,7 +243,7 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #fbfaf5;
+  background-color: #d8dbde;
   transition: all ease 0.3s;
 }
 .landingPage-screen-icon {
@@ -302,6 +302,18 @@
   }
   .landingPage-app-api {
     border: 3px solid #0982cc;
+  }
+  .landingPage-card-container:hover .landingPage-card {
+    filter: none;
+    opacity: 1;
+  }
+  .landingPage-card-container .landingPage-card:hover {
+    top: 0;
+    transform: none;
+    box-shadow: none;
+    filter: blur(0);
+    box-shadow: 0 0.5rem 1rem #0000004c;
+    opacity: 1;
   }
   .landingPage-text {
     display: flex;
@@ -362,7 +374,6 @@
     align-items: center;
     display: flex;
     column-gap: 0.7rem;
-    opacity: 0.8;
     color: #ffffff;
     font-size: 22px;
     font-weight: 300;

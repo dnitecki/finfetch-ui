@@ -69,11 +69,13 @@
   }
   .underConstruction-header {
     font-size: 36px;
+    margin-bottom: 1rem;
   }
   .underConstruction-text {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 22px;
   }
   .underConstruction-buttons {
     margin-top: 2rem;
@@ -82,5 +84,9 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+  .underConstruction-button:hover {
+    background-color: transparent;
+    color: #fff;
   }
 }
