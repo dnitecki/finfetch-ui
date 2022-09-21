@@ -81,10 +81,10 @@ export default function LandingPage() {
               src={iconText}
               alt="FinFetch.io"
             />
-            <span className="landingPage-mobile-text">
+            <div className="landingPage-mobile-text">
               Select Application
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            </span>
+            </div>
           </div>
           <div id="landingPage-main">
             <div className="landingPage-icon-container">
