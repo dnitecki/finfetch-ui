@@ -236,7 +236,17 @@
   background-color: #0982cc;
   transition: all ease 0.3s;
 }
-.landingPage-screen-icon-api {
+.landingPage-dash-screen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fbfaf5;
+  transition: all ease 0.3s;
+}
+.landingPage-screen-icon {
   height: 11rem;
   margin-top: 2rem;
   -webkit-animation: pulse 1.5s infinite ease-in-out;
@@ -299,7 +309,7 @@
     justify-content: center;
     align-content: center;
   }
-  .landingPage-screen-icon-api {
+  .landingPage-screen-icon {
     height: 8rem;
   }
   .landingPage-circle-dash {
