@@ -43,12 +43,20 @@ export default function LandingPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const [apiNavigate, setApiNavigate] = useState(false);
+  const [dashboardNavigate, setDashboardNavigate] = useState(false);
 
   const apiClick = () => {
     setApiNavigate(true);
     setTimeout(() => {
       setApiNavigate(false);
       navigate("/api/docs", { state: { from: location }, replace: true });
+    }, 1500);
+  };
+  const dashClick = () => {
+    setDashboardNavigate(true);
+    setTimeout(() => {
+      setDashboardNavigate(false);
+      navigate("/dashboard/", { state: { from: location }, replace: true });
     }, 1500);
   };
 
@@ -60,13 +68,24 @@ export default function LandingPage() {
       {apiNavigate ? (
         <div className="landingPage-api-screen screen-on">
           <img
-            className="landingPage-screen-icon-api"
+            className="landingPage-screen-icon"
             src={apiIcon2}
             alt="FinFetch.io"
           />
         </div>
       ) : (
         <div className="landingPage-api-screen screen-off"></div>
+      )}
+      {dashboardNavigate ? (
+        <div className="landingPage-dash-screen screen-on">
+          <img
+            className="landingPage-screen-icon"
+            src={dashIcon}
+            alt="FinFetch.io"
+          />
+        </div>
+      ) : (
+        <div className="landingPage-dash-screen screen-off"></div>
       )}
       <div className="bg-animation">
         <div className="bg-layer-1"></div>
@@ -121,7 +140,7 @@ export default function LandingPage() {
           <div className="landingPage-card-container" onMouseLeave={resetBg}>
             <button
               className="landingPage-button app-reveal-1"
-              onClick={apiClick}
+              onClick={dashClick}
               onMouseOver={changeBgDashboard}
             >
               <div className="landingPage-card landingPage-app-dashboard ">

@@ -236,7 +236,17 @@
   background-color: #0982cc;
   transition: all ease 0.3s;
 }
-.landingPage-screen-icon-api {
+.landingPage-dash-screen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #d8dbde;
+  transition: all ease 0.3s;
+}
+.landingPage-screen-icon {
   height: 11rem;
   margin-top: 2rem;
   -webkit-animation: pulse 1.5s infinite ease-in-out;
@@ -283,15 +293,27 @@
   }
   .landingPage-construction {
     transform: rotate(53deg);
-    width: 18rem;
+    width: 18.5rem;
     font-size: 14px;
     padding: 0.2rem;
   }
   .landingPage-app-dashboard {
-    border: 3px solid #5c4eb3;
+    border: 1px solid #5c4eb3;
   }
   .landingPage-app-api {
-    border: 3px solid #0982cc;
+    border: 1px solid #0982cc;
+  }
+  .landingPage-card-container:hover .landingPage-card {
+    filter: none;
+    opacity: 1;
+  }
+  .landingPage-card-container .landingPage-card:hover {
+    top: 0;
+    transform: none;
+    box-shadow: none;
+    filter: blur(0);
+    box-shadow: 0 0.5rem 1rem #0000004c;
+    opacity: 1;
   }
   .landingPage-text {
     display: flex;
@@ -299,7 +321,7 @@
     justify-content: center;
     align-content: center;
   }
-  .landingPage-screen-icon-api {
+  .landingPage-screen-icon {
     height: 8rem;
   }
   .landingPage-circle-dash {
@@ -352,7 +374,6 @@
     align-items: center;
     display: flex;
     column-gap: 0.7rem;
-    opacity: 0.8;
     color: #ffffff;
     font-size: 22px;
     font-weight: 300;

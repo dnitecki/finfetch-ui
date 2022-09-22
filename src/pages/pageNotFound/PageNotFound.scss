@@ -62,3 +62,19 @@
 .pageNotFound-button:hover {
   opacity: 0.8;
 }
+@media all and (max-width: 600px) {
+  .pageNotFound-container {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .pageNotFound-header {
+    font-size: 60px;
+  }
+  .pageNotFound-subHeader {
+    font-size: 40px;
+  }
+  .pageNotFound-text {
+    font-size: 24px;
+  }
+}

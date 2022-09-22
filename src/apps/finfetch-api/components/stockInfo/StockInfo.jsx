@@ -84,7 +84,18 @@ export default function StockInfo() {
             </div>
           ) : (
             <div className="tryitout-response">
-              <div className="tryitout-response-text">{data}</div>
+              {data ? (
+                <div className="tryitout-response-text">{data}</div>
+              ) : (
+                <div className="tryitout-image-container">
+                  <img
+                    className="tryitout-finfetch-icon"
+                    src={icon}
+                    alt="FinFetch.io"
+                  />
+                  Enter Parameters to View Data
+                </div>
+              )}
             </div>
           )}
         </div>
