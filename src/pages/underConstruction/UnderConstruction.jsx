@@ -38,9 +38,9 @@ export default function UnderConstruction() {
             Under Construction
           </div>
           <div className="underConstruction-text hidden">
-            The <strong>Stock Analyzer Tool</strong> is currently under
-            construction. I'm excited to show this to the world and it'll be on
-            FinFetch as soon as it's ready.
+            The <strong>Stock Analyzer Tool</strong> is currently in
+            development. I'm excited to show this to the world and it'll be
+            available on FinFetch as soon as it's ready.
           </div>
           <div className="underConstruction-buttons">
             <NavLink to="/">
