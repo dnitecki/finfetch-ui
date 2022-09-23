@@ -108,7 +108,7 @@ export default function StockPrice() {
           </form>
         </div>
         <div className="documentation-tryitout-results">
-          <div className="documentation-code-header">API response</div>
+          <div className="documentation-code-header">API Response</div>
           {isloading ? (
             <div className="tryitout-response tryitout-center">
               <div className="tryitout-loading-container">

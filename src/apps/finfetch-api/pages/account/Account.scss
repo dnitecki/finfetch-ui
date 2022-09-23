@@ -263,3 +263,31 @@
 .account-icon {
   height: 4rem;
 }
+@media all and (max-width: 600px) {
+  .account {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .account-container {
+    width: 100%;
+  }
+  .account-key {
+    width: 100%;
+  }
+  .account-buttons {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .account-api-docs-button {
+    font-size: 16px;
+  }
+  .account-api-regen-button {
+    font-size: 16px;
+  }
+  .account-login-text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
