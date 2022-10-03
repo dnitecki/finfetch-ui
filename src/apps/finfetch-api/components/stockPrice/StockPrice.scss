@@ -40,6 +40,7 @@
   height: 100%;
   flex-direction: column;
   max-width: 40rem;
+  padding-bottom: 0.5rem;
 }
 .tryitout-button {
   background-color: #0b335b;
@@ -124,7 +125,7 @@
   height: 100%;
   width: 100%;
   font-weight: 500;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 .tryitout-finfetch-icon {
   height: 55px;
@@ -143,6 +144,7 @@
   .documentation-tryitout-results {
     margin-top: 1rem;
     width: 100%;
+    padding-bottom: 0;
   }
   .tryitout-response {
     height: 12rem;
