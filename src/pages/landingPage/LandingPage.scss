@@ -71,7 +71,7 @@
   overflow: hidden;
   height: 28rem;
   width: 16rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5px);
   border-radius: 20px;
   box-shadow: 0 0.5rem 1rem #0000004c;
@@ -257,10 +257,19 @@
 }
 .screen-on {
   opacity: 1;
+  animation: expand 0.3s ease;
   z-index: 10000;
 }
 .screen-off {
   opacity: 0;
+}
+@keyframes expand {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @media all and (max-width: 600px) {
   .landingPage {
@@ -332,7 +341,7 @@
   }
   .landingPage-app-name {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 1rem;
   }
   .landingPage-bold {

@@ -28,6 +28,10 @@ html:focus-within {
 a {
   text-decoration: none;
 }
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
 .form-input {
   width: 100%;
   border: none;
