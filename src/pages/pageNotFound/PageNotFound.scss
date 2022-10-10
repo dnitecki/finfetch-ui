@@ -63,6 +63,10 @@
   opacity: 0.8;
 }
 @media all and (max-width: 600px) {
+  .pageNotFound {
+    height: -moz-available; /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  }
   .pageNotFound-container {
     width: 100%;
     padding-left: 2rem;

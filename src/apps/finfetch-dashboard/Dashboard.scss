@@ -13,3 +13,9 @@
 .p-accordion-header .p-highlight.p-accordion-header {
   outline: none;
 }
+@media all and (max-width: 600px) {
+  .app-dashboard-container {
+    height: -moz-available; /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  }
+}

@@ -160,6 +160,13 @@
   font-size: 1.6rem;
   font-weight: bold;
 }
+.landingPage-logo-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2ms;
+}
 .landingPage-finfetch-text {
   display: flex;
   height: 100%;
@@ -374,6 +381,28 @@
   .landingPage-card-button-api {
     font-size: 16px;
   }
+  .landingPage-logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transform: scale(0.9);
+  }
+  .landingPage-finfetch-letter {
+    position: absolute;
+    height: 80%;
+    top: 50%;
+    left: 27.5%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    animation: letterMove ease-in-out 1.5s;
+  }
+  .landingPage-finfetch-text {
+    width: 100%;
+    height: 100%;
+    transform: translateX(1.5rem);
+    clip-path: inset(0 0 0 0);
+    animation: logoReveal ease-in-out 1.5s;
+  }
   .landingPage-mobile {
     width: 100%;
     display: flex;
@@ -390,7 +419,7 @@
     display: flex;
     column-gap: 0.7rem;
     color: #ffffff;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 300;
   }
   .landingPage-finfetch-text {
@@ -410,5 +439,42 @@
   }
   .app-reveal-2 {
     animation: reveal-2 1s ease;
+  }
+  @keyframes letterMove {
+    0% {
+      left: 50%;
+      opacity: 0.8;
+      height: 80%;
+    }
+    30% {
+      left: 50%;
+      opacity: 1;
+      height: 95%;
+    }
+    55% {
+      left: 50%;
+      opacity: 1;
+      height: 80%;
+    }
+    100% {
+      left: 27.5%;
+      opacity: 1;
+      height: 80%;
+    }
+  }
+  @keyframes logoReveal {
+    0% {
+      clip-path: inset(0 0 0 100%);
+    }
+    30% {
+      clip-path: inset(0 0 0 100%);
+    }
+    65% {
+      clip-path: inset(0 0 0 100%);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
   }
 }

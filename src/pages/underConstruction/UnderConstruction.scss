@@ -62,6 +62,10 @@
   color: #5c4eb3;
 }
 @media all and (max-width: 600px) {
+  .underConstruction {
+    height: -moz-available; /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  }
   .underConstruction-container {
     width: 100%;
     justify-content: center;

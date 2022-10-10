@@ -3,7 +3,9 @@ import "./LandingPage.scss";
 import { useNavigate, useLocation } from "react-router-dom";
 import StockTicker from "../../components/stockTicker/StockTicker";
 import icon from "../../assets/FinFetch-icon.png";
-import iconText from "../../assets/FinFetch-icon-text.png";
+import iconText from "../../assets/FinFetch-text-animation.png";
+import iconTextFull from "../../assets/FinFetch-icon-text.png";
+import letter from "../../assets/FinFetch-letter-primary.png";
 import apiIcon from "../../assets/API-icon.png";
 import apiIcon2 from "../../assets/API-icon-alternate.png";
 import dashIcon from "../../assets/Dashboard-icon.png";
@@ -70,7 +72,7 @@ export default function LandingPage() {
           <img
             className="landingPage-screen-icon"
             src={apiIcon2}
-            alt="FinFetch.io"
+            alt="FinFetch"
           />
         </div>
       ) : (
@@ -81,7 +83,7 @@ export default function LandingPage() {
           <img
             className="landingPage-screen-icon"
             src={dashIcon}
-            alt="FinFetch.io"
+            alt="FinFetch"
           />
         </div>
       ) : (
@@ -95,11 +97,18 @@ export default function LandingPage() {
       <div className="landingPage-container">
         <div className="landingPage-text">
           <div className="landingPage-mobile">
-            <img
-              className="landingPage-finfetch-text"
-              src={iconText}
-              alt="FinFetch.io"
-            />
+            <div className="landingPage-logo-container">
+              <img
+                className="landingPage-finfetch-letter"
+                src={letter}
+                alt="FinFetch Letter Icon"
+              />
+              <img
+                className="landingPage-finfetch-text"
+                src={iconText}
+                alt="FinFetch"
+              />
+            </div>
             <div className="landingPage-mobile-text">
               Select Application
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -110,14 +119,14 @@ export default function LandingPage() {
               <img
                 className="landingPage-finfetch-icon"
                 src={icon}
-                alt="FinFetch.io"
+                alt="FinFetch"
               />
             </div>
-            <div>
+            <div className="landingPage-logo-container">
               <img
                 className="landingPage-finfetch-text"
-                src={iconText}
-                alt="FinFetch.io"
+                src={iconTextFull}
+                alt="FinFetch"
               />
             </div>
           </div>
@@ -125,14 +134,14 @@ export default function LandingPage() {
             <img
               className="landingPage-icon"
               src="./assets/dashboard-image.png"
-              alt="FinFetch.io"
+              alt="FinFetch"
             />
           </div>
           <div id="landingPage-api">
             <img
               className="landingPage-icon"
               src="./assets/api-image.png"
-              alt="FinFetch.io"
+              alt="FinFetch"
             />
           </div>
         </div>
