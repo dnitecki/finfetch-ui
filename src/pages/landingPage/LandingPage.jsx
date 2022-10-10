@@ -9,6 +9,7 @@ import letter from "../../assets/FinFetch-letter-primary.png";
 import apiIcon from "../../assets/API-icon.png";
 import apiIcon2 from "../../assets/API-icon-alternate.png";
 import dashIcon from "../../assets/Dashboard-icon.png";
+import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,6 +17,15 @@ import {
   faArrowUpRightFromSquare,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
+
+const dragDashboard = () => {
+  document.getElementById("button-api").style.zIndex = 1;
+  document.getElementById("button-dashboard").style.zIndex = 1000;
+};
+const dragApi = () => {
+  document.getElementById("button-dashboard").style.zIndex = 1;
+  document.getElementById("button-api").style.zIndex = 1000;
+};
 
 const changeBgDashboard = () => {
   if (window.screen.width > 600) {
@@ -147,8 +157,12 @@ export default function LandingPage() {
         </div>
         <div className="landingPage-apps">
           <div className="landingPage-card-container" onMouseLeave={resetBg}>
-            <button
+            <motion.button
+              onDrag={dragDashboard}
+              drag
+              dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
               className="landingPage-button app-reveal-1"
+              id="button-dashboard"
               onClick={dashClick}
               onMouseOver={changeBgDashboard}
             >
@@ -182,9 +196,13 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              onDrag={dragApi}
+              drag
+              dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
               className="landingPage-button app-reveal-2"
+              id="button-api"
               onClick={apiClick}
               onMouseOver={changeBgApi}
             >
@@ -210,7 +228,7 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
