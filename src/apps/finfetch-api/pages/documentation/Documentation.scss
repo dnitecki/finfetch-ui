@@ -29,6 +29,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .documentation-content-container {
   display: flex;
@@ -252,6 +253,7 @@
   z-index: 1000;
 }
 .documentation-top {
+  display: flex;
   position: absolute;
   top: 90vh; // How far should the scroll travel prior to the link appearing
   right: 2rem;
@@ -298,8 +300,7 @@
 }
 .documentation-footer {
   display: flex;
-  height: 100%;
-  margin-bottom: 5rem;
+  height: fit-content;
 }
 .parameters {
   padding-left: 1rem;
@@ -428,7 +429,13 @@
     padding-right: 0;
     border: none;
   }
+  .documentation-footer {
+    margin-bottom: 5rem;
+  }
   .parameters {
     padding: 0;
+  }
+  .documentation-top {
+    display: none;
   }
 }
