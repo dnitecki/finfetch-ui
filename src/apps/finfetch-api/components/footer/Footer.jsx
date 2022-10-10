@@ -24,7 +24,6 @@ export default function Footer() {
           </div>
           <div className="footer-right">
             <div className="footer-aboutme">
-              <div className="footer-text"></div>
               <div className="footer-socials">
                 <a
                   className="footer-link"

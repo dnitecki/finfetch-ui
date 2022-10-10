@@ -16,6 +16,7 @@
 .ticker-content {
   display: inline-block;
   animation: marquee 40s linear infinite;
+  animation-delay: 0.5s;
 }
 
 .item-collection-1 {

@@ -408,7 +408,9 @@ export default function Documentation() {
               </div>
             </div>
           </div>
-          <Footer />
+          <div className="documentation-footer">
+            <Footer />
+          </div>
         </div>
       </div>
     </div>

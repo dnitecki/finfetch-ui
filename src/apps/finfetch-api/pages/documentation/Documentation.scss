@@ -296,6 +296,11 @@
   flex-direction: column;
   row-gap: 1rem;
 }
+.documentation-footer {
+  display: flex;
+  height: 100%;
+  margin-bottom: 5rem;
+}
 .parameters {
   padding-left: 1rem;
 }
@@ -312,7 +317,7 @@
 
 @media all and (max-width: 600px) {
   .documentation {
-    height: calc(100vh - 10rem);
+    height: 100%;
   }
   .documentation-sidebar {
     display: none;
