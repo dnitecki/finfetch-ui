@@ -7,3 +7,9 @@
   height: 100vh;
   width: 100%;
 }
+
+@media all and (max-width: 600px) {
+  .app-api-container {
+    height: -webkit-fill-available;
+  }
+}

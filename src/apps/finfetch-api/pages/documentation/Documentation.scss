@@ -358,6 +358,9 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+  .documentation-content-container {
+    height: -webkit-fill-available;
+  }
   .documentation-content-header {
     font-size: 30px;
   }
