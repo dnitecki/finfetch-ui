@@ -311,6 +311,9 @@
 // Mobile CSS
 
 @media all and (max-width: 600px) {
+  .documentation {
+    height: calc(100vh - 10rem);
+  }
   .documentation-sidebar {
     display: none;
   }
@@ -359,7 +362,8 @@
     padding-bottom: 3rem;
   }
   .documentation-content-container {
-    height: -webkit-fill-available;
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
   }
   .documentation-content-header {
     font-size: 30px;
