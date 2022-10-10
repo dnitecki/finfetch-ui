@@ -362,8 +362,8 @@
     padding-bottom: 3rem;
   }
   .documentation-content-container {
-    width: -moz-available; /* WebKit-based browsers will ignore this. */
-    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    height: -moz-available; /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
   }
   .documentation-content-header {
     font-size: 30px;
