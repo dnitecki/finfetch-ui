@@ -90,7 +90,8 @@
   z-index: 100;
   width: 30.5rem;
   height: fit-content;
-  background-color: rgba(255, 255, 0, 0.851);
+  background-color: rgba(255, 255, 0, 0.8);
+  backdrop-filter: blur(5px);
   transform: rotate(54deg);
   transform-origin: top left;
   margin-top: 1rem;
@@ -105,10 +106,10 @@
   box-shadow: 0 0.5rem 1rem #0000004c;
 }
 .landingPage-app-dashboard {
-  border: none;
+  border: 1px solid #5c4eb3;
 }
 .landingPage-app-api {
-  border: none;
+  border: 1px solid #0982cc;
 }
 .landingPage-card-container .landingPage-card:hover {
   top: -8px;
