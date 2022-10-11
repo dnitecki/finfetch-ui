@@ -401,14 +401,14 @@
     left: 27.5%;
     opacity: 1;
     transform: translate(-50%, -50%);
-    animation: letterMove ease-in-out 1.5s;
+    animation: letterMove ease-in-out 2s;
   }
   .landingPage-finfetch-text {
     width: 100%;
     height: 100%;
     transform: translateX(1.5rem);
     clip-path: inset(0 0 0 0);
-    animation: logoReveal ease-in-out 1.5s;
+    animation: logoReveal ease-in-out 2s;
   }
   .landingPage-mobile {
     width: 100%;
@@ -450,13 +450,13 @@
   @keyframes letterMove {
     0% {
       left: 50%;
-      opacity: 0.8;
+      opacity: 0;
       height: 80%;
     }
     30% {
       left: 50%;
       opacity: 1;
-      height: 95%;
+      height: 105%;
     }
     55% {
       left: 50%;
@@ -478,7 +478,7 @@
       clip-path: inset(0 0 0 100%);
       opacity: 0;
     }
-    65% {
+    70% {
       clip-path: inset(0 0 0 100%);
       opacity: 0;
     }
