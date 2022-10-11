@@ -228,14 +228,17 @@
   align-items: center;
   transition: display ease 0.3s;
   row-gap: 1.5rem;
+  animation: fadeIn ease 0.5s;
 }
 #landingPage-dashboard {
   display: none;
   transition: display ease 0.3s;
+  animation: fadeIn ease 0.5s;
 }
 #landingPage-api {
   display: none;
   transition: display ease 0.3s;
+  animation: fadeIn ease 0.5s;
 }
 .landingPage-mobile {
   display: none;
@@ -283,6 +286,16 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 @media all and (max-width: 600px) {
