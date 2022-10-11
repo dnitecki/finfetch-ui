@@ -11,12 +11,13 @@
   padding-bottom: 1rem;
   z-index: 100;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.325);
+  animation: dropDown 1s ease;
 }
 
 .ticker-content {
   display: inline-block;
   animation: marquee 40s linear infinite, tickerFade 1.5s ease;
-  animation-delay: 0.5s, 0s;
+  animation-delay: 1s, 0s;
 }
 
 .item-collection-1 {
@@ -68,7 +69,14 @@
     opacity: 1;
   }
 }
-
+@keyframes dropDown {
+  0% {
+    transform: translateY(-5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .color-neutral {
   color: #ffae00;
 }
