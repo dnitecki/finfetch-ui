@@ -13,12 +13,11 @@ import "primeicons/primeicons.css"; //icons
 function App() {
   const [loginStatus, setLoginStatus] = useState(false);
   return (
-    <div>
+    <div className="app">
       <UserContext.Provider value={{ loginStatus, setLoginStatus }}>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/api/*" element={<Home />} />
-          {/* <Route exact path="/dashboard/*" element={<Dashboard />} /> */}
           <Route exact path="/dashboard/*" element={<UnderConstruction />} />
           <Route exact path="*" element={<PageNotFound />} />
         </Routes>

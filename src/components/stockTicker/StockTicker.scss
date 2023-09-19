@@ -1,12 +1,13 @@
 .ticker-wrap {
   position: fixed;
-  overflow-x: hidden;
+  overflow: hidden;
   white-space: nowrap;
   background-color: black;
   color: #fff;
   opacity: 0.7;
   box-sizing: content-box;
   width: 100%;
+  height: fit-content;
   padding-top: 1rem;
   padding-bottom: 1rem;
   z-index: 100;
